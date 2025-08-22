@@ -1,160 +1,223 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Juan José Osorio Reyes — CV</title>
+  <title>Juan José Osorio Reyes — Portafolio</title>
+  <meta name="description" content="Portafolio web de Juan José Osorio Reyes: ingeniería multimedia, desarrollo web, edición y animación." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
+  <script defer src="script.js"></script>
 </head>
 <body>
-  <header class="site-header">
-    <nav class="nav container">
-      <a class="logo" href="index.html" aria-label="Inicio">Juan<span>OS</span></a>
-      <button class="nav-toggle" aria-label="Abrir menú">☰</button>
-      <ul class="nav-menu">
-        <li><a href="#perfil">Perfil laboral</a></li>
-        <li><a href="#formacion">Formación</a></li>
-        <li><a href="#habilidades">Habilidades</a></li>
-        <li><a href="portfolio.html">Portafolios</a></li>
-        <li><button id="themeToggle" class="ghost" aria-label="Tema">🌓</button></li>
-      </ul>
-    </nav>
-
-    <section class="hero container">
-      <div class="hero-text">
-        <img class="avatar round reveal" src="assets/foto-perfil-placeholder.svg" alt="Foto de perfil">
-        <h1 class="reveal">Juan José Osorio Reyes</h1>
-        <p class="subtitle reveal-delay">Estudiante de Ingeniería Multimedia · Producción de Contenidos</p>
-        <p class="meta">Cali, Colombia · +57 301 251 6228 · <a href="mailto:juan.jose.osorio.reyes@hotmail.com">juan.jose.osorio.reyes@hotmail.com</a></p>
-        <div class="actions">
-          <a href="assets/cv.pdf" class="btn" download>Descargar CV (PDF)</a>
-          <a href="portfolio.html" class="btn">Ver Portafolios</a>
-          <a href="#perfil" class="btn ghost">Conocer más</a>
-        </div>
+  <header class="header">
+    <div class="container nav">
+      <a class="brand" href="#hero">JJOR</a>
+      <nav class="nav-links" id="navLinks">
+        <a href="#sobre-mi">Sobre mí</a>
+        <a href="#habilidades">Habilidades</a>
+        <a href="#proyectos">Proyectos</a>
+        <a href="#formacion">Formación</a>
+        <a href="#contacto">Contacto</a>
+        <a class="cv-pill" href="cv.html">Ver CV</a>
+      </nav>
+      <div class="actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema">🌓</button>
+        <button class="hamburger" id="hamburger" aria-label="Abrir menú">☰</button>
       </div>
-      <div class="hero-art" aria-hidden="true">
-        <img class="float-y" src="assets/hero-bg.svg" alt="" />
-        <img class="float-x avatar" src="assets/avatar.svg" alt="Avatar" />
-      </div>
-    </section>
+    </div>
   </header>
 
+  <section class="hero" id="hero">
+    <div class="container grid-2">
+      <div class="hero-copy">
+        <h1><span class="hi">Hola, soy</span><br/>Juan José Osorio Reyes</h1>
+        <p class="subtitle">Ingeniería Multimedia · Desarrollo Web · Edición & Animación</p>
+        <div class="cta">
+          <a class="btn primary" href="#proyectos">Ver proyectos</a>
+          <a class="btn ghost" href="cv.html">Descargar CV</a>
+        </div>
+        <ul class="quickfacts">
+          <li>📍 Cali, Colombia</li>
+          <li>📧 juan.jose.osorio.reyes@hotmail.com</li>
+          <li>📱 3012516228</li>
+        </ul>
+      </div>
+      <div class="hero-card">
+        <div class="profile-card">
+          <div class="avatar" aria-hidden="true"></div>
+          <div class="dots" aria-hidden="true"></div>
+          <h3>Portafolio Interactivo</h3>
+          <p>Explora mis proyectos de edición de video, animación, desarrollo web y branding.</p>
+          <a class="btn small" href="#proyectos">Explorar</a>
+        </div>
+      </div>
+    </div>
+    <a class="scroll-indicator" href="#sobre-mi">▼</a>
+  </section>
+
   <main>
-    <section id="perfil" class="section container grid-2">
-      <div class="card reveal">
-        <h2>Perfil laboral</h2>
-        <p>Persona amable, paciente y comunicativa, con excelentes relaciones interpersonales y aprendizaje rápido. Disfruto los desafíos, trabajo en equipo y bajo presión. Mi misión en cada empleo es cumplir los objetivos de la empresa y del equipo, aportando soluciones creativas y orientadas a resultados.</p>
-        <p class="muted">Enfocado en contenidos digitales para infancia y juventud. Experiencia académica en guion, narrativa, investigación de audiencias, animación y producción audiovisual. Inglés avanzado.</p>
-        <ul class="bullets">
-          <li>Enfoque en infancia y juventud</li>
-          <li>Guion, narrativa y producción audiovisual</li>
-          <li>Trabajo en equipo y cumplimiento de objetivos</li>
-        </ul>
-      </div>
-      <div class="card reveal-delay">
-        <h2>Datos</h2>
-        <ul class="kv">
-          <li><strong>Ubicación:</strong> Cali, Colombia</li>
-          <li><strong>Teléfono:</strong> +57 301 251 6228</li>
-          <li><strong>Email:</strong> <a href="mailto:juan.jose.osorio.reyes@hotmail.com">juan.jose.osorio.reyes@hotmail.com</a></li>
-          <li><strong>Idiomas:</strong> Inglés (Avanzado)</li>
-        </ul>
-        <a href="portfolio.html" class="btn wide">Explorar Portafolios</a>
+    <section id="sobre-mi" class="section">
+      <div class="container">
+        <h2>Sobre mí</h2>
+        <p>
+          Soy una persona comunicativa, paciente y orientada al trabajo en equipo. Estudiante de Ingeniería Multimedia
+          con interés en telecomunicaciones, desarrollo web y producción de contenidos digitales. He realizado proyectos
+          freelance de edición de video, animación y diseño de identidad visual.
+        </p>
       </div>
     </section>
 
-    <section id="objetivo" class="section container">
-      <div class="card">
-        <h2>Objetivo profesional</h2>
-        <p>Potenciar proyectos de <strong>contenidos digitales</strong> orientados a <strong>infancias y juventudes</strong>, aportando competencias en guion, narrativa, animación e investigación de audiencias para cumplir metas de equipo con creatividad, empatía y disciplina.</p>
-      </div>
-    </section>
-    
-    <section id="formacion" class="section container">
-      <h2 class="section-title">Formación</h2>
-      <div class="timeline">
-        <article class="tile reveal">
-          <h3>Ingeniería Multimedia · Universidad Autónoma de Occidente</h3>
-          <p class="meta">Febrero 2021 – En curso</p>
-        </article>
-        <article class="tile reveal-delay">
-          <h3>Diplomado Internacional · Producción de Contenidos con Enfoque Diverso (Infancia y Juventud)</h3>
-          <p class="meta">UAO & Proimágenes Colombia · Junio 2022 – Diciembre 2022</p>
-          <details>
-            <summary>Ver módulos certificados</summary>
-            <ul class="cols-2">
-              <li>El desarrollo infantil y juvenil y la producción de contenidos audiovisuales</li><li>Estructuras e idea temática en el guion de ficción corta</li><li>Maleta Prix Jeunesse</li><li>Construyendo historias: casos de éxito. El Niño(a) en el centro</li><li>Principios básicos para una historia para audiencias infantiles y juveniles: ¿Cómo reflejar sus intereses y necesidades?</li><li>Desarrollando la historia: Guion, libreto, escaleta (Animación)</li><li>Herramientas de investigación para el acercamiento al público infantil</li><li>Desarrollando la historia: Guion, libreto, escaleta (Ficción – No Ficción – Audiovisual)</li>
-            </ul>
-          </details>
-        </article>
-        <article class="tile reveal">
-          <h3>Bachiller Académico · Colegio Los Andes San Fernando</h3>
-          <p class="meta">Julio 2018 – Enero 2021</p>
-        </article>
-      </div>
-    </section>
+    <section id="habilidades" class="section alt">
+      <div class="container">
+        <h2>Habilidades</h2>
+        <div class="chips">
+          <span class="chip">HTML</span>
+          <span class="chip">CSS</span>
+          <span class="chip">JavaScript</span>
+          <span class="chip">Python</span>
+          <span class="chip">Premiere Pro</span>
+          <span class="chip">After Effects</span>
+          <span class="chip">Photoshop</span>
+          <span class="chip">Illustrator</span>
+          <span class="chip">Adobe XD</span>
+          <span class="chip">Pro Tools</span>
+          <span class="chip">Blender</span>
+          <span class="chip">Figma</span>
+        </div>
 
-    <section id="competencias" class="section container">
-      <div class="card">
-        <h2>Competencias clave</h2>
-        <ul class="kv">
-          <li><strong>Comunicación:</strong> clara, cercana y efectiva con equipos y audiencias.</li>
-          <li><strong>Creatividad:</strong> generación de ideas y construcción de historias centradas en la niñez.</li>
-          <li><strong>Planificación:</strong> trabajo bajo presión, gestión del tiempo y enfoque a objetivos.</li>
-          <li><strong>Investigación:</strong> análisis de intereses y necesidades del público infantil/juvenil.</li>
-        </ul>
-      </div>
-    </section>
-    
-    <section id="habilidades" class="section container grid-2">
-      <div class="card reveal">
-        <h2>Habilidades técnicas</h2>
-        <div class="tags">
-          <span class="tag">Guion y narrativa</span><span class="tag">Producción audiovisual</span><span class="tag">Animación</span><span class="tag">Investigación de audiencias</span><span class="tag">Edición básica de video</span>
+        <div class="skills-grid">
+          <div class="skill">
+            <div class="skill-top"><span>Desarrollo Web</span><span class="val">Intermedio</span></div>
+            <div class="bar"><span style="width: 70%"></span></div>
+          </div>
+          <div class="skill">
+            <div class="skill-top"><span>Edición & Post</span><span class="val">Intermedio/Avanzado</span></div>
+            <div class="bar"><span style="width: 80%"></span></div>
+          </div>
+          <div class="skill">
+            <div class="skill-top"><span>Animación 2D/3D</span><span class="val">Intermedio</span></div>
+            <div class="bar"><span style="width: 65%"></span></div>
+          </div>
+          <div class="skill">
+            <div class="skill-top"><span>Branding</span><span class="val">Intermedio</span></div>
+            <div class="bar"><span style="width: 70%"></span></div>
+          </div>
         </div>
       </div>
-      <div class="card reveal-delay">
-        <h2>Habilidades blandas</h2>
-        <div class="tags">
-          <span class="tag alt">Comunicación efectiva</span><span class="tag alt">Trabajo en equipo</span><span class="tag alt">Creatividad e innovación</span><span class="tag alt">Gestión del tiempo</span><span class="tag alt">Adaptabilidad</span>
+    </section>
+
+    <section id="proyectos" class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2>Proyectos</h2>
+          <div class="filters" role="tablist" aria-label="Filtrar proyectos">
+            <button class="filter active" data-filter="all">Todos</button>
+            <button class="filter" data-filter="web">Web</button>
+            <button class="filter" data-filter="video">Video</button>
+            <button class="filter" data-filter="branding">Branding</button>
+          </div>
         </div>
-      </div>
-      <div class="card highlight reveal">
-        <div>
-          <h3>¿Buscas colaboración o prácticas?</h3>
-          <p>Estoy listo para participar en proyectos de contenidos digitales, animación y producción audiovisual.</p>
+
+        <div class="cards" id="projectCards">
+          <!-- Proyecto Web -->
+          <article class="card project" data-type="web">
+            <div class="card-media placeholder">App</div>
+            <div class="card-body">
+              <h3>Calculadora de Notas (Web)</h3>
+              <p>Herramienta online para calcular promedios académicos con enfoque en usabilidad.</p>
+              <ul class="tags">
+                <li>HTML</li><li>CSS</li><li>JavaScript</li>
+              </ul>
+              <div class="card-cta">
+                <a href="#" class="btn small">Demo (próximamente)</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Proyecto Video -->
+          <article class="card project" data-type="video">
+            <div class="card-media placeholder">Video</div>
+            <div class="card-body">
+              <h3>Video de Grado Personalizado</h3>
+              <p>Edición y montaje con narrativa audiovisual, tratamiento de audio e imágenes.</p>
+              <ul class="tags">
+                <li>Premiere</li><li>After Effects</li><li>Pro Tools</li>
+              </ul>
+              <div class="card-cta">
+                <a href="#" class="btn small">Ver clip (próximamente)</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Proyecto Branding -->
+          <article class="card project" data-type="branding">
+            <div class="card-media placeholder">Logo</div>
+            <div class="card-body">
+              <h3>Logotipos para Emprendimiento</h3>
+              <p>Identidad visual con piezas para redes sociales y presentaciones.</p>
+              <ul class="tags">
+                <li>Illustrator</li><li>Photoshop</li><li>Figma</li>
+              </ul>
+              <div class="card-cta">
+                <a href="#" class="btn small">Ver galería (próximamente)</a>
+              </div>
+            </div>
+          </article>
         </div>
-        <a href="portfolio.html" class="btn">Ver trabajos</a>
       </div>
     </section>
 
-    
-    
+    <section id="formacion" class="section alt">
+      <div class="container">
+        <h2>Formación</h2>
+        <ul class="timeline">
+          <li>
+            <h4>Ingeniería Multimedia</h4>
+            <p>Universidad Autónoma de Occidente (2021 – En curso)</p>
+          </li>
+          <li>
+            <h4>Diplomado Internacional — Producción de contenidos con enfoque diverso (2022)</h4>
+            <p>UAO – Proimágenes Colombia • Módulos: guion de ficción y animación, desarrollo infantil y juvenil, investigación de audiencias, Maleta Prix Jeunesse, entre otros.</p>
+          </li>
+          <li>
+            <h4>Bachiller Académico</h4>
+            <p>Colegio Los Andes San Fernando (2018 – 2021)</p>
+          </li>
+        </ul>
+        <a class="btn ghost" href="cv.html">Ver CV completo</a>
+      </div>
+    </section>
 
-    <section id="contacto" class="section container">
-      <div class="card">
+    <section id="contacto" class="section">
+      <div class="container">
         <h2>Contacto</h2>
-        <form id="contactForm" name="contacto" class="grid-2" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="gracias.html">
-          <input type="hidden" name="form-name" value="contacto">
-          <p class="hidden"><label>No llenar: <input name="bot-field"></label></p>
-          <input type="text" name="nombre" placeholder="Tu nombre" required>
-          <input type="email" name="correo" placeholder="Tu email" required>
-          <textarea name="mensaje" placeholder="Mensaje" rows="4" required></textarea>
-          <button class="btn" type="submit">Enviar</button>
-        </form>
-        <p class="form-result" aria-live="polite"></p>
+        <p>¿Te interesa colaborar o contratar un proyecto? Escríbeme:</p>
+        <div class="contact-grid">
+          <a class="contact-card" href="mailto:juan.jose.osorio.reyes@hotmail.com">
+            <span class="icon">✉️</span>
+            <span class="label">Correo</span>
+            <span class="value">juan.jose.osorio.reyes@hotmail.com</span>
+          </a>
+          <a class="contact-card" href="tel:+573012516228">
+            <span class="icon">📱</span>
+            <span class="label">Teléfono</span>
+            <span class="value">(+57) 301 251 6228</span>
+          </a>
+        </div>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container">
-      <p class="small">© 2025 Juan José Osorio Reyes. Todos los derechos reservados.</p>
+  <footer class="footer">
+    <div class="container foot">
+      <p>© <span id="year"></span> Juan José Osorio Reyes – Portafolio</p>
+      <a class="tiny" href="cv.html">CV</a>
     </div>
   </footer>
 
-  <script src="main.js"></script>
+  <button id="toTop" class="to-top" aria-label="Volver arriba">↑</button>
 </body>
 </html>

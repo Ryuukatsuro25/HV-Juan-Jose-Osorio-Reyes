@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CV — Juan José Osorio Reyes</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="header">
+    <div class="container nav">
+      <a class="brand" href="index.html">JJOR</a>
+      <nav class="nav-links">
+        <a href="index.html#sobre-mi">Sobre mí</a>
+        <a href="index.html#habilidades">Habilidades</a>
+        <a href="index.html#proyectos">Proyectos</a>
+        <a href="index.html#formacion">Formación</a>
+        <a href="index.html#contacto">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container">
+      <h1>Currículum Vitae</h1>
+      <p class="muted">Aquí puedes visualizar y descargar tu CV. Reemplaza el archivo PDF cuando lo tengas listo.</p>
+
+      <div class="cv-actions">
+        <a class="btn primary" href="assets/CV_Juan_Jose_Osorio_Reyes.pdf" download>Descargar PDF (cuando esté)</a>
+        <a class="btn ghost" href="../CV_Juan_Jose_Osorio_Reyes.docx" download>Descargar DOCX actual</a>
+      </div>
+
+      <div class="cv-viewer">
+        <div class="placeholder-pdf">
+          <p>📄 Vista previa del CV (PDF). Coloca tu archivo en <code>/assets/CV_Juan_Jose_Osorio_Reyes.pdf</code>.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container foot">
+      <p>© <span id="year"></span> Juan José Osorio Reyes – Portafolio</p>
+      <a class="tiny" href="index.html">Inicio</a>
+    </div>
+  </footer>
+
+  <script>
+    // Año dinámico
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

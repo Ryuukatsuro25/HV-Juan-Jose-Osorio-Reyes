@@ -1,6 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800">
-  <rect width="100%" height="100%" fill="#14183d"/>
-  <rect x="24" y="24" width="1152" height="752" rx="24" fill="#121636" stroke="#7c7cff" stroke-width="2"/>
-  <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle"
-        font-family="Poppins, Arial" font-size="42" fill="#f0f3ff">Desarrollando la historia (Animación)</text>
-</svg>
