@@ -65,6 +65,13 @@
       </div>
     </section>
 
+    <section id="objetivo" class="section container">
+      <div class="card">
+        <h2>Objetivo profesional</h2>
+        <p>Potenciar proyectos de <strong>contenidos digitales</strong> orientados a <strong>infancias y juventudes</strong>, aportando competencias en guion, narrativa, animación e investigación de audiencias para cumplir metas de equipo con creatividad, empatía y disciplina.</p>
+      </div>
+    </section>
+    
     <section id="formacion" class="section container">
       <h2 class="section-title">Formación</h2>
       <div class="timeline">
@@ -89,6 +96,18 @@
       </div>
     </section>
 
+    <section id="competencias" class="section container">
+      <div class="card">
+        <h2>Competencias clave</h2>
+        <ul class="kv">
+          <li><strong>Comunicación:</strong> clara, cercana y efectiva con equipos y audiencias.</li>
+          <li><strong>Creatividad:</strong> generación de ideas y construcción de historias centradas en la niñez.</li>
+          <li><strong>Planificación:</strong> trabajo bajo presión, gestión del tiempo y enfoque a objetivos.</li>
+          <li><strong>Investigación:</strong> análisis de intereses y necesidades del público infantil/juvenil.</li>
+        </ul>
+      </div>
+    </section>
+    
     <section id="habilidades" class="section container grid-2">
       <div class="card reveal">
         <h2>Habilidades técnicas</h2>
@@ -112,73 +131,14 @@
     </section>
 
     
-    <section id="certificaciones" class="section container">
-      <h2 class="section-title">Certificaciones del Diplomado</h2>
-      <p class="muted">Haz clic en cada tarjeta para abrir el certificado correspondiente.</p>
-      <div class="cert-grid">
-        <a class="card cert-card" href="assets/diplomado.pdf#page=1" target="_blank" rel="noopener">
-          <img src="assets/cert-1.svg" alt="El desarrollo infantil y juvenil y la producción de contenidos audiovisuales">
-          <div class="pad">
-            <h4>El desarrollo infantil y juvenil y la producción de contenidos audiovisuales</h4>
-            <p class="meta">Diplomado Internacional · UAO & Proimágenes</p>
-          </div>
-        </a>
-<a class="card cert-card" href="assets/diplomado.pdf#page=2" target="_blank" rel="noopener">
-          <img src="assets/cert-2.svg" alt="Estructuras e idea temática en el guion de ficción corta">
-          <div class="pad">
-            <h4>Estructuras e idea temática en el guion de ficción corta</h4>
-            <p class="meta">Diplomado Internacional · UAO & Proimágenes</p>
-          </div>
-        </a>
-<a class="card cert-card" href="assets/diplomado.pdf#page=3" target="_blank" rel="noopener">
-          <img src="assets/cert-3.svg" alt="Maleta Prix Jeunesse">
-          <div class="pad">
-            <h4>Maleta Prix Jeunesse</h4>
-            <p class="meta">Diplomado Internacional · UAO & Proimágenes</p>
-          </div>
-        </a>
-<a class="card cert-card" href="assets/diplomado.pdf#page=4" target="_blank" rel="noopener">
-          <img src="assets/cert-4.svg" alt="Construyendo historias: casos de éxito. El Niño(a) en el centro">
-          <div class="pad">
-            <h4>Construyendo historias: casos de éxito. El Niño(a) en el centro</h4>
-            <p class="meta">Diplomado Internacional · UAO & Proimágenes</p>
-          </div>
-        </a>
-<a class="card cert-card" href="assets/diplomado.pdf#page=5" target="_blank" rel="noopener">
-          <img src="assets/cert-5.svg" alt="Principios básicos para una historia para audiencias infantiles y juveniles">
-          <div class="pad">
-            <h4>Principios básicos para una historia para audiencias infantiles y juveniles</h4>
-            <p class="meta">Diplomado Internacional · UAO & Proimágenes</p>
-          </div>
-        </a>
-<a class="card cert-card" href="assets/diplomado.pdf#page=6" target="_blank" rel="noopener">
-          <img src="assets/cert-6.svg" alt="Desarrollando la historia (Animación)">
-          <div class="pad">
-            <h4>Desarrollando la historia (Animación)</h4>
-            <p class="meta">Diplomado Internacional · UAO & Proimágenes</p>
-          </div>
-        </a>
-<a class="card cert-card" href="assets/diplomado.pdf#page=7" target="_blank" rel="noopener">
-          <img src="assets/cert-7.svg" alt="Herramientas de investigación para el acercamiento al público infantil">
-          <div class="pad">
-            <h4>Herramientas de investigación para el acercamiento al público infantil</h4>
-            <p class="meta">Diplomado Internacional · UAO & Proimágenes</p>
-          </div>
-        </a>
-<a class="card cert-card" href="assets/diplomado.pdf#page=8" target="_blank" rel="noopener">
-          <img src="assets/cert-8.svg" alt="Desarrollando la historia (Ficción – No Ficción – Audiovisual)">
-          <div class="pad">
-            <h4>Desarrollando la historia (Ficción – No Ficción – Audiovisual)</h4>
-            <p class="meta">Diplomado Internacional · UAO & Proimágenes</p>
-          </div>
-        </a>
-      </div>
-    </section>
+    
 
     <section id="contacto" class="section container">
       <div class="card">
         <h2>Contacto</h2>
-        <form id="contactForm" class="grid-2" method="POST" action="https://formspree.io/f/XXXXXX">
+        <form id="contactForm" name="contacto" class="grid-2" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="gracias.html">
+          <input type="hidden" name="form-name" value="contacto">
+          <p class="hidden"><label>No llenar: <input name="bot-field"></label></p>
           <input type="text" name="nombre" placeholder="Tu nombre" required>
           <input type="email" name="correo" placeholder="Tu email" required>
           <textarea name="mensaje" placeholder="Mensaje" rows="4" required></textarea>

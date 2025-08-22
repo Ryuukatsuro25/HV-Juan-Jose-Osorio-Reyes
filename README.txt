@@ -16,7 +16,4 @@ Abrir `index.html` para ver el CV. Abrir `portfolio.html` para el Portafolios.
 Sugerencia: reemplaza los SVG por thumbnails JPG/PNG de tus proyectos para una vista más realista.
 
 
-## Envío real de formulario (Formspree)
-- Crea un formulario en Formspree y copia el **Form ID** (tiene el formato `/f/abcdxyz`).
-- Abre `index.html` y reemplaza `https://formspree.io/f/XXXXXX` por tu URL real.
-- Los campos `nombre`, `correo`, `mensaje` se enviarán por POST.
+El formulario envía directamente a tu correo configurado con mailto.
