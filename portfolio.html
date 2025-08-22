@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portafolios — Juan José Osorio Reyes</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header small">
+    <nav class="nav">
+      <a class="logo" href="index.html">JJ</a>
+      <button class="nav-toggle" aria-label="Abrir menú">☰</button>
+      <ul class="nav-menu">
+        <li><a href="index.html#about">Perfil</a></li>
+        <li><a href="index.html#education">Formación</a></li>
+        <li><a href="index.html#skills">Habilidades</a></li>
+        <li><a class="cta" href="portfolio.html">Portafolios</a></li>
+        <li><button id="themeToggle" class="ghost">🌓</button></li>
+      </ul>
+    </nav>
+    <section class="hero compact">
+      <div class="hero-inner">
+        <h1>Portafolios</h1>
+        <p class="subtitle">Animaciones · Diseños · Modelados · Videojuegos · Programación</p>
+      </div>
+    </section>
+  </header>
+
+  <main class="container section">
+    <div class="filters">
+      <button class="chip" data-filter="all">Todos</button>
+      <button class="chip" data-filter="animaciones">Animaciones</button>
+      <button class="chip" data-filter="diseños">Diseños</button>
+      <button class="chip" data-filter="modelados">Modelados</button>
+      <button class="chip" data-filter="videojuegos">Videojuegos</button>
+      <button class="chip" data-filter="programacion">Programación</button>
+      <input id="search" type="search" placeholder="Buscar en el portafolios..." aria-label="Buscar">
+    </div>
+
+    <div id="portfolioGrid" class="grid-3"></div>
+
+    <!-- Modal / Lightbox -->
+    <dialog id="lightbox">
+      <img id="lbImage" alt="" />
+      <div class="lb-caption">
+        <h3 id="lbTitle"></h3>
+        <p id="lbDesc"></p>
+        <a id="lbLink" href="#" target="_blank" rel="noopener">Ver más</a>
+      </div>
+      <button id="lbClose" class="btn ghost">Cerrar</button>
+    </dialog>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p class="small">© 2025 Juan José Osorio Reyes.</p>
+    </div>
+  </footer>
+
+  <script src="portfolio.js"></script>
+</body>
+</html>

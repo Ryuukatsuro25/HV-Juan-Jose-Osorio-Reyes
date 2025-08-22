@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Juan José Osorio Reyes — CV</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav">
+      <a class="logo" href="#">JJ</a>
+      <button class="nav-toggle" aria-label="Abrir menú">☰</button>
+      <ul class="nav-menu">
+        <li><a href="#about">Perfil</a></li>
+        <li><a href="#education">Formación</a></li>
+        <li><a href="#skills">Habilidades</a></li>
+        <li><a href="#contact">Contacto</a></li>
+        <li><a class="cta" href="portfolio.html">Portafolios →</a></li>
+        <li><button id="themeToggle" class="ghost">🌓</button></li>
+      </ul>
+    </nav>
+    <section class="hero">
+      <div class="hero-inner">
+        <h1>Juan José Osorio Reyes</h1>
+        <p class="subtitle">Estudiante de Ingeniería Multimedia | Producción de Contenidos</p>
+        <p class="meta">Cali, Colombia · 301 251 6228 · <a href="mailto:juan.jose.osorio.reyes@hotmail.com">juan.jose.osorio.reyes@hotmail.com</a></p>
+        <div class="actions">
+          <a class="btn" href="#contact">Contáctame</a>
+          <a class="btn ghost" href="portfolio.html">Ver Portafolios</a>
+        </div>
+      </div>
+    </section>
+  </header>
+
+  <main>
+    <section id="about" class="section container">
+      <h2>Perfil</h2>
+      <p>Soy una persona comunicativa, creativa y orientada a resultados. Me adapto rápidamente, disfruto el trabajo en equipo y me apasiona la creación de contenidos digitales con enfoque en audiencias infantiles y juveniles.</p>
+    </section>
+
+    <section id="education" class="section container">
+      <h2>Formación</h2>
+      
+<ul class="timeline">
+  <li>
+    <h4>Ingeniería Multimedia — Universidad Autónoma de Occidente</h4>
+    <p class="meta">Febrero 2021 – En curso</p>
+  </li>
+  <li>
+    <h4>Diplomado Internacional en Producción de Contenidos con Enfoque Diverso para Infancia y Juventud — UAO & Proimágenes Colombia</h4>
+    <p class="meta">Junio 2022 – Diciembre 2022</p>
+    <details>
+      <summary>Ver módulos certificados</summary>
+      <ul>
+        <li>El desarrollo infantil y juvenil y la producción de contenidos audiovisuales</li>
+        <li>Estructuras e idea temática en el guion de ficción corta</li>
+        <li>Maleta Prix Jeunesse</li>
+        <li>Construyendo historias: casos de éxito. El Niño(a) en el centro</li>
+        <li>Principios básicos para una historia para audiencias infantiles y juveniles: ¿Cómo reflejar sus intereses y necesidades?</li>
+        <li>Desarrollando la historia. Guion, libreto, escaleta: ¿Cómo materializar la idea? (Animación)</li>
+        <li>Herramientas de investigación para el acercamiento al público infantil: conocimiento de sus necesidades e intereses</li>
+        <li>Desarrollando la historia. Guion, libreto, escaleta: ¿Cómo materializar la idea? (Ficción – No Ficción – Audiovisual)</li>
+      </ul>
+    </details>
+  </li>
+  <li>
+    <h4>Bachiller Académico — Colegio Los Andes San Fernando</h4>
+    <p class="meta">Julio 2018 – Enero 2021</p>
+  </li>
+</ul>
+
+    </section>
+
+    <section id="skills" class="section container">
+      <h2>Habilidades</h2>
+      <div class="tags"><span class="tag">Comunicación efectiva</span>
+<span class="tag">Generación de ideas</span>
+<span class="tag">Guion y narrativa</span>
+<span class="tag">Producción audiovisual</span>
+<span class="tag">Animación</span>
+<span class="tag">Investigación de audiencias</span>
+<span class="tag">Trabajo en equipo</span>
+<span class="tag">Aprendizaje rápido</span>
+<span class="tag">Inglés (Avanzado)</span></div>
+    </section>
+
+    <section id="cta-portfolio" class="section container card highlight">
+      <div>
+        <h3>Explora mi Portafolios</h3>
+        <p>Animaciones, diseños, modelados, videojuegos y programación: una selección de trabajos y proyectos destacados.</p>
+      </div>
+      <a class="btn" href="portfolio.html">Entrar al Portafolios</a>
+    </section>
+  </main>
+
+  <footer id="contact" class="site-footer">
+    <div class="container">
+      <div class="contact-card card">
+        <h2>Contacto</h2>
+        <p>¿Tienes una oportunidad o un proyecto? ¡Hablemos!</p>
+        <form id="contactForm" class="grid-2">
+          <input type="text" name="nombre" placeholder="Tu nombre" required />
+          <input type="email" name="correo" placeholder="Tu email" required />
+          <textarea name="mensaje" placeholder="Mensaje" rows="4" required></textarea>
+          <button type="submit" class="btn">Enviar</button>
+        </form>
+        <p class="form-result" aria-live="polite"></p>
+      </div>
+      <p class="small">© 2025 Juan José Osorio Reyes. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
