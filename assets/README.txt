@@ -1,0 +1,1 @@
+Coloca aquí tu foto como 'foto.jpg' (ideal 800x800 px, centrada).
