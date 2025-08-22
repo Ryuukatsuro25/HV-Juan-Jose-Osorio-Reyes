@@ -2,9 +2,7 @@
 // Mobile nav
 const navToggle = document.querySelector('.nav-toggle');
 const navMenu = document.querySelector('.nav-menu');
-if (navToggle) {
-  navToggle.addEventListener('click', () => navMenu.classList.toggle('show'));
-}
+if (navToggle) navToggle.addEventListener('click', () => navMenu.classList.toggle('show'));
 
 // Theme toggle
 const root = document.documentElement;
@@ -19,53 +17,45 @@ if (themeToggle) themeToggle.addEventListener('click', ()=>{
   setTheme(isLight ? 'dark' : 'light');
 });
 
-// Load gallery data
-async function loadGallery(){
-  const res = await fetch('gallery-data.json');
-  return res.json();
+// Load data
+async function loadData(){ const r = await fetch('gallery-data.json'); return r.json(); }
+
+function card(item){
+  const el = document.createElement('article');
+  el.className = 'card item';
+  el.innerHTML = `
+    <img src="${item.thumb}" alt="${item.title}">
+    <div class="pad">
+      <h4>${item.title}</h4>
+      <p class="meta">${item.description}</p>
+    </div>
+  `;
+  el.addEventListener('click', ()=> openLightbox(item));
+  el.style.opacity = 0; el.style.transform = 'translateY(12px)';
+  requestAnimationFrame(()=>{
+    el.style.transition = 'opacity .35s ease, transform .35s ease';
+    el.style.opacity = 1; el.style.transform = 'none';
+  });
+  return el;
 }
 
-function renderItems(data, filter='all', keyword=''){
+function render(data, filter='all', q=''){
   const grid = document.getElementById('portfolioGrid');
   grid.innerHTML = '';
-
-  const cats = Object.keys(data);
-  cats.forEach(cat => {
-    const section = document.createElement('div');
-    section.className = 'category-section';
-    const title = document.createElement('h2');
-    title.textContent = cat.charAt(0).toUpperCase() + cat.slice(1);
-    section.appendChild(title);
-
-    const desc = document.createElement('p');
-    desc.className = 'meta';
-    desc.textContent = data[cat].description;
-    section.appendChild(desc);
-
+  Object.entries(data).forEach(([cat, payload])=>{
+    const list = payload.items
+      .filter(i => filter === 'all' || filter === cat)
+      .filter(i => i.title.toLowerCase().includes(q) || i.description.toLowerCase().includes(q));
+    if(!list.length) return;
+    const section = document.createElement('section');
+    section.className = 'category';
+    section.innerHTML = `<h2>${cat.charAt(0).toUpperCase() + cat.slice(1)}</h2>
+                         <p class="meta">${payload.description}</p>`;
     const wrap = document.createElement('div');
     wrap.className = 'grid-3';
-
-    data[cat].items
-      .filter(i => (filter === 'all' || filter === cat))
-      .filter(i => (i.title.toLowerCase().includes(keyword) || i.description.toLowerCase().includes(keyword)))
-      .forEach(item => {
-        const card = document.createElement('article');
-        card.className = 'card item';
-        card.innerHTML = `
-          <img src="${item.thumb}" alt="${item.title}">
-          <div class="pad">
-            <h4>${item.title}</h4>
-            <p>${item.description}</p>
-          </div>
-        `;
-        card.addEventListener('click', ()=> openLightbox(item));
-        wrap.appendChild(card);
-      });
-
-    if (wrap.children.length > 0) {
-      section.appendChild(wrap);
-      grid.appendChild(section);
-    }
+    list.forEach(item => wrap.appendChild(card(item)));
+    section.appendChild(wrap);
+    grid.appendChild(section);
   });
 }
 
@@ -75,30 +65,22 @@ function openLightbox(item){
   document.getElementById('lbTitle').textContent = item.title;
   document.getElementById('lbDesc').textContent = item.description;
   document.getElementById('lbLink').href = item.link || '#';
-  if (typeof dlg.showModal === 'function') dlg.showModal(); else alert('Vista previa: ' + item.title);
+  if (typeof dlg.showModal === 'function') dlg.showModal(); else alert(item.title);
 }
-const lbClose = document.getElementById('lbClose');
-if (lbClose) lbClose.addEventListener('click', ()=> document.getElementById('lightbox').close());
+document.getElementById('lbClose').addEventListener('click', ()=> document.getElementById('lightbox').close());
 
-// Filters and search
+// Filters
 const chips = document.querySelectorAll('.chip');
 const search = document.getElementById('search');
-let currentFilter = 'all';
-let currentKeyword = '';
-
-chips.forEach(c => c.addEventListener('click', ()=>{
-  currentFilter = c.dataset.filter;
-  chips.forEach(x=>x.classList.remove('active'));
-  c.classList.add('active');
-  loadGallery().then(data => renderItems(data, currentFilter, currentKeyword));
+let current = 'all', keyword = '';
+chips.forEach(c=> c.addEventListener('click', ()=> {
+  current = c.dataset.filter; chips.forEach(x=>x.classList.remove('active')); c.classList.add('active');
+  loadData().then(d => render(d, current, keyword));
 }));
+if(search) search.addEventListener('input', ()=>{
+  keyword = search.value.trim().toLowerCase();
+  loadData().then(d => render(d, current, keyword));
+});
 
-if (search){
-  search.addEventListener('input', ()=>{
-    currentKeyword = search.value.trim().toLowerCase();
-    loadGallery().then(data => renderItems(data, currentFilter, currentKeyword));
-  });
-}
-
-// Initial render
-loadGallery().then(data => renderItems(data));
+// Init
+loadData().then(d => render(d));

@@ -4,111 +4,193 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Juan José Osorio Reyes — CV</title>
-  <link rel="stylesheet" href="styles.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header class="site-header">
-    <nav class="nav">
-      <a class="logo" href="#">JJ</a>
+    <nav class="nav container">
+      <a class="logo" href="index.html" aria-label="Inicio">Juan<span>OS</span></a>
       <button class="nav-toggle" aria-label="Abrir menú">☰</button>
       <ul class="nav-menu">
-        <li><a href="#about">Perfil</a></li>
-        <li><a href="#education">Formación</a></li>
-        <li><a href="#skills">Habilidades</a></li>
-        <li><a href="#contact">Contacto</a></li>
-        <li><a class="cta" href="portfolio.html">Portafolios →</a></li>
-        <li><button id="themeToggle" class="ghost">🌓</button></li>
+        <li><a href="#perfil">Perfil laboral</a></li>
+        <li><a href="#formacion">Formación</a></li>
+        <li><a href="#habilidades">Habilidades</a></li>
+        <li><a href="portfolio.html">Portafolios</a></li>
+        <li><button id="themeToggle" class="ghost" aria-label="Tema">🌓</button></li>
       </ul>
     </nav>
-    <section class="hero">
-      <div class="hero-inner">
-        <h1>Juan José Osorio Reyes</h1>
-        <p class="subtitle">Estudiante de Ingeniería Multimedia | Producción de Contenidos</p>
-        <p class="meta">Cali, Colombia · 301 251 6228 · <a href="mailto:juan.jose.osorio.reyes@hotmail.com">juan.jose.osorio.reyes@hotmail.com</a></p>
+
+    <section class="hero container">
+      <div class="hero-text">
+        <img class="avatar round reveal" src="assets/foto-perfil-placeholder.svg" alt="Foto de perfil">
+        <h1 class="reveal">Juan José Osorio Reyes</h1>
+        <p class="subtitle reveal-delay">Estudiante de Ingeniería Multimedia · Producción de Contenidos</p>
+        <p class="meta">Cali, Colombia · +57 301 251 6228 · <a href="mailto:juan.jose.osorio.reyes@hotmail.com">juan.jose.osorio.reyes@hotmail.com</a></p>
         <div class="actions">
-          <a class="btn" href="#contact">Contáctame</a>
-          <a class="btn ghost" href="portfolio.html">Ver Portafolios</a>
+          <a href="assets/cv.pdf" class="btn" download>Descargar CV (PDF)</a>
+          <a href="portfolio.html" class="btn">Ver Portafolios</a>
+          <a href="#perfil" class="btn ghost">Conocer más</a>
         </div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <img class="float-y" src="assets/hero-bg.svg" alt="" />
+        <img class="float-x avatar" src="assets/avatar.svg" alt="Avatar" />
       </div>
     </section>
   </header>
 
   <main>
-    <section id="about" class="section container">
-      <h2>Perfil</h2>
-      <p>Soy una persona comunicativa, creativa y orientada a resultados. Me adapto rápidamente, disfruto el trabajo en equipo y me apasiona la creación de contenidos digitales con enfoque en audiencias infantiles y juveniles.</p>
-    </section>
-
-    <section id="education" class="section container">
-      <h2>Formación</h2>
-      
-<ul class="timeline">
-  <li>
-    <h4>Ingeniería Multimedia — Universidad Autónoma de Occidente</h4>
-    <p class="meta">Febrero 2021 – En curso</p>
-  </li>
-  <li>
-    <h4>Diplomado Internacional en Producción de Contenidos con Enfoque Diverso para Infancia y Juventud — UAO & Proimágenes Colombia</h4>
-    <p class="meta">Junio 2022 – Diciembre 2022</p>
-    <details>
-      <summary>Ver módulos certificados</summary>
-      <ul>
-        <li>El desarrollo infantil y juvenil y la producción de contenidos audiovisuales</li>
-        <li>Estructuras e idea temática en el guion de ficción corta</li>
-        <li>Maleta Prix Jeunesse</li>
-        <li>Construyendo historias: casos de éxito. El Niño(a) en el centro</li>
-        <li>Principios básicos para una historia para audiencias infantiles y juveniles: ¿Cómo reflejar sus intereses y necesidades?</li>
-        <li>Desarrollando la historia. Guion, libreto, escaleta: ¿Cómo materializar la idea? (Animación)</li>
-        <li>Herramientas de investigación para el acercamiento al público infantil: conocimiento de sus necesidades e intereses</li>
-        <li>Desarrollando la historia. Guion, libreto, escaleta: ¿Cómo materializar la idea? (Ficción – No Ficción – Audiovisual)</li>
-      </ul>
-    </details>
-  </li>
-  <li>
-    <h4>Bachiller Académico — Colegio Los Andes San Fernando</h4>
-    <p class="meta">Julio 2018 – Enero 2021</p>
-  </li>
-</ul>
-
-    </section>
-
-    <section id="skills" class="section container">
-      <h2>Habilidades</h2>
-      <div class="tags"><span class="tag">Comunicación efectiva</span>
-<span class="tag">Generación de ideas</span>
-<span class="tag">Guion y narrativa</span>
-<span class="tag">Producción audiovisual</span>
-<span class="tag">Animación</span>
-<span class="tag">Investigación de audiencias</span>
-<span class="tag">Trabajo en equipo</span>
-<span class="tag">Aprendizaje rápido</span>
-<span class="tag">Inglés (Avanzado)</span></div>
-    </section>
-
-    <section id="cta-portfolio" class="section container card highlight">
-      <div>
-        <h3>Explora mi Portafolios</h3>
-        <p>Animaciones, diseños, modelados, videojuegos y programación: una selección de trabajos y proyectos destacados.</p>
+    <section id="perfil" class="section container grid-2">
+      <div class="card reveal">
+        <h2>Perfil laboral</h2>
+        <p>Persona amable, paciente y comunicativa, con excelentes relaciones interpersonales y aprendizaje rápido. Disfruto los desafíos, trabajo en equipo y bajo presión. Mi misión en cada empleo es cumplir los objetivos de la empresa y del equipo, aportando soluciones creativas y orientadas a resultados.</p>
+        <p class="muted">Enfocado en contenidos digitales para infancia y juventud. Experiencia académica en guion, narrativa, investigación de audiencias, animación y producción audiovisual. Inglés avanzado.</p>
+        <ul class="bullets">
+          <li>Enfoque en infancia y juventud</li>
+          <li>Guion, narrativa y producción audiovisual</li>
+          <li>Trabajo en equipo y cumplimiento de objetivos</li>
+        </ul>
       </div>
-      <a class="btn" href="portfolio.html">Entrar al Portafolios</a>
+      <div class="card reveal-delay">
+        <h2>Datos</h2>
+        <ul class="kv">
+          <li><strong>Ubicación:</strong> Cali, Colombia</li>
+          <li><strong>Teléfono:</strong> +57 301 251 6228</li>
+          <li><strong>Email:</strong> <a href="mailto:juan.jose.osorio.reyes@hotmail.com">juan.jose.osorio.reyes@hotmail.com</a></li>
+          <li><strong>Idiomas:</strong> Inglés (Avanzado)</li>
+        </ul>
+        <a href="portfolio.html" class="btn wide">Explorar Portafolios</a>
+      </div>
     </section>
-  </main>
 
-  <footer id="contact" class="site-footer">
-    <div class="container">
-      <div class="contact-card card">
+    <section id="formacion" class="section container">
+      <h2 class="section-title">Formación</h2>
+      <div class="timeline">
+        <article class="tile reveal">
+          <h3>Ingeniería Multimedia · Universidad Autónoma de Occidente</h3>
+          <p class="meta">Febrero 2021 – En curso</p>
+        </article>
+        <article class="tile reveal-delay">
+          <h3>Diplomado Internacional · Producción de Contenidos con Enfoque Diverso (Infancia y Juventud)</h3>
+          <p class="meta">UAO & Proimágenes Colombia · Junio 2022 – Diciembre 2022</p>
+          <details>
+            <summary>Ver módulos certificados</summary>
+            <ul class="cols-2">
+              <li>El desarrollo infantil y juvenil y la producción de contenidos audiovisuales</li><li>Estructuras e idea temática en el guion de ficción corta</li><li>Maleta Prix Jeunesse</li><li>Construyendo historias: casos de éxito. El Niño(a) en el centro</li><li>Principios básicos para una historia para audiencias infantiles y juveniles: ¿Cómo reflejar sus intereses y necesidades?</li><li>Desarrollando la historia: Guion, libreto, escaleta (Animación)</li><li>Herramientas de investigación para el acercamiento al público infantil</li><li>Desarrollando la historia: Guion, libreto, escaleta (Ficción – No Ficción – Audiovisual)</li>
+            </ul>
+          </details>
+        </article>
+        <article class="tile reveal">
+          <h3>Bachiller Académico · Colegio Los Andes San Fernando</h3>
+          <p class="meta">Julio 2018 – Enero 2021</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="habilidades" class="section container grid-2">
+      <div class="card reveal">
+        <h2>Habilidades técnicas</h2>
+        <div class="tags">
+          <span class="tag">Guion y narrativa</span><span class="tag">Producción audiovisual</span><span class="tag">Animación</span><span class="tag">Investigación de audiencias</span><span class="tag">Edición básica de video</span>
+        </div>
+      </div>
+      <div class="card reveal-delay">
+        <h2>Habilidades blandas</h2>
+        <div class="tags">
+          <span class="tag alt">Comunicación efectiva</span><span class="tag alt">Trabajo en equipo</span><span class="tag alt">Creatividad e innovación</span><span class="tag alt">Gestión del tiempo</span><span class="tag alt">Adaptabilidad</span>
+        </div>
+      </div>
+      <div class="card highlight reveal">
+        <div>
+          <h3>¿Buscas colaboración o prácticas?</h3>
+          <p>Estoy listo para participar en proyectos de contenidos digitales, animación y producción audiovisual.</p>
+        </div>
+        <a href="portfolio.html" class="btn">Ver trabajos</a>
+      </div>
+    </section>
+
+    
+    <section id="certificaciones" class="section container">
+      <h2 class="section-title">Certificaciones del Diplomado</h2>
+      <p class="muted">Haz clic en cada tarjeta para abrir el certificado correspondiente.</p>
+      <div class="cert-grid">
+        <a class="card cert-card" href="assets/diplomado.pdf#page=1" target="_blank" rel="noopener">
+          <img src="assets/cert-1.svg" alt="El desarrollo infantil y juvenil y la producción de contenidos audiovisuales">
+          <div class="pad">
+            <h4>El desarrollo infantil y juvenil y la producción de contenidos audiovisuales</h4>
+            <p class="meta">Diplomado Internacional · UAO & Proimágenes</p>
+          </div>
+        </a>
+<a class="card cert-card" href="assets/diplomado.pdf#page=2" target="_blank" rel="noopener">
+          <img src="assets/cert-2.svg" alt="Estructuras e idea temática en el guion de ficción corta">
+          <div class="pad">
+            <h4>Estructuras e idea temática en el guion de ficción corta</h4>
+            <p class="meta">Diplomado Internacional · UAO & Proimágenes</p>
+          </div>
+        </a>
+<a class="card cert-card" href="assets/diplomado.pdf#page=3" target="_blank" rel="noopener">
+          <img src="assets/cert-3.svg" alt="Maleta Prix Jeunesse">
+          <div class="pad">
+            <h4>Maleta Prix Jeunesse</h4>
+            <p class="meta">Diplomado Internacional · UAO & Proimágenes</p>
+          </div>
+        </a>
+<a class="card cert-card" href="assets/diplomado.pdf#page=4" target="_blank" rel="noopener">
+          <img src="assets/cert-4.svg" alt="Construyendo historias: casos de éxito. El Niño(a) en el centro">
+          <div class="pad">
+            <h4>Construyendo historias: casos de éxito. El Niño(a) en el centro</h4>
+            <p class="meta">Diplomado Internacional · UAO & Proimágenes</p>
+          </div>
+        </a>
+<a class="card cert-card" href="assets/diplomado.pdf#page=5" target="_blank" rel="noopener">
+          <img src="assets/cert-5.svg" alt="Principios básicos para una historia para audiencias infantiles y juveniles">
+          <div class="pad">
+            <h4>Principios básicos para una historia para audiencias infantiles y juveniles</h4>
+            <p class="meta">Diplomado Internacional · UAO & Proimágenes</p>
+          </div>
+        </a>
+<a class="card cert-card" href="assets/diplomado.pdf#page=6" target="_blank" rel="noopener">
+          <img src="assets/cert-6.svg" alt="Desarrollando la historia (Animación)">
+          <div class="pad">
+            <h4>Desarrollando la historia (Animación)</h4>
+            <p class="meta">Diplomado Internacional · UAO & Proimágenes</p>
+          </div>
+        </a>
+<a class="card cert-card" href="assets/diplomado.pdf#page=7" target="_blank" rel="noopener">
+          <img src="assets/cert-7.svg" alt="Herramientas de investigación para el acercamiento al público infantil">
+          <div class="pad">
+            <h4>Herramientas de investigación para el acercamiento al público infantil</h4>
+            <p class="meta">Diplomado Internacional · UAO & Proimágenes</p>
+          </div>
+        </a>
+<a class="card cert-card" href="assets/diplomado.pdf#page=8" target="_blank" rel="noopener">
+          <img src="assets/cert-8.svg" alt="Desarrollando la historia (Ficción – No Ficción – Audiovisual)">
+          <div class="pad">
+            <h4>Desarrollando la historia (Ficción – No Ficción – Audiovisual)</h4>
+            <p class="meta">Diplomado Internacional · UAO & Proimágenes</p>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <section id="contacto" class="section container">
+      <div class="card">
         <h2>Contacto</h2>
-        <p>¿Tienes una oportunidad o un proyecto? ¡Hablemos!</p>
-        <form id="contactForm" class="grid-2">
-          <input type="text" name="nombre" placeholder="Tu nombre" required />
-          <input type="email" name="correo" placeholder="Tu email" required />
+        <form id="contactForm" class="grid-2" method="POST" action="https://formspree.io/f/XXXXXX">
+          <input type="text" name="nombre" placeholder="Tu nombre" required>
+          <input type="email" name="correo" placeholder="Tu email" required>
           <textarea name="mensaje" placeholder="Mensaje" rows="4" required></textarea>
-          <button type="submit" class="btn">Enviar</button>
+          <button class="btn" type="submit">Enviar</button>
         </form>
         <p class="form-result" aria-live="polite"></p>
       </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
       <p class="small">© 2025 Juan José Osorio Reyes. Todos los derechos reservados.</p>
     </div>
   </footer>

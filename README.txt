@@ -1,31 +1,22 @@
 
-# Carpeta: CV + Portafolios — Juan José Osorio Reyes
+# CV + Portafolios (Versión ordenada con animaciones mejoradas) — Juan José Osorio Reyes
 
-Abrir `index.html` en tu navegador para ver el **CV interactivo**.
-Abrir `portfolio.html` para ver el **Portafolios** con galerías por categoría.
+Abrir `index.html` para ver el CV. Abrir `portfolio.html` para el Portafolios.
+- Carpeta `assets/` ya creada con imágenes SVG de ejemplo.
+- Animaciones mejoradas: hero flotante, reveal on scroll, transiciones de tarjetas.
+- Sidebar con filtros y buscador en el Portafolios.
+- Modo claro/oscuro con persistencia.
 
-## Cómo personalizar
-- **Texto del CV**: edita `index.html` (secciones Perfil, Formación y Habilidades).
-- **Habilidades**: busca el contenedor `<div class="tags">` o ajusta la lista en `styles.css` para estilos.
-- **Portafolios**: edita `gallery-data.json`. Cada categoría tiene un campo `description` y una lista `items`.
-  - Reemplaza `thumb` por la ruta de tu imagen (por ejemplo, `assets/mi-render.jpg`).
-  - Cambia `link` para dirigir a un video de YouTube, itch.io, repositorio, etc.
+## Personalización rápida
+- **Perfil laboral** y texto: `index.html` (sección #perfil).
+- **Formación** y módulos del diplomado: `index.html` (sección #formacion).
+- **Habilidades**: editar las listas en `index.html` o añadir más etiquetas.
+- **Galería**: `gallery-data.json`. Cambia `thumb` por tus imágenes reales dentro de `assets/` y `link` por tus URLs.
 
-## Imágenes
-Actualmente se usan **placeholders** (SVG embebidos). Para usar tus imágenes:
-1. Crea la carpeta `assets/` junto a estos archivos.
-2. Copia tus imágenes allí.
-3. Reemplaza el campo `thumb` de cada item en `gallery-data.json` con `assets/tu-imagen.jpg`.
+Sugerencia: reemplaza los SVG por thumbnails JPG/PNG de tus proyectos para una vista más realista.
 
-## Modo claro/oscuro
-Usa el botón 🌓 en el menú para alternar el tema. La preferencia queda guardada en el navegador.
 
-## Estructura
-- `index.html` — CV con hero, perfil, formación, habilidades y contacto.
-- `portfolio.html` — Portafolios con filtros y buscador.
-- `styles.css` — Estilos globales, responsive y accesibles.
-- `main.js` — Interactividad del CV (menú, tema, formulario demo).
-- `portfolio.js` — Interactividad del portafolios (filtros, lightbox).
-- `gallery-data.json` — Datos de las galerías por categoría.
-
-¡Éxitos con tus postulaciones y proyectos!
+## Envío real de formulario (Formspree)
+- Crea un formulario en Formspree y copia el **Form ID** (tiene el formato `/f/abcdxyz`).
+- Abre `index.html` y reemplaza `https://formspree.io/f/XXXXXX` por tu URL real.
+- Los campos `nombre`, `correo`, `mensaje` se enviarán por POST.
