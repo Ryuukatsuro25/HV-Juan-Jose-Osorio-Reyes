@@ -1,44 +1,50 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="no-js">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Juan José Osorio Reyes — CV</title>
-  <meta name="description" content="Hoja de vida digital de Juan José Osorio Reyes. Ingeniería Multimedia. Experiencia, educación, habilidades y proyectos." />
+  <title>Juan José Osorio Reyes — Ingeniero Multimedia</title>
+  <meta name="description" content="CV web de Juan José Osorio Reyes, Ingeniero Multimedia. Experiencia, educación, diplomas, habilidades y proyectos." />
   <meta name="theme-color" content="#0b3d62" />
-  <meta property="og:title" content="Juan José Osorio Reyes — CV" />
-  <meta property="og:description" content="Hoja de vida digital profesional." />
-  <meta property="og:type" content="website" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
 <header class="site-header" role="banner" aria-label="Cabecera">
   <div class="container nav-wrap">
-    <a href="#hero" class="brand" aria-label="Ir a portada">JJ Osorio</a>
+    <a href="#hero" class="brand" aria-label="Ir a portada">JJ·Osorio</a>
     <nav class="main-nav" role="navigation" aria-label="Navegación principal">
       <a href="#bio">Resumen</a>
       <a href="#experience">Experiencia</a>
       <a href="#education">Educación</a>
       <a href="#diplomas">Diplomas</a>
       <a href="#skills">Habilidades</a>
-      <a href="#projects">Proyectos</a>
+      <a href="#projects">Portafolio</a>
       <a href="#contact">Contacto</a>
     </nav>
+    <button id="themeToggle" class="icon-btn" aria-label="Cambiar tema">🌗</button>
   </div>
 </header>
 
 <main id="hero" class="hero" tabindex="-1">
+  <div class="hero-bg" aria-hidden="true">
+    <span class="blob b1"></span>
+    <span class="blob b2"></span>
+    <span class="grid"></span>
+  </div>
   <div class="container hero-grid">
-    <img src="assets/img/profile.jpg" alt="Foto profesional de Juan José Osorio Reyes" class="avatar"/>
-    <div>
-      <h1>Juan José Osorio Reyes</h1>
-      <p class="subtitle">Ingeniería Multimedia</p>
-      <p class="tagline">Transformo ideas en experiencias digitales claras y útiles.</p>
-      <div class="cta-row">
-        <a class="btn" href="assets/CV-Juan-Jose-Osorio-Reyes.pdf" target="_blank" rel="noopener" aria-label="Abrir CV en PDF">Descargar CV (PDF)</a>
+    <div class="hero-card reveal">
+      <img src="assets/img/profile.jpg" alt="Foto profesional de Juan José Osorio Reyes" class="avatar"/>
+      <div>
+        <h1 class="display">Juan José Osorio Reyes</h1>
+        <p class="subtitle">Ingeniero Multimedia</p>
+        <p class="tagline">Experiencias digitales <strong>claras</strong>, <strong>útiles</strong> y <strong>memorables</strong>.</p>
+        <div class="cta-row">
+          <a class="btn primary" href="assets/CV-Juan-Jose-Osorio-Reyes.pdf" target="_blank" rel="noopener" aria-label="Abrir CV en PDF">Descargar CV (PDF)</a>
+          <a class="btn ghost" href="#projects">Ver Portafolio</a>
+        </div>
       </div>
     </div>
   </div>
@@ -46,84 +52,133 @@
 
 <section id="bio" class="section">
   <div class="container">
-    <h2>Resumen Ejecutivo</h2>
-    <p>Soy una persona creativa, responsable y apasionada por el mundo digital. Me caracterizo por tener habilidades de comunicación, aprendizaje rápido y trabajo en equipo. Me motiva enfrentar nuevos retos y transformar ideas en proyectos innovadores. Mi objetivo es aportar valor en cada proyecto, alcanzando las metas propuestas con compromiso y calidad.</p>
+    <h2 class="section-title">Resumen Ejecutivo</h2>
+    <div class="card lead reveal">
+      <p>Soy Ingeniero Multimedia con enfoque en concepción y entrega de productos digitales. Combino criterio visual, narrativa, interacción y desempeño técnico para llevar ideas a interfaces claras y de alto impacto. Me mueven los retos y la mejora continua.</p>
+    </div>
   </div>
 </section>
 
-<section id="experience" class="section">
+<section id="experience" class="section alt">
   <div class="container">
-    <h2>Experiencia Laboral</h2>
-    <article class="job">
-      <header>
-        <h3>Rol / Puesto</h3>
-        <div class="meta">Empresa · Mes/Año – Mes/Año</div>
-      </header>
-      <ul>
-        <li>Logro o responsabilidad cuantificable #1.</li>
-        <li>Logro o responsabilidad #2 con impacto.</li>
-        <li>Logro o responsabilidad #3.</li>
-      </ul>
-    </article>
+    <h2 class="section-title">Experiencia</h2>
+    <div class="timeline">
+      <article class="tl-item reveal">
+        <div class="tl-dot"></div>
+        <header class="tl-head">
+          <h3>Rol / Puesto</h3>
+          <span class="meta">Empresa · Mes/Año – Mes/Año</span>
+        </header>
+        <ul class="tl-body">
+          <li>Diseñé e implementé interfaz y microinteracciones, elevando el tiempo de permanencia en 18%.</li>
+          <li>Optimicé rendimiento percibido y accesibilidad (WCAG AA).</li>
+          <li>Coordiné QA funcional y visual con equipo multidisciplinar.</li>
+        </ul>
+      </article>
+      <article class="tl-item reveal">
+        <div class="tl-dot"></div>
+        <header class="tl-head">
+          <h3>Rol / Puesto</h3>
+          <span class="meta">Empresa · Mes/Año – Mes/Año</span>
+        </header>
+        <ul class="tl-body">
+          <li>Prototipos interactivos y handoff a devs en tiempos ajustados.</li>
+          <li>Uso de métricas para iterar (embudos, mapas de calor).</li>
+        </ul>
+      </article>
+    </div>
   </div>
 </section>
 
-<section id="education" class="section alt">
+<section id="education" class="section">
   <div class="container">
-    <h2>Educación</h2>
-    <ul class="edu-list">
-      <li>
-        <strong>Ingeniería Multimedia</strong> — U. Autónoma de Occidente
-        <span class="time">Feb 2021 – En curso</span>
-      </li>
-      <li>
-        <strong>Bachiller Académico</strong> — Colegio los Andes San Fernando
-        <span class="time">Jul 2018 – Ene 2021</span>
-      </li>
-    </ul>
+    <h2 class="section-title">Educación</h2>
+    <div class="grid cards">
+      <article class="card reveal">
+        <h3>Ingeniería Multimedia</h3>
+        <p class="muted">U. Autónoma de Occidente · <span class="tag">Feb 2021 – En curso</span></p>
+      </article>
+      <article class="card reveal">
+        <h3>Bachiller Académico</h3>
+        <p class="muted">Colegio los Andes San Fernando · <span class="tag">Jul 2018 – Ene 2021</span></p>
+      </article>
+    </div>
   </div>
 </section>
 
-<section id="diplomas" class="section">
+<section id="diplomas" class="section alt">
   <div class="container">
-    <h2>Diplomas y Cursos</h2>
-    <div id="diploma-grid" class="grid"></div>
-    <p class="hint">Para actualizar, reemplace/añada archivos en <code>assets/diplomas/</code> y edite <code>data/diplomas.json</code> si desea títulos/fechas.</p>
+    <h2 class="section-title">Diplomas y Cursos</h2>
+    <div id="diploma-grid" class="grid tiles"></div>
+    <p class="hint">Agrega o edita archivos en <code>assets/diplomas/</code>. Ajusta títulos/fechas en <code>data/diplomas.json</code>.</p>
   </div>
   <div id="lightbox" class="lightbox" aria-hidden="true" role="dialog" aria-label="Vista de diploma">
     <button class="lightbox-close" aria-label="Cerrar ventana">×</button>
-    <div class="lightbox-body">
+    <div class="lightbox-body glass">
       <img id="lightbox-img" alt="" />
       <iframe id="lightbox-pdf" title="Diploma PDF" loading="lazy"></iframe>
     </div>
   </div>
 </section>
 
-<section id="skills" class="section alt">
+<section id="skills" class="section">
   <div class="container">
-    <h2>Habilidades</h2>
-    <div class="chip-row" role="list" aria-label="Habilidades">
-      <span class="chip" role="listitem">Comunicación</span>
-      <span class="chip" role="listitem">Generación de ideas</span>
-      <span class="chip" role="listitem">Trabajo en equipo</span>
+    <h2 class="section-title">Habilidades</h2>
+    <div class="grid skill-grid">
+      <article class="card reveal">
+        <h3>Core</h3>
+        <div class="badge-row" role="list">
+          <span class="badge" role="listitem">Diseño UI</span>
+          <span class="badge" role="listitem">Prototipado</span>
+          <span class="badge" role="listitem">Interacción</span>
+          <span class="badge" role="listitem">Accesibilidad</span>
+        </div>
+      </article>
+      <article class="card reveal">
+        <h3>Técnicas</h3>
+        <div class="bars">
+          <div class="bar"><span>HTML/CSS</span><i style="--val:90%"></i></div>
+          <div class="bar"><span>JavaScript</span><i style="--val:80%"></i></div>
+          <div class="bar"><span>Figma/Prototipos</span><i style="--val:85%"></i></div>
+        </div>
+      </article>
+      <article class="card reveal">
+        <h3>Blandas</h3>
+        <div class="badge-row">
+          <span class="badge">Comunicación</span>
+          <span class="badge">Trabajo en equipo</span>
+          <span class="badge">Creatividad</span>
+          <span class="badge">Aprendizaje rápido</span>
+        </div>
+      </article>
     </div>
   </div>
 </section>
 
-<section id="projects" class="section">
+<section id="projects" class="section alt">
   <div class="container">
-    <h2>Portafolio</h2>
-    <div class="grid cards">
-      <article class="card">
+    <h2 class="section-title">Portafolio</h2>
+    <div class="grid cards portfolio">
+      <article class="card hoverable reveal">
+        <div class="cover"></div>
         <h3>Proyecto 1</h3>
         <p>Descripción breve del proyecto, objetivo y resultado.</p>
         <a class="card-link" href="https://github.com/" target="_blank" rel="noopener" aria-label="Ver código en GitHub">
           <img src="assets/icons/github.svg" alt="" class="icon" /> GitHub
         </a>
       </article>
-      <article class="card">
+      <article class="card hoverable reveal">
+        <div class="cover"></div>
         <h3>Proyecto 2</h3>
         <p>Descripción breve del proyecto, objetivo y resultado.</p>
+        <a class="card-link" href="https://github.com/" target="_blank" rel="noopener" aria-label="Ver código en GitHub">
+          <img src="assets/icons/github.svg" alt="" class="icon" /> GitHub
+        </a>
+      </article>
+      <article class="card hoverable reveal">
+        <div class="cover"></div>
+        <h3>Proyecto 3</h3>
+        <p>Otro resultado destacado con métricas.</p>
         <a class="card-link" href="https://github.com/" target="_blank" rel="noopener" aria-label="Ver código en GitHub">
           <img src="assets/icons/github.svg" alt="" class="icon" /> GitHub
         </a>
@@ -132,27 +187,29 @@
   </div>
 </section>
 
-<section id="contact" class="section alt">
+<section id="contact" class="section">
   <div class="container">
-    <h2>Contacto</h2>
-    <ul class="contact-list">
-      <li><a href="mailto:juan.jose.osorio.reyes@hotmail.com" target="_blank" rel="noopener">juan.jose.osorio.reyes@hotmail.com</a></li>
-      <li><a href="https://www.linkedin.com/in/" target="_blank" rel="noopener" aria-label="LinkedIn">
-        <img src="assets/icons/linkedin.svg" class="icon" alt="" /> LinkedIn
-      </a></li>
-      <li><a href="https://github.com/" target="_blank" rel="noopener" aria-label="GitHub">
-        <img src="assets/icons/github.svg" class="icon" alt="" /> GitHub
-      </a></li>
-    </ul>
+    <h2 class="section-title">Contacto</h2>
+    <div class="card reveal">
+      <ul class="contact-list">
+        <li><a href="mailto:juan.jose.osorio.reyes@hotmail.com" target="_blank" rel="noopener">juan.jose.osorio.reyes@hotmail.com</a></li>
+        <li><a href="https://www.linkedin.com/in/" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <img src="assets/icons/linkedin.svg" class="icon" alt="" /> LinkedIn
+        </a></li>
+        <li><a href="https://github.com/" target="_blank" rel="noopener" aria-label="GitHub">
+          <img src="assets/icons/github.svg" class="icon" alt="" /> GitHub
+        </a></li>
+      </ul>
+    </div>
   </div>
 </section>
 
 <footer class="site-footer">
   <div class="container">
-    <small>© <span id="year"></span> Juan José Osorio Reyes. Todos los derechos reservados.</small>
+    <small>© <span id="year"></span> Juan José Osorio Reyes · Ingeniero Multimedia</small>
     <nav class="footer-nav">
       <a href="#hero">Inicio</a>
-      <a href="#projects">Proyectos</a>
+      <a href="#projects">Portafolio</a>
       <a href="#contact">Contacto</a>
     </nav>
   </div>
