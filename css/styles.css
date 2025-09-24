@@ -204,3 +204,12 @@ body{
   .btn, .card-link, .reveal{transition:none}
   .btn:hover, .card-link:hover{transform:none}
 }
+/* ==== FIX: permitir clics en los enlaces del portafolio ==== */
+.portfolio .cover{
+  pointer-events: none; /* no bloquear los clics */
+}
+/* opcional: asegura que el contenido quede encima visualmente */
+.portfolio .card > *:not(.cover){
+  position: relative;
+  z-index: 1;
+}
