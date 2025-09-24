@@ -127,3 +127,9 @@ body{
   .display{font-size:1.8rem}
   .main-nav{display:none}
 }
+
+
+/* --- Fix icon sizing (avoid huge SVGs) --- */
+.icon{width:20px;height:20px;vertical-align:middle;display:inline-block}
+.contact-list .icon{width:18px;height:18px}
+.card img.icon{max-width:none}
