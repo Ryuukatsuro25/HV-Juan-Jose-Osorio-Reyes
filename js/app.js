@@ -6,7 +6,7 @@ document.documentElement.classList.remove('no-js');
 // Year
 $("#year") && ($("#year").textContent = new Date().getFullYear());
 
-// Theme toggle (persisted)
+// Theme
 const root = document.documentElement;
 const savedTheme = localStorage.getItem('theme');
 if(savedTheme){ root.classList.toggle('light', savedTheme === 'light'); }
@@ -15,50 +15,43 @@ $("#themeToggle")?.addEventListener('click', ()=>{
   localStorage.setItem('theme', isLight ? 'light' : 'dark');
 });
 
-// Mobile menu
-const menu = $("#mainNav");
-const menuBtn = $("#menuToggle");
-if(menu && menuBtn){
-  const closeMenu = () => { menu.classList.remove('open'); menuBtn.setAttribute('aria-expanded', 'false'); };
-  const openMenu  = () => { menu.classList.add('open'); menuBtn.setAttribute('aria-expanded', 'true'); };
-  menuBtn.addEventListener('click', ()=>{
-    const open = menu.classList.toggle('open');
-    menuBtn.setAttribute('aria-expanded', String(open));
-  });
-  // Close on link click
-  menu.addEventListener('click', (e)=>{
-    if(e.target.tagName.toLowerCase() === 'a'){ closeMenu(); }
-  });
-  // Close on escape
-  window.addEventListener('keydown', (e)=>{ if(e.key === 'Escape') closeMenu(); });
-}
-
 // Reveal on scroll
-const io = ('IntersectionObserver' in window) ? new IntersectionObserver((entries)=>{
-  entries.forEach(en=>{ if(en.isIntersecting){ en.target.classList.add('visible'); io.unobserve(en.target); } });
-}, { rootMargin: '0px 0px -10% 0px' }) : null;
-if(io){ $$('.reveal').forEach(el=>io.observe(el)); } else { $$('.reveal').forEach(el=>el.classList.add('visible')); }
+const io = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if(e.isIntersecting){
+      e.target.classList.add('show');
+      io.unobserve(e.target);
+    }
+  });
+}, { threshold: .15 });
+$$('.reveal').forEach(el => io.observe(el));
 
-// Diplomas loader
+// Diplomas
 async function loadDiplomas(){
   try{
-    const res = await fetch('data/diplomas.json');
+    const res = await fetch('data/diplomas.json', {cache:'no-store'});
     const list = await res.json();
-    const wrap = $("#diplomasGrid");
-    if(!wrap) return;
-    list.forEach(item=>{
+    const wrap = $("#diploma-grid");
+    wrap.innerHTML = '';
+    list.forEach(item => {
       const tile = document.createElement('article');
-      tile.className = 'diploma-tile reveal';
+      tile.className = 'tile hoverable reveal';
       tile.innerHTML = `
-        <div class="thumb" aria-hidden="true"></div>
+        <img src="${item.thumb}" alt="Miniatura de ${item.title}">
         <div>
-          <div class="title">${item.title || 'Diploma'}</div>
-          <div class="meta">${item.year || ''}</div>
+          <div class="title">${item.title}</div>
+          <div class="meta">${item.institution || ''} ${item.date ? '· '+item.date : ''}</div>
+          <div style="margin-top:6px">
+            <a class="card-link" href="${item.file}" target="_blank" rel="noopener">Abrir</a>
+          </div>
         </div>
       `;
-      tile.addEventListener('click', ()=> openLightbox(item));
+      tile.addEventListener('click', (e)=>{
+        if(e.target.tagName.toLowerCase() === 'a') return;
+        openLightbox(item);
+      });
       wrap.appendChild(tile);
-      io && io.observe(tile);
+      io.observe(tile);
     });
   }catch(e){
     console.error('Error cargando diplomas', e);
@@ -68,17 +61,28 @@ async function loadDiplomas(){
 function openLightbox(item){
   const box = $("#lightbox");
   const img = $("#lightbox-img");
-  const link = $("#lightbox-link");
-  if(!box || !img || !link) return;
-  // Use the PDF directly; thumbnails could be added later.
-  img.src = 'assets/icons/pdf.svg';
-  link.href = item.file;
-  box.showModal();
+  const pdf = $("#lightbox-pdf");
+  img.style.display = 'none';
+  pdf.style.display = 'none';
+
+  if((item.type||'').toLowerCase() === 'image'){
+    img.src = item.file;
+    img.alt = item.title;
+    img.style.display = 'block';
+  }else{
+    pdf.src = item.file;
+    pdf.style.display = 'block';
+  }
+  box.classList.add('show');
+  box.setAttribute('aria-hidden','false');
 }
 
-$("#lightboxClose")?.addEventListener('click', ()=> $("#lightbox")?.close());
-document.addEventListener('keydown', (e)=>{
-  if(e.key === 'Escape'){ $("#lightbox")?.close(); }
+$(".lightbox-close")?.addEventListener('click', ()=>{
+  const box = $("#lightbox");
+  $("#lightbox-img").src = '';
+  $("#lightbox-pdf").src = '';
+  box.classList.remove('show');
+  box.setAttribute('aria-hidden','true');
 });
 
 loadDiplomas();
