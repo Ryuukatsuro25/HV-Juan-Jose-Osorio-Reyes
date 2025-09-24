@@ -1,55 +1,83 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>CV — Juan José Osorio Reyes</title>
-  <link rel="stylesheet" href="styles.css" />
+  <meta name="description" content="Currículum de Juan José Osorio Reyes." />
+  <link rel="canonical" href="https://tu-dominio.com/cv.html" />
+  <link rel="icon" href="/icons/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/css/styles.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <meta name="theme-color" content="#0f1115">
 </head>
 <body>
   <header class="header">
     <div class="container nav">
-      <a class="brand" href="index.html">JJOR</a>
-      <nav class="nav-links">
-        <a href="index.html#sobre-mi">Sobre mí</a>
-        <a href="index.html#habilidades">Habilidades</a>
-        <a href="index.html#proyectos">Proyectos</a>
-        <a href="index.html#formacion">Formación</a>
-        <a href="index.html#contacto">Contacto</a>
+      <a class="brand" href="/index.html">JJOR</a>
+      <nav class="nav-links" id="navLinks" aria-label="Navegación principal">
+        <a href="/index.html#sobre-mi">Sobre mí</a>
+        <a href="/index.html#proyectos">Proyectos</a>
+        <a href="/index.html#contacto">Contacto</a>
       </nav>
+      <div class="actions">
+        <a class="btn" href="#" onclick="window.print();return false;">Imprimir PDF</a>
+      </div>
     </div>
   </header>
-
   <main class="section">
-    <div class="container">
-      <h1>Currículum Vitae</h1>
-      <p class="muted">Aquí puedes visualizar y descargar tu CV. Reemplaza el archivo PDF cuando lo tengas listo.</p>
-
-      <div class="cv-actions">
-        <a class="btn primary" href="assets/CV_Juan_Jose_Osorio_Reyes.pdf" download>Descargar PDF (cuando esté)</a>
-        <a class="btn ghost" href="../CV_Juan_Jose_Osorio_Reyes.docx" download>Descargar DOCX actual</a>
-      </div>
-
-      <div class="cv-viewer">
-        <div class="placeholder-pdf">
-          <p>📄 Vista previa del CV (PDF). Coloca tu archivo en <code>/assets/CV_Juan_Jose_Osorio_Reyes.pdf</code>.</p>
-        </div>
-      </div>
+    <div class="container cv-grid">
+      <aside class="cv-aside">
+        <img src="/assets/foto.svg" alt="Foto de Juan José Osorio Reyes" loading="lazy" width="240" height="240" style="width:100%; border-radius:16px; border:1px solid var(--stroke); background:var(--card)">
+        <h2>Juan José Osorio Reyes</h2>
+        <p><strong>Ingeniería Multimedia / Desarrollo web</strong></p>
+        <p>Cali, Colombia · <a href="mailto:juan.jose.osorio.reyes@hotmail.com">juan.jose.osorio.reyes@hotmail.com</a></p>
+        <p>
+          <a href="https://www.linkedin.com/in/tu-user/" target="_blank" rel="noopener">LinkedIn</a> ·
+          <a href="https://github.com/tu-user" target="_blank" rel="noopener">GitHub</a>
+        </p>
+        <h3>Habilidades</h3>
+        <ul>
+          <li>HTML, CSS, JS</li>
+          <li>React (básico/intermedio)</li>
+          <li>Accesibilidad, SEO, rendimiento</li>
+          <li>Edición y animación 2D</li>
+        </ul>
+        <h3>Idiomas</h3>
+        <ul><li>Español (nativo)</li><li>Inglés (intermedio)</li></ul>
+      </aside>
+      <article class="cv-main">
+        <section>
+          <h2>Perfil</h2>
+          <p>Desarrollador web con base en ingeniería multimedia. Me enfoco en interfaces accesibles, rápidas y visualmente consistentes.</p>
+        </section>
+        <section>
+          <h2>Experiencia</h2>
+          <h3>Freelance — Frontend / Multimedia <small>(2022–Presente)</small></h3>
+          <ul>
+            <li>Desarrollé landings y micrositios con 90+ en Lighthouse.</li>
+            <li>Implementé prácticas AA de accesibilidad (focus, etiquetas, jerarquía correcta).</li>
+            <li>Edición y animación para campañas digitales.</li>
+          </ul>
+        </section>
+        <section>
+          <h2>Educación</h2>
+          <p><strong>Ingeniería Multimedia</strong> — Universidad (2019–2024)</p>
+        </section>
+        <section>
+          <h2>Proyectos destacados</h2>
+          <ul>
+            <li><strong>Landing X:</strong> optimización de rendimiento, métricas: +35% retención.</li>
+            <li><strong>Motion Y:</strong> animación educativa, +100k vistas.</li>
+          </ul>
+        </section>
+      </article>
     </div>
   </main>
-
   <footer class="footer">
-    <div class="container foot">
-      <p>© <span id="year"></span> Juan José Osorio Reyes – Portafolio</p>
-      <a class="tiny" href="index.html">Inicio</a>
-    </div>
+    <div class="container">© JJOR — CV</div>
   </footer>
-
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
 </body>
 </html>

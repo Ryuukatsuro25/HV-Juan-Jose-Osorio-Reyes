@@ -1,222 +1,175 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Juan José Osorio Reyes — Portafolio</title>
-  <meta name="description" content="Portafolio web de Juan José Osorio Reyes: ingeniería multimedia, desarrollo web, edición y animación." />
+  <meta name="description" content="Portafolio de Juan José Osorio Reyes: ingeniería multimedia, desarrollo web, edición y animación." />
+  <link rel="canonical" href="https://tu-dominio.com/" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css" />
-  <script defer src="script.js"></script>
+  <meta name="theme-color" content="#0f1115" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#f7f9fc" media="(prefers-color-scheme: light)">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Juan José Osorio Reyes — Portafolio">
+  <meta property="og:description" content="Ingeniería multimedia, desarrollo web, edición y animación.">
+  <meta property="og:image" content="https://tu-dominio.com/assets/cover.svg">
+  <meta property="og:url" content="https://tu-dominio.com/">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="/icons/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script defer src="/js/script.js"></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Juan José Osorio Reyes",
+    "jobTitle": "Ingeniería Multimedia / Desarrollador Web",
+    "email": "mailto:juan.jose.osorio.reyes@hotmail.com",
+    "address": {"@type": "PostalAddress", "addressLocality": "Cali", "addressCountry": "CO"},
+    "url": "https://tu-dominio.com/",
+    "sameAs": [
+      "https://www.linkedin.com/in/tu-user",
+      "https://github.com/tu-user",
+      "https://www.behance.net/tu-user"
+    ]
+  }
+  </script>
 </head>
 <body>
+  <a class="skip-link" href="#contenido">Saltar al contenido principal</a>
   <header class="header">
     <div class="container nav">
-      <a class="brand" href="#hero">JJOR</a>
-      <nav class="nav-links" id="navLinks">
+      <a class="brand" href="#hero" aria-label="Inicio">JJOR</a>
+      <nav class="nav-links" id="navLinks" aria-label="Navegación principal">
         <a href="#sobre-mi">Sobre mí</a>
         <a href="#habilidades">Habilidades</a>
         <a href="#proyectos">Proyectos</a>
         <a href="#formacion">Formación</a>
         <a href="#contacto">Contacto</a>
-        <a class="cv-pill" href="cv.html">Ver CV</a>
+        <a class="cv-pill" href="/cv.html">Ver CV</a>
       </nav>
       <div class="actions">
         <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema">🌓</button>
-        <button class="hamburger" id="hamburger" aria-label="Abrir menú">☰</button>
+        <button class="hamburger" id="hamburger" aria-label="Abrir menú" aria-controls="navLinks" aria-expanded="false">☰</button>
       </div>
     </div>
   </header>
-
-  <section class="hero" id="hero">
-    <div class="container grid-2">
-      <div class="hero-copy">
-        <h1><span class="hi">Hola, soy</span><br/>Juan José Osorio Reyes</h1>
-        <p class="subtitle">Ingeniería Multimedia · Desarrollo Web · Edición & Animación</p>
-        <div class="cta">
-          <a class="btn primary" href="#proyectos">Ver proyectos</a>
-          <a class="btn ghost" href="cv.html">Descargar CV</a>
-        </div>
-        <ul class="quickfacts">
-          <li>📍 Cali, Colombia</li>
-          <li>📧 juan.jose.osorio.reyes@hotmail.com</li>
-          <li>📱 3012516228</li>
-        </ul>
-      </div>
-      <div class="hero-card">
-        <div class="profile-card">
-          <div class="avatar">
-            <img src="assets/foto.jpg" alt="Foto de Juan José Osorio Reyes">
+  <main id="contenido">
+    <section id="hero" class="section">
+      <div class="container hero">
+        <div class="will-reveal">
+          <h1>Hola, soy Juan José<br> <span style="color:var(--brand)">Ingeniería Multimedia</span> & desarrollo web</h1>
+          <p>Creo experiencias digitales nítidas y accesibles, desde landing pages rápidas hasta interfaces web animadas y edición/animación audiovisual.</p>
+          <div class="cta" style="margin-top:16px">
+            <a class="btn primary" href="mailto:juan.jose.osorio.reyes@hotmail.com?subject=Contacto%20desde%20portafolio">Escríbeme</a>
+            <a class="btn ghost" target="_blank" rel="noopener" href="https://www.linkedin.com/in/tu-user/">LinkedIn</a>
+            <a class="btn ghost" target="_blank" rel="noopener" href="https://github.com/tu-user">GitHub</a>
           </div>
-          <div class="dots" aria-hidden="true"></div>
-          <h3>Portafolio Interactivo</h3>
-          <p>Explora mis proyectos de edición de video, animación, desarrollo web y branding.</p>
-          <a class="btn small" href="#proyectos">Explorar</a>
+        </div>
+        <div class="will-reveal">
+          <img class="avatar" src="/assets/foto.svg" alt="Retrato ilustrado de Juan José Osorio Reyes" loading="lazy" width="480" height="480">
         </div>
       </div>
-    </div>
-    <a class="scroll-indicator" href="#sobre-mi">▼</a>
-  </section>
-
-  <main>
+    </section>
     <section id="sobre-mi" class="section">
-      <div class="container">
+      <div class="container will-reveal">
         <h2>Sobre mí</h2>
-        <p>
-          Soy una persona comunicativa, paciente y orientada al trabajo en equipo. Estudiante de Ingeniería Multimedia
-          con interés en telecomunicaciones, desarrollo web y producción de contenidos digitales. He realizado proyectos
-          freelance de edición de video, animación y diseño de identidad visual.
-        </p>
+        <p>Apasionado por el performance y la accesibilidad. Me gusta combinar código y diseño para contar historias y resolver problemas reales. Trabajo con HTML/CSS/JS, React y edición/animación.</p>
       </div>
     </section>
-
-    <section id="habilidades" class="section alt">
-      <div class="container">
+    <section id="habilidades" class="section">
+      <div class="container will-reveal">
         <h2>Habilidades</h2>
-        <div class="chips">
-          <span class="chip">HTML</span>
-          <span class="chip">CSS</span>
-          <span class="chip">JavaScript</span>
-          <span class="chip">Python</span>
-          <span class="chip">Premiere Pro</span>
-          <span class="chip">After Effects</span>
-          <span class="chip">Photoshop</span>
-          <span class="chip">Illustrator</span>
-          <span class="chip">Adobe XD</span>
-          <span class="chip">Pro Tools</span>
-          <span class="chip">Blender</span>
-          <span class="chip">Figma</span>
-        </div>
-
-        <div class="skills-grid">
-          <div class="skill">
-            <div class="skill-top"><span>Desarrollo Web</span><span class="val">Intermedio</span></div>
-            <div class="bar"><span style="width: 70%"></span></div>
-          </div>
-          <div class="skill">
-            <div class="skill-top"><span>Edición & Post</span><span class="val">Intermedio/Avanzado</span></div>
-            <div class="bar"><span style="width: 80%"></span></div>
-          </div>
-          <div class="skill">
-            <div class="skill-top"><span>Animación 2D/3D</span><span class="val">Intermedio</span></div>
-            <div class="bar"><span style="width: 65%"></span></div>
-          </div>
-          <div class="skill">
-            <div class="skill-top"><span>Branding</span><span class="val">Intermedio</span></div>
-            <div class="bar"><span style="width: 70%"></span></div>
-          </div>
+        <div class="skills">
+          <div class="skill">HTML5 / Semántica</div>
+          <div class="skill">CSS3 / Responsive / Animaciones</div>
+          <div class="skill">JavaScript (ES6+)</div>
+          <div class="skill">React (básico/intermedio)</div>
+          <div class="skill">Performance (Lighthouse)</div>
+          <div class="skill">Edición / Animación</div>
         </div>
       </div>
     </section>
-
     <section id="proyectos" class="section">
       <div class="container">
-        <div class="section-head">
-          <h2>Proyectos</h2>
-          <div class="filters" role="tablist" aria-label="Filtrar proyectos">
-            <button class="filter active" data-filter="all">Todos</button>
-            <button class="filter" data-filter="web">Web</button>
-            <button class="filter" data-filter="video">Video</button>
-            <button class="filter" data-filter="branding">Branding</button>
+        <h2 class="will-reveal">Proyectos</h2>
+        <div class="filters will-reveal" role="tablist" aria-label="Filtrar proyectos">
+          <button class="filter active" role="tab" aria-selected="true" data-filter="all">Todos</button>
+          <button class="filter" role="tab" aria-selected="false" data-filter="web">Web</button>
+          <button class="filter" role="tab" aria-selected="false" data-filter="video">Video</button>
+          <button class="filter" role="tab" aria-selected="false" data-filter="branding">Branding</button>
+        </div>
+        <div class="projects">
+          <article class="project will-reveal" data-type="web">
+            <img src="/assets/cover.svg" alt="Mockup del proyecto Landing X" loading="lazy" width="640" height="360">
+            <div class="p-body">
+              <h3>Landing X</h3>
+              <p>Landing optimizada (90+ Lighthouse). Rol: Frontend.</p>
+              <div class="cta">
+                <a class="btn" target="_blank" rel="noopener" href="#">Ver demo</a>
+                <a class="btn" target="_blank" rel="noopener" href="#">Mira el código</a>
+              </div>
+            </div>
+          </article>
+          <article class="project will-reveal" data-type="video">
+            <img src="/assets/cover.svg" alt="Miniatura de video Motion Y" loading="lazy" width="640" height="360">
+            <div class="p-body">
+              <h3>Motion Y</h3>
+              <p>Edición y animación 2D para marca educativa.</p>
+              <div class="cta">
+                <a class="btn" target="_blank" rel="noopener" href="#">Ver video</a>
+              </div>
+            </div>
+          </article>
+          <article class="project will-reveal" data-type="branding">
+            <img src="/assets/cover.svg" alt="Branding Z: logotipo y sistema visual" loading="lazy" width="640" height="360">
+            <div class="p-body">
+              <h3>Branding Z</h3>
+              <p>Identidad visual y guía de estilo.</p>
+              <div class="cta">
+                <a class="btn" target="_blank" rel="noopener" href="#">Caso</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section id="formacion" class="section">
+      <div class="container will-reveal">
+        <h2>Formación</h2>
+        <div class="grid-3">
+          <div class="card">
+            <strong>Ingeniería Multimedia</strong><br>
+            <span>Universidad — 2019–2024</span>
+          </div>
+          <div class="card">
+            <strong>Curso Frontend Accesible</strong><br>
+            <span>2023</span>
+          </div>
+          <div class="card">
+            <strong>Edición y Motion</strong><br>
+            <span>2022</span>
           </div>
         </div>
-
-        <div class="cards" id="projectCards">
-          <article class="card project" data-type="web">
-            <div class="card-media placeholder">App</div>
-            <div class="card-body">
-              <h3>Calculadora de Notas (Web)</h3>
-              <p>Herramienta online para calcular promedios académicos con enfoque en usabilidad.</p>
-              <ul class="tags">
-                <li>HTML</li><li>CSS</li><li>JavaScript</li>
-              </ul>
-              <div class="card-cta">
-                <a href="#" class="btn small">Demo (próximamente)</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="card project" data-type="video">
-            <div class="card-media placeholder">Video</div>
-            <div class="card-body">
-              <h3>Video de Grado Personalizado</h3>
-              <p>Edición y montaje con narrativa audiovisual, tratamiento de audio e imágenes.</p>
-              <ul class="tags">
-                <li>Premiere</li><li>After Effects</li><li>Pro Tools</li>
-              </ul>
-              <div class="card-cta">
-                <a href="#" class="btn small">Ver clip (próximamente)</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="card project" data-type="branding">
-            <div class="card-media placeholder">Logo</div>
-            <div class="card-body">
-              <h3>Logotipos para Emprendimiento</h3>
-              <p>Identidad visual con piezas para redes sociales y presentaciones.</p>
-              <ul class="tags">
-                <li>Illustrator</li><li>Photoshop</li><li>Figma</li>
-              </ul>
-              <div class="card-cta">
-                <a href="#" class="btn small">Ver galería (próximamente)</a>
-              </div>
-            </div>
-          </article>
-        </div>
       </div>
     </section>
-
-    <section id="formacion" class="section alt">
-      <div class="container">
-        <h2>Formación</h2>
-        <ul class="timeline">
-          <li>
-            <h4>Ingeniería Multimedia</h4>
-            <p>Universidad Autónoma de Occidente (2021 – En curso)</p>
-          </li>
-          <li>
-            <h4>Diplomado Internacional — Producción de contenidos con enfoque diverso (2022)</h4>
-            <p>UAO – Proimágenes Colombia • Módulos: guion de ficción y animación, desarrollo infantil y juvenil, investigación de audiencias, Maleta Prix Jeunesse, entre otros.</p>
-          </li>
-          <li>
-            <h4>Bachiller Académico</h4>
-            <p>Colegio Los Andes San Fernando (2018 – 2021)</p>
-          </li>
-        </ul>
-        <a class="btn ghost" href="cv.html">Ver CV completo</a>
-      </div>
-    </section>
-
     <section id="contacto" class="section">
-      <div class="container">
+      <div class="container will-reveal">
         <h2>Contacto</h2>
-        <p>¿Te interesa colaborar o contratar un proyecto? Escríbeme:</p>
-        <div class="contact-grid">
-          <a class="contact-card" href="mailto:juan.jose.osorio.reyes@hotmail.com">
-            <span class="icon">✉️</span>
-            <span class="label">Correo</span>
-            <span class="value">juan.jose.osorio.reyes@hotmail.com</span>
-          </a>
-          <a class="contact-card" href="tel:+573012516228">
-            <span class="icon">📱</span>
-            <span class="label">Teléfono</span>
-            <span class="value">(+57) 301 251 6228</span>
-          </a>
+        <p>¿Tienes un proyecto? Hablemos.</p>
+        <div class="cta">
+          <a class="btn primary" href="mailto:juan.jose.osorio.reyes@hotmail.com?subject=Contacto%20desde%20portafolio">Escríbeme</a>
+          <a class="btn ghost" target="_blank" rel="noopener" href="https://www.linkedin.com/in/tu-user/">LinkedIn</a>
+          <a class="btn ghost" target="_blank" rel="noopener" href="https://github.com/tu-user">GitHub</a>
         </div>
       </div>
     </section>
   </main>
-
   <footer class="footer">
-    <div class="container foot">
-      <p>© <span id="year"></span> Juan José Osorio Reyes – Portafolio</p>
-      <a class="tiny" href="cv.html">CV</a>
-    </div>
+    <div class="container">© 2025 JJOR — Hecho con HTML/CSS/JS</div>
   </footer>
-
-  <button id="toTop" class="to-top" aria-label="Volver arriba">↑</button>
 </body>
 </html>
