@@ -9,50 +9,54 @@ $("#year") && ($("#year").textContent = new Date().getFullYear());
 // Theme
 const root = document.documentElement;
 const savedTheme = localStorage.getItem('theme');
-if(savedTheme){ root.classList.toggle('light', savedTheme === 'light'); }
+if(savedTheme){
+  root.classList.toggle('light', savedTheme === 'light');
+}
 $("#themeToggle")?.addEventListener('click', ()=>{
   const isLight = root.classList.toggle('light');
   localStorage.setItem('theme', isLight ? 'light' : 'dark');
 });
 
 // Reveal on scroll
-const io = new IntersectionObserver(entries => {
-  entries.forEach(e => {
-    if(e.isIntersecting){
-      e.target.classList.add('show');
-      io.unobserve(e.target);
+const revealEls = $$('.reveal');
+const onScroll = ()=>{
+  const h = window.innerHeight;
+  revealEls.forEach(el=>{
+    const rect = el.getBoundingClientRect();
+    if(rect.top < h - 80){
+      el.classList.add('visible');
     }
   });
-}, { threshold: .15 });
-$$('.reveal').forEach(el => io.observe(el));
+};
+window.addEventListener('scroll', onScroll);
+onScroll();
 
-// Diplomas
+// Diplomas lightbox
 async function loadDiplomas(){
   try{
-    const res = await fetch('data/diplomas.json', {cache:'no-store'});
-    const list = await res.json();
-    const wrap = $("#diploma-grid");
-    wrap.innerHTML = '';
-    list.forEach(item => {
+    const res = await fetch('data/diplomas.json');
+    const data = await res.json();
+    const container = $('#diplomasList');
+    if(!container) return;
+    container.innerHTML = '';
+    data.forEach(item=>{
       const tile = document.createElement('article');
       tile.className = 'tile hoverable reveal';
       tile.innerHTML = `
-        <img src="${item.thumb}" alt="Miniatura de ${item.title}">
-        <div>
-          <div class="title">${item.title}</div>
-          <div class="meta">${item.institution || ''} ${item.date ? '· '+item.date : ''}</div>
-          <div style="margin-top:6px">
-            <a class="card-link" href="${item.file}" target="_blank" rel="noopener">Abrir</a>
-          </div>
+        <div class="tile-icon">
+          <img src="assets/icons/pdf.svg" alt="" class="icon" />
+        </div>
+        <div class="tile-body">
+          <h3>${item.title}</h3>
+          <p>${item.institution}</p>
         </div>
       `;
-      tile.addEventListener('click', (e)=>{
-        if(e.target.tagName.toLowerCase() === 'a') return;
+      tile.addEventListener('click', ()=>{
         openLightbox(item);
       });
-      wrap.appendChild(tile);
-      io.observe(tile);
+      container.appendChild(tile);
     });
+    onScroll();
   }catch(e){
     console.error('Error cargando diplomas', e);
   }
@@ -60,18 +64,17 @@ async function loadDiplomas(){
 
 function openLightbox(item){
   const box = $("#lightbox");
+  if(!box) return;
+  const pdfFrame = $("#lightbox-pdf");
   const img = $("#lightbox-img");
-  const pdf = $("#lightbox-pdf");
-  img.style.display = 'none';
-  pdf.style.display = 'none';
-
-  if((item.type||'').toLowerCase() === 'image'){
-    img.src = item.file;
-    img.alt = item.title;
-    img.style.display = 'block';
+  if(item.type === 'pdf'){
+    pdfFrame.style.display = 'block';
+    img.style.display = 'none';
+    pdfFrame.src = item.src;
   }else{
-    pdf.src = item.file;
-    pdf.style.display = 'block';
+    pdfFrame.style.display = 'none';
+    img.style.display = 'block';
+    img.src = item.src;
   }
   box.classList.add('show');
   box.setAttribute('aria-hidden','false');
