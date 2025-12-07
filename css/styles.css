@@ -213,3 +213,70 @@ body{
   position: relative;
   z-index: 1;
 }
+
+/* ---------------------------
+   IDIOMAS — Combinación Premium
+---------------------------- */
+
+.language-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.language-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.flag {
+  width: 42px;
+  height: 28px;
+  border-radius: 4px;
+  object-fit: cover;
+  border: 1px solid var(--line);
+}
+
+.level {
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.language-card .bars {
+  margin-top: 0.5rem;
+}
+
+.language-card .badge-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.language-card .badge {
+  background: rgba(255,255,255,0.08);
+  padding: 6px 10px;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  border: 1px solid var(--line);
+}
+:root.light .language-card .badge {
+  background: rgba(0,0,0,0.04);
+}
+
+@media (max-width: 600px) {
+  .language-header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .flag {
+    width: 50px;
+    height: 34px;
+  }
+
+  .language-card .badge-row {
+    justify-content: center;
+  }
+}
+
