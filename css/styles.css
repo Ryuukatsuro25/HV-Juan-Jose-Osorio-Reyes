@@ -169,6 +169,7 @@ body{
 .footer-nav a{margin-left:12px; color:inherit; text-decoration:none}
 
 /* ---------------- Reveal Anim ---------------- */
+.no-js .reveal{opacity:1; transform:none}
 .reveal{opacity:0; transform:translateY(10px); transition:opacity .5s ease, transform .5s ease}
 .reveal.show{opacity:1; transform:none}
 
