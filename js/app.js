@@ -35,13 +35,15 @@ async function loadDiplomas(){
     wrap.innerHTML = '';
     list.forEach(item => {
       const tile = document.createElement('article');
-      tile.className = 'tile hoverable reveal';
+      tile.className = 'tile diploma-tile hoverable reveal';
       tile.innerHTML = `
-        <img src="${item.thumb}" alt="Miniatura de ${item.title}">
-        <div>
+        <div class="thumb" aria-hidden="true">
+          <img src="${item.thumb}" alt="Vista previa de ${item.title}" loading="lazy">
+        </div>
+        <div class="content">
           <div class="title">${item.title}</div>
           <div class="meta">${item.institution || ''} ${item.date ? '· '+item.date : ''}</div>
-          <div style="margin-top:6px">
+          <div style="margin-top:8px">
             <a class="card-link" href="${item.file}" target="_blank" rel="noopener">Abrir</a>
           </div>
         </div>
