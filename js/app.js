@@ -75,14 +75,31 @@ function openLightbox(item){
   }
   box.classList.add('show');
   box.setAttribute('aria-hidden','false');
+
+  // Accesibilidad: llevar el foco al botón de cerrar
+  box.querySelector('.lightbox-close')?.focus();
 }
 
-$(".lightbox-close")?.addEventListener('click', ()=>{
+function closeLightbox(){
   const box = $("#lightbox");
   $("#lightbox-img").src = '';
   $("#lightbox-pdf").src = '';
   box.classList.remove('show');
   box.setAttribute('aria-hidden','true');
+}
+
+$(".lightbox-close")?.addEventListener('click', closeLightbox);
+
+// Cerrar al hacer clic fuera del contenido (en el fondo oscuro)
+$("#lightbox")?.addEventListener('click', (e)=>{
+  if(e.target === e.currentTarget) closeLightbox();
+});
+
+// Cerrar con tecla ESC
+document.addEventListener('keydown', (e)=>{
+  if(e.key === 'Escape' && $("#lightbox")?.classList.contains('show')){
+    closeLightbox();
+  }
 });
 
 loadDiplomas();
