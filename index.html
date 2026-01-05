@@ -14,13 +14,14 @@
 <body>
 <header class="site-header" role="banner" aria-label="Cabecera">
   <div class="container nav-wrap">
-    <a href="#hero" class="brand" aria-label="Ir a portada"></a>
+    <a href="#hero" class="brand" aria-label="Ir a portada">Juan José</a>
     <nav class="main-nav" role="navigation" aria-label="Navegación principal">
       <a href="#bio">Resumen</a>
       <a href="#experience">Experiencia</a>
       <a href="#education">Educación</a>
       <a href="#diplomas">Diplomas</a>
       <a href="#skills">Habilidades</a>
+      <a href="#services">Servicios</a>
       <a href="#projects">Portafolio</a>
       <a href="#contact">Contacto</a>
     </nav>
@@ -41,7 +42,16 @@
         <h1 class="display">Juan José Osorio Reyes</h1>
         <p class="subtitle">Estudiante de Ingeniería Multimedia</p>
         <p class="tagline">Desarrollador <strong>full-stack</strong> con dominio de <strong>backend</strong> y <strong>frontend</strong>, y sólida base en múltiples <strong>lenguajes de programación</strong>.</p>
-          <a class="btn primary" href="assets/documents/Hoja_de_Vida_Juan_Jose_Osorio_Reyes.pdf" target="_blank" rel="noopener" aria-label="Abrir CV en PDF">Descargar CV</a>
+
+        <!-- Highlights rápidos (más visual) -->
+        <div class="highlights" aria-label="Resumen rápido">
+          <div class="highlight"><span class="stat">+3</span><span class="label">años edición/multimedia</span></div>
+          <div class="highlight"><span class="stat">Full‑stack</span><span class="label">JS · Python</span></div>
+          <div class="highlight"><span class="stat">UI/UX</span><span class="label">Figma</span></div>
+          <div class="highlight"><span class="stat">B2</span><span class="label">Inglés (MCER)</span></div>
+        </div>
+
+        <a class="btn primary" href="assets/documents/Hoja_de_Vida_Juan_Jose_Osorio_Reyes.pdf" target="_blank" rel="noopener" aria-label="Abrir CV en PDF">Descargar CV</a>
       </div>
     </div>
   </div>
@@ -210,17 +220,54 @@
 <section id="skills" class="section">
   <div class="container">
     <h2 class="section-title">Habilidades</h2>
-    <div class="grid skill-grid">
+    <p class="muted" style="margin-top:-6px">Herramientas y áreas de dominio (con enfoque en aplicaciones reales).</p>
+
+    <div class="grid cards">
       <article class="card reveal">
-        <h3>Habilidades Profesionales</h3>
+        <h3>Stack Web</h3>
         <div class="badge-row" role="list">
-          <span class="badge" role="listitem">Diseño UI/UX</span>
-          <span class="badge" role="listitem">Desarrollo Web</span>
-          <span class="badge" role="listitem">Edición de Video</span>
-          <span class="badge" role="listitem">Animación Digital</span>
-          <span class="badge" role="listitem">Producción Multimedia</span>
+          <span class="badge" role="listitem">HTML5</span>
+          <span class="badge" role="listitem">CSS3</span>
+          <span class="badge" role="listitem">JavaScript</span>
+          <span class="badge" role="listitem">Responsive</span>
+          <span class="badge" role="listitem">APIs REST</span>
+        </div>
+        <div class="bars" style="margin-top:12px">
+          <div class="bar"><span>HTML/CSS</span><i style="--val:90%"></i></div>
+          <div class="bar"><span>JavaScript</span><i style="--val:80%"></i></div>
+          <div class="bar"><span>Python (Desarrollo)</span><i style="--val:95%"></i></div>
         </div>
       </article>
+
+      <article class="card reveal">
+        <h3>Multimedia</h3>
+        <div class="badge-row" role="list">
+          <span class="badge" role="listitem">Premiere</span>
+          <span class="badge" role="listitem">After Effects</span>
+          <span class="badge" role="listitem">Photoshop</span>
+          <span class="badge" role="listitem">Illustrator</span>
+          <span class="badge" role="listitem">Motion Graphics</span>
+          <span class="badge" role="listitem">Fotografía</span>
+        </div>
+        <div class="bars" style="margin-top:12px">
+          <div class="bar"><span>Edición / Postproducción</span><i style="--val:85%"></i></div>
+          <div class="bar"><span>Animación (Motion)</span><i style="--val:80%"></i></div>
+        </div>
+      </article>
+
+      <article class="card reveal">
+        <h3>Herramientas</h3>
+        <div class="badge-row" role="list">
+          <span class="badge" role="listitem">Git/GitHub</span>
+          <span class="badge" role="listitem">Figma</span>
+          <span class="badge" role="listitem">Netlify</span>
+          <span class="badge" role="listitem">VS Code</span>
+        </div>
+        <div class="bars" style="margin-top:12px">
+          <div class="bar"><span>Figma/Prototipos</span><i style="--val:75%"></i></div>
+        </div>
+      </article>
+
       <article class="card reveal">
         <h3>Habilidades Personales</h3>
         <div class="badge-row">
@@ -231,14 +278,39 @@
           <span class="badge">Gestión del tiempo</span>
         </div>
       </article>
-            <article class="card reveal">
-        <h3>Tecnologías</h3>
-        <div class="bars">
-          <div class="bar"><span>Figma/Prototipos</span><i style="--val:75%"></i></div>
-          <div class="bar"><span>JavaScript</span><i style="--val:80%"></i></div>
-          <div class="bar"><span>Adobe Creative Suite</span><i style="--val:85%"></i></div>
-          <div class="bar"><span>HTML/CSS</span><i style="--val:90%"></i></div>
-          <div class="bar"><span>Python (Desarrollo)</span><i style="--val:95%"></i></div>
+    </div>
+  </div>
+</section>
+
+<section id="services" class="section alt">
+  <div class="container">
+    <h2 class="section-title">Servicios</h2>
+    <div class="grid cards">
+      <article class="card reveal service-card">
+        <h3>Edición de video</h3>
+        <p class="muted">Reels, TikTok, YouTube, anuncios y contenido para redes.</p>
+        <div class="badge-row">
+          <span class="badge">Premiere</span>
+          <span class="badge">After Effects</span>
+          <span class="badge">Corrección de color</span>
+        </div>
+      </article>
+      <article class="card reveal service-card">
+        <h3>Diseño gráfico</h3>
+        <p class="muted">Logos, identidad visual, piezas para redes y material promocional.</p>
+        <div class="badge-row">
+          <span class="badge">Illustrator</span>
+          <span class="badge">Photoshop</span>
+          <span class="badge">Branding</span>
+        </div>
+      </article>
+      <article class="card reveal service-card">
+        <h3>Desarrollo web</h3>
+        <p class="muted">Landing pages, portafolios y sitios responsivos optimizados.</p>
+        <div class="badge-row">
+          <span class="badge">HTML/CSS</span>
+          <span class="badge">JavaScript</span>
+          <span class="badge">Netlify</span>
         </div>
       </article>
     </div>
@@ -254,6 +326,11 @@
         <div class="cover" style="pointer-events: none;"></div>
         <h3>MediaWebStudio</h3>
         <p>Emprendimiento personal de desarrollo de software, edición de imagen y video.</p>
+
+        <ul class="project-meta" aria-label="Detalles del proyecto">
+          <li><strong>Enfoque:</strong> sitio/portafolio con secciones, modo claro/oscuro y navegación.</li>
+          <li><strong>Tecnologías:</strong> HTML/CSS · JavaScript · Netlify</li>
+        </ul>
         <div class="project-actions" style="margin-top: 1rem; display: flex; flex-wrap: wrap; gap: 0.5rem;">
           <a href="https://github.com/Ryuukatsuro25/MediaWebStudio" target="_blank" rel="noopener" 
              class="btn ghost" style="display: inline-flex; align-items: center; gap: 0.4rem;">
@@ -271,6 +348,11 @@
         <div class="cover" style="pointer-events: none;"></div>
         <h3>Servidor de Minecraft</h3>
         <p>Panel de control para servidor del videojuego Minecraft, genera conexión, IP y habilita el servicio.</p>
+
+        <ul class="project-meta" aria-label="Detalles del proyecto">
+          <li><strong>Impacto:</strong> centraliza acciones (estado, IP y servicio) en un panel.</li>
+          <li><strong>UI:</strong> interfaz web responsiva y orientada a tareas.</li>
+        </ul>
         <div class="project-actions" style="margin-top: 1rem; display: flex; flex-wrap: wrap; gap: 0.5rem;">
           <a href="https://github.com/Ryuukatsuro25/SERVER-MANAGER-MINERCRAFT" target="_blank" rel="noopener"
              class="btn ghost" style="display: inline-flex; align-items: center; gap: 0.4rem;">
@@ -300,6 +382,11 @@
         <div class="cover" style="pointer-events: none;"></div>
         <h3>RappiXtreame</h3>
         <p>Proyecto de documentación de videojuego creado en Unity.</p>
+
+        <ul class="project-meta" aria-label="Detalles del proyecto">
+          <li><strong>Objetivo:</strong> documentación clara del juego, mecánicas y estructura.</li>
+          <li><strong>Tecnologías:</strong> Unity (proyecto) · Web (documentación)</li>
+        </ul>
         <div class="project-actions" style="margin-top: 1rem; display: flex; flex-wrap: wrap; gap: 0.5rem;">
           <a href="https://github.com/Ryuukatsuro25/Rappi-Xtreame" target="_blank" rel="noopener"
              class="btn ghost" style="display: inline-flex; align-items: center; gap: 0.4rem;">
@@ -321,31 +408,69 @@
   <div class="container">
     <h2 class="section-title">Contacto</h2>
     <div class="card reveal">
-      <ul class="contact-list">
-        <!-- Correo -->
-        <li>
-          <a href="mailto:juan.jose.osorio.reyes@hotmail.com" rel="noopener" aria-label="Correo electrónico">
-            <img src="assets/icons/mail.svg" class="icon" alt="Correo" />
-            juan.jose.osorio.reyes@hotmail.com
-          </a>
-        </li>
+      <div class="contact-grid">
 
-        <!-- Ubicación -->
-        <li>
-          <span aria-label="Ubicación">
-            <img src="assets/icons/map-pin.svg" class="icon" alt="Ubicación" />
-            Cali, Colombia
-          </span>
-        </li>
+        <!-- Datos + acciones rápidas -->
+        <div class="contact-info">
+          <h3 style="margin-top:0">Hablemos</h3>
+          <ul class="contact-list">
+            <li class="contact-row">
+              <a href="mailto:juan.jose.osorio.reyes@hotmail.com" rel="noopener" aria-label="Correo electrónico">
+                <img src="assets/icons/mail.svg" class="icon" alt="Correo" />
+                <span>juan.jose.osorio.reyes@hotmail.com</span>
+              </a>
+              <button type="button" class="icon-btn icon-btn-sm" data-copy="juan.jose.osorio.reyes@hotmail.com" aria-label="Copiar correo">Copiar</button>
+            </li>
 
-        <!-- LinkedIn -->
-        <li>
-          <a href="https://www.linkedin.com/in/juan-jose-osorio-reyes-a7b7442ba/" target="_blank" rel="noopener" aria-label="LinkedIn">
-            <img src="assets/icons/linkedin.svg" class="icon linkedin-icon" alt="LinkedIn" />
-            LinkedIn
-          </a>
-        </li>
-      </ul>
+            <li>
+              <span aria-label="Ubicación">
+                <img src="assets/icons/map-pin.svg" class="icon" alt="Ubicación" />
+                Cali, Colombia
+              </span>
+            </li>
+
+            <li>
+              <a href="https://www.linkedin.com/in/juan-jose-osorio-reyes-a7b7442ba/" target="_blank" rel="noopener" aria-label="LinkedIn">
+                <img src="assets/icons/linkedin.svg" class="icon linkedin-icon" alt="LinkedIn" />
+                LinkedIn
+              </a>
+            </li>
+
+            <li>
+              <!-- TIP: reemplaza 57TU_NUMERO por tu número real (ej: 573001112233) -->
+              <a class="card-link ghost" style="justify-content:center" href="https://wa.me/57TU_NUMERO?text=Hola%20Juan%20Jos%C3%A9%2C%20vi%20tu%20CV%20web%20y%20me%20gustar%C3%ADa%20contactarte." target="_blank" rel="noopener" aria-label="WhatsApp">
+                WhatsApp
+              </a>
+              <p class="muted" style="margin:10px 0 0; font-size:.9rem">(Reemplaza <strong>57TU_NUMERO</strong> por tu número para que funcione.)</p>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Formulario (Netlify Forms) -->
+        <div class="contact-form">
+          <h3 style="margin-top:0">Escríbeme</h3>
+          <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/gracias.html" class="form">
+            <input type="hidden" name="form-name" value="contact">
+            <input type="hidden" name="subject" value="Nuevo mensaje desde tu CV web">
+            <p class="sr-only">
+              <label>Si eres humano, deja esto vacío: <input name="bot-field" /></label>
+            </p>
+
+            <label class="sr-only" for="name">Nombre</label>
+            <input id="name" name="name" type="text" class="input" placeholder="Nombre" autocomplete="name" required>
+
+            <label class="sr-only" for="email">Email</label>
+            <input id="email" name="email" type="email" class="input" placeholder="Email" autocomplete="email" required>
+
+            <label class="sr-only" for="message">Mensaje</label>
+            <textarea id="message" name="message" class="input textarea" placeholder="Mensaje" rows="6" required></textarea>
+
+            <button class="btn primary" type="submit" style="width:100%">Enviar</button>
+            <p class="muted" style="margin:10px 0 0; font-size:.9rem">Al enviar, tu mensaje llegará a mi correo y también quedará guardado en Netlify Forms.</p>
+          </form>
+        </div>
+
+      </div>
     </div>
   </div>
 </section>
@@ -357,6 +482,7 @@
     <nav class="footer-nav">
       <a href="#hero">Inicio</a>
       <a href="#projects">Portafolio</a>
+      <a href="#services">Servicios</a>
       <a href="#contact">Contacto</a>
     </nav>
   </div>

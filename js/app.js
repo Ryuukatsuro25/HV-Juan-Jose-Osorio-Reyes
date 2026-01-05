@@ -15,6 +15,31 @@ $("#themeToggle")?.addEventListener('click', ()=>{
   localStorage.setItem('theme', isLight ? 'light' : 'dark');
 });
 
+// Copy to clipboard (correo, etc.)
+$$('[data-copy]').forEach(btn => {
+  btn.addEventListener('click', async () => {
+    const text = btn.getAttribute('data-copy') || '';
+    if(!text) return;
+    const original = btn.textContent;
+    try{
+      await navigator.clipboard.writeText(text);
+      btn.textContent = 'Copiado ✓';
+    }catch{
+      // Fallback
+      const ta = document.createElement('textarea');
+      ta.value = text;
+      ta.style.position = 'fixed';
+      ta.style.opacity = '0';
+      document.body.appendChild(ta);
+      ta.select();
+      document.execCommand('copy');
+      document.body.removeChild(ta);
+      btn.textContent = 'Copiado ✓';
+    }
+    setTimeout(()=>{ btn.textContent = original; }, 1400);
+  });
+});
+
 // Reveal on scroll
 const io = new IntersectionObserver(entries => {
   entries.forEach(e => {
