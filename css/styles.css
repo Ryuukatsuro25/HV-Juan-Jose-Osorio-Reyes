@@ -202,6 +202,9 @@ body{
 /* GitHub (SVG en <img>): en modo oscuro el ícono por defecto se ve negro. */
 :root:not(.light) img.github-icon{filter: invert(1) brightness(1.05)}
 
+/* LinkedIn (SVG en <img>): en modo oscuro el ícono por defecto se ve negro. */
+:root:not(.light) img.linkedin-icon{filter: invert(1) brightness(1.05)}
+
 /* Preferencias de movimiento del usuario */
 @media (prefers-reduced-motion: reduce){
   .btn, .card-link, .reveal{transition:none}
