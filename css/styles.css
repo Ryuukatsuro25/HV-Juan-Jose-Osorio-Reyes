@@ -322,3 +322,55 @@ body{
   }
 }
 
+/* Subtítulos dentro de secciones */
+.section-subtitle{
+  margin: 24px 0 14px;
+  font-weight: 800;
+  opacity: .95;
+}
+
+/* Acciones de proyectos (quita el inline) */
+.project-actions{
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+}
+
+/* --- Portafolio Gráfico: thumbnails pequeños + preview --- */
+.graphic-gallery .gallery-item{
+  position: relative;
+  overflow: hidden;
+}
+
+.graphic-gallery .gallery-media{
+  width: 100%;
+  height: 160px;       /* <-- aquí haces la miniatura más pequeña */
+  object-fit: cover;   /* recorte bonito */
+  display: block;
+}
+
+/* overlay con botón "Ver" */
+.graphic-gallery .gallery-overlay{
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  opacity: 0;
+  transition: opacity .2s ease;
+  pointer-events: none;
+}
+
+.graphic-gallery .gallery-item:hover .gallery-overlay{
+  opacity: 1;
+}
+
+.graphic-gallery .gallery-overlay .btn{
+  pointer-events: auto;
+}
+
+/* preview al hover (zoom sutil) */
+.graphic-gallery .gallery-item:hover .gallery-media{
+  transform: scale(1.03);
+  transition: transform .25s ease;
+}
