@@ -3,9 +3,15 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Juan José Osorio Reyes — Ingeniero Multimedia</title>
-  <meta name="description" content="CV web de Juan José Osorio Reyes, Ingeniero Multimedia. Experiencia, educación, diplomas, habilidades y proyectos." />
+  <title>Juan José Osorio Reyes — Ingeniero Multimedia · Desarrollador Web Full-Stack</title>
+  <meta name="description" content="CV web de Juan José Osorio Reyes, estudiante de Ingeniería Multimedia y desarrollador web full-stack. Experiencia freelance, educación, idiomas, diplomas, habilidades y portafolio." />
   <meta name="theme-color" content="#0b3d62" />
+
+  <!-- Open Graph (mejor presentación al compartir en LinkedIn) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Juan José Osorio Reyes — Ingeniero Multimedia · Desarrollador Web Full-Stack" />
+  <meta property="og:description" content="Portafolio y CV de Juan José Osorio Reyes: desarrollo web full-stack, UI/UX, edición de video y producción gráfica." />
+  <meta property="og:image" content="assets/img/profile.png" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -33,451 +39,454 @@
     </div>
   </header>
 
-  <main id="hero" class="hero" tabindex="-1">
-    <div class="hero-bg" aria-hidden="true">
-      <span class="blob b1"></span>
-      <span class="blob b2"></span>
-      <span class="grid"></span>
-    </div>
+  <main id="main">
 
-    <div class="container hero-grid">
-      <div class="hero-card reveal">
-        <img src="assets/img/profile.png" alt="Foto profesional de Juan José Osorio Reyes" class="avatar" />
+    <!-- ============ HERO ============ -->
+    <section id="hero" class="hero" tabindex="-1">
+      <div class="hero-bg" aria-hidden="true">
+        <span class="blob b1"></span>
+        <span class="blob b2"></span>
+        <span class="grid"></span>
+      </div>
 
-        <div>
-          <h1 class="display">Juan José Osorio Reyes</h1>
-          <p class="subtitle">Estudiante de Ingeniería Multimedia</p>
-          <p class="tagline">
-            Desarrollador web con enfoque <strong>full‑stack</strong> (frontend + backend)
-            y base sólida en <strong>multimedia</strong> para crear productos digitales completos.
-          </p>
+      <div class="container hero-grid">
+        <div class="hero-card reveal">
+          <img src="assets/img/profile.png" alt="Foto profesional de Juan José Osorio Reyes" class="avatar" />
 
-          <div class="hero-highlights badge-row" aria-label="Puntos clave">
-            <span class="badge">Desarrollo web (enfoque full‑stack)</span>
-            <span class="badge">UI/UX · Figma</span>
-            <span class="badge">Multimedia · Adobe (Premiere/AE)</span>
-            <span class="badge">Inglés B1 (EFSET)</span>
-          </div>
+          <div>
+            <h1 class="display">Juan José Osorio Reyes</h1>
+            <p class="subtitle">Estudiante de Ingeniería Multimedia · Desarrollador Web Full‑Stack</p>
+            <p class="tagline">
+              Construyo productos digitales completos combinando <strong>desarrollo web frontend y backend</strong>
+              con una base sólida en <strong>multimedia</strong>.
+            </p>
 
-          <div class="hero-actions">
-            <a class="btn primary"
-               href="assets/documents/CV_Juan_Jose_Osorio_Reyes.pdf"
-               target="_blank" rel="noopener"
-               aria-label="Abrir CV en PDF">
-              Descargar CV
-            </a>
+            <div class="hero-highlights badge-row" aria-label="Puntos clave">
+              <span class="badge">Desarrollo web full‑stack</span>
+              <span class="badge">UI/UX · Figma</span>
+              <span class="badge">Multimedia · Adobe (Premiere/AE)</span>
+              <span class="badge">Inglés B1 (EFSET)</span>
+            </div>
 
-            <a class="btn ghost" href="https://github.com/Ryuukatsuro25" target="_blank" rel="noopener" aria-label="GitHub">
-              <img src="assets/icons/github.svg" class="github-icon" alt="GitHub" width="16" height="16" />
-              <span>GitHub</span>
-            </a>
+            <div class="hero-actions">
+              <a class="btn primary"
+                 href="assets/documents/CV_Juan_Jose_Osorio_Reyes.pdf"
+                 target="_blank" rel="noopener"
+                 aria-label="Abrir CV en PDF">
+                Descargar CV
+              </a>
 
-            <a class="btn ghost" href="https://www.linkedin.com/in/juan-jose-osorio-reyes-a7b7442ba/" target="_blank" rel="noopener" aria-label="LinkedIn">
-              <img src="assets/icons/linkedin.svg" class="icon linkedin-icon" alt="LinkedIn" width="16" height="16" />
-              <span>LinkedIn</span>
-            </a>
+              <a class="btn ghost" href="https://github.com/Ryuukatsuro25" target="_blank" rel="noopener" aria-label="GitHub">
+                <img src="assets/icons/github.svg" class="github-icon" alt="" width="16" height="16" />
+                <span>GitHub</span>
+              </a>
+
+              <a class="btn ghost" href="https://www.linkedin.com/in/juan-jose-osorio-reyes-a7b7442ba/" target="_blank" rel="noopener" aria-label="LinkedIn">
+                <img src="assets/icons/linkedin.svg" class="icon linkedin-icon" alt="" width="16" height="16" />
+                <span>LinkedIn</span>
+              </a>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
+
+    <!-- ============ RESUMEN ============ -->
+    <section id="bio" class="section">
+      <div class="container">
+        <h2 class="section-title">Resumen Profesional</h2>
+
+        <div class="card lead reveal">
+          <p>
+            Soy <strong>estudiante de Ingeniería Multimedia</strong> con experiencia freelance en
+            <strong>desarrollo web full‑stack, diseño UI/UX, edición de video y producción gráfica</strong>.
+            Combino criterio visual y habilidades técnicas para crear productos digitales completos.
+          </p>
+
+          <p>
+            Destaco por mi <strong>adaptabilidad en entornos dinámicos</strong>, el trabajo en equipo
+            y el cumplimiento de objetivos bajo presión. Busco proyectos desafiantes donde aportar
+            y seguir creciendo profesionalmente.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ EXPERIENCIA ============ -->
+    <section id="experience" class="section alt">
+      <div class="container">
+        <h2 class="section-title">Experiencia</h2>
+
+        <div class="timeline">
+          <article class="tl-item reveal">
+            <div class="tl-dot"></div>
+            <header class="tl-head">
+              <h3>Desarrollador Web Independiente</h3>
+              <span class="meta">MediaWebStudio · Mar 2023 – Presente</span>
+            </header>
+            <ul class="tl-body">
+              <li>Diseño y desarrollo de interfaces web responsive usando HTML5, CSS3 y JavaScript.</li>
+              <li>Optimización de performance y experiencia de usuario en proyectos web.</li>
+              <li>Gestión de proyectos desde la conceptualización hasta la implementación.</li>
+            </ul>
+          </article>
+
+          <article class="tl-item reveal">
+            <div class="tl-dot"></div>
+            <header class="tl-head">
+              <h3>Editor de Video</h3>
+              <span class="meta">Clientes Independientes · Abr 2023 – Presente</span>
+            </header>
+            <ul class="tl-body">
+              <li>Ediciones de video para clientes y proyectos diversos.</li>
+              <li>Aplicación de corrección de color, transiciones y efectos visuales.</li>
+              <li>Optimización de contenido para diferentes plataformas y formatos.</li>
+            </ul>
+          </article>
+
+          <article class="tl-item reveal">
+            <div class="tl-dot"></div>
+            <header class="tl-head">
+              <h3>Productor Gráfico</h3>
+              <span class="meta">Varios Emprendimientos · Mar 2023 – Presente</span>
+            </header>
+            <ul class="tl-body">
+              <li>Diseño de identidad visual y creación de logos para emprendimientos y marcas.</li>
+              <li>Desarrollo de material gráfico con Adobe Illustrator y Photoshop.</li>
+              <li>Colaboración con clientes para conceptualizar y materializar su visión de marca.</li>
+            </ul>
+          </article>
+
+          <article class="tl-item reveal">
+            <div class="tl-dot"></div>
+            <header class="tl-head">
+              <h3>Editor Multimedia</h3>
+              <span class="meta">Proyectos Independientes · Ene 2022 – Presente</span>
+            </header>
+            <ul class="tl-body">
+              <li>Desarrollo de contenido audiovisual para redes sociales y plataformas digitales.</li>
+              <li>Edición y postproducción con Adobe Premiere y After Effects.</li>
+              <li>Creación de motion graphics y animaciones para proyectos comerciales.</li>
+              <li>Registro fotográfico y edición de video para una guardería de mascotas caninas.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ EDUCACIÓN ============ -->
+    <section id="education" class="section">
+      <div class="container">
+        <h2 class="section-title">Educación</h2>
+
+        <div class="grid cards">
+          <article class="card reveal">
+            <h3>Ingeniería Multimedia</h3>
+            <p class="muted">Universidad Autónoma de Occidente · <span class="tag">Feb 2021 – En curso</span></p>
+          </article>
+
+          <article class="card reveal">
+            <h3>Bachiller Académico</h3>
+            <p class="muted">Colegio Los Andes San Fernando · <span class="tag">Jul 2018 – Ene 2021</span></p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ IDIOMAS ============ -->
+    <section id="languages" class="section">
+      <div class="container">
+        <h2 class="section-title">Idiomas</h2>
+
+        <div class="grid cards">
+          <article class="card reveal language-card">
+            <div class="language-header">
+              <img src="assets/img/Colombia.png" alt="Bandera de Colombia" class="flag" />
+              <div>
+                <h3>Español</h3>
+                <span class="level">Nativo</span>
+              </div>
+            </div>
+
+            <div class="bars">
+              <div class="bar"><span>Comprensión</span><i style="--val:100%"></i></div>
+              <div class="bar"><span>Lectura</span><i style="--val:100%"></i></div>
+              <div class="bar"><span>Comunicación</span><i style="--val:100%"></i></div>
+            </div>
+
+            <div class="badge-row">
+              <span class="badge">Nativo</span>
+              <span class="badge">Comunicación profesional</span>
+              <span class="badge">Escritura avanzada</span>
+            </div>
+          </article>
+
+          <article class="card reveal language-card">
+            <div class="language-header">
+              <img src="assets/img/usa.png" alt="Bandera de Estados Unidos" class="flag" />
+              <div>
+                <h3>Inglés</h3>
+                <span class="level">Nivel B1</span>
+              </div>
+            </div>
+
+            <div class="bars">
+              <div class="bar"><span>Comprensión</span><i style="--val:70%"></i></div>
+              <div class="bar"><span>Lectura técnica</span><i style="--val:65%"></i></div>
+              <div class="bar"><span>Conversación</span><i style="--val:75%"></i></div>
+            </div>
+
+            <div class="badge-row">
+              <span class="badge">B1 Intermedio</span>
+              <span class="badge">Comprensión técnica</span>
+              <span class="badge">Nivel conversacional</span>
+            </div>
+
+            <div style="margin-top: 20px;">
+              <a href="https://cert.efset.org/es/2oEXjs"
+                 target="_blank" rel="noopener"
+                 class="btn primary"
+                 style="display: inline-flex; align-items: center; gap: 8px; font-size: 0.9rem;">
+                <span>Ver Certificado Oficial</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                     stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ DIPLOMAS ============ -->
+    <section id="diplomas" class="section alt">
+      <div class="container">
+        <h2 class="section-title">Diplomas y Cursos</h2>
+        <div id="diploma-grid" class="grid tiles"></div>
+      </div>
+
+      <div id="lightbox" class="lightbox" aria-hidden="true" role="dialog" aria-label="Vista de diploma">
+        <div class="lightbox-body glass">
+          <button class="lightbox-close" aria-label="Cerrar ventana" type="button">×</button>
+          <img id="lightbox-img" alt="" />
+          <iframe id="lightbox-pdf" title="Diploma PDF" loading="lazy"></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ HABILIDADES ============ -->
+    <section id="skills" class="section">
+      <div class="container">
+        <h2 class="section-title">Habilidades</h2>
+
+        <div class="grid skill-grid">
+          <article class="card reveal">
+            <h3>Habilidades Profesionales</h3>
+            <div class="badge-row" role="list">
+              <span class="badge" role="listitem">Diseño UI/UX</span>
+              <span class="badge" role="listitem">Desarrollo Web</span>
+              <span class="badge" role="listitem">Edición de Video</span>
+              <span class="badge" role="listitem">Animación Digital</span>
+              <span class="badge" role="listitem">Producción Multimedia</span>
+            </div>
+          </article>
+
+          <article class="card reveal">
+            <h3>Habilidades Personales</h3>
+            <div class="badge-row">
+              <span class="badge">Trabajo en equipo</span>
+              <span class="badge">Adaptabilidad</span>
+              <span class="badge">Creatividad</span>
+              <span class="badge">Resolución de problemas</span>
+              <span class="badge">Gestión del tiempo</span>
+            </div>
+          </article>
+
+          <article class="card reveal">
+            <h3>Tecnologías</h3>
+
+            <div class="badge-row" aria-label="Áreas técnicas">
+              <span class="badge">Web: HTML/CSS/JS</span>
+              <span class="badge">Backend: Python</span>
+              <span class="badge">UI/UX: Figma</span>
+              <span class="badge">Multimedia: Adobe CC</span>
+              <span class="badge">Git/GitHub</span>
+              <span class="badge">Netlify</span>
+            </div>
+
+            <div class="bars">
+              <div class="bar"><span>Figma / Prototipos</span><i style="--val:75%"></i></div>
+              <div class="bar"><span>JavaScript</span><i style="--val:80%"></i></div>
+              <div class="bar"><span>Adobe Creative Suite</span><i style="--val:85%"></i></div>
+              <div class="bar"><span>HTML / CSS</span><i style="--val:90%"></i></div>
+              <div class="bar"><span>Python (Desarrollo)</span><i style="--val:95%"></i></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PORTAFOLIO ============ -->
+    <section id="projects" class="section alt">
+      <div class="container">
+        <h2 class="section-title">Portafolio</h2>
+
+        <h3 class="section-subtitle">Proyectos de Programación</h3>
+        <div class="grid cards portfolio">
+          <article class="card hoverable reveal">
+            <div class="cover" aria-hidden="true"></div>
+            <h3>MediaWebStudio</h3>
+            <p>Emprendimiento personal de desarrollo de software, edición de imagen y video.</p>
+
+            <div class="project-actions">
+              <a href="https://github.com/Ryuukatsuro25/MediaWebStudio" target="_blank" rel="noopener" class="btn ghost">
+                <img src="assets/icons/github.svg" class="github-icon" alt="" width="16" height="16" />
+                <span>Repositorio</span>
+              </a>
+              <a href="https://mediawebstudio.netlify.app" target="_blank" rel="noopener" class="btn primary">
+                <span>Ver sitio</span>
+              </a>
+            </div>
+          </article>
+
+          <article class="card hoverable reveal">
+            <div class="cover" aria-hidden="true"></div>
+            <h3>Servidor de Minecraft</h3>
+            <p>Panel de control para servidor de Minecraft: genera conexión, IP y habilita el servicio.</p>
+
+            <div class="project-actions">
+              <a href="https://github.com/Ryuukatsuro25/SERVER-MANAGER-MINERCRAFT" target="_blank" rel="noopener" class="btn ghost">
+                <img src="assets/icons/github.svg" class="github-icon" alt="" width="16" height="16" />
+                <span>Repositorio</span>
+              </a>
+            </div>
+          </article>
+
+          <article class="card hoverable reveal">
+            <div class="cover" aria-hidden="true"></div>
+            <h3>RappiXtreame</h3>
+            <p>Proyecto de documentación de videojuego creado en Unity.</p>
+
+            <div class="project-actions">
+              <a href="https://github.com/Ryuukatsuro25/Rappi-Xtreame" target="_blank" rel="noopener" class="btn ghost">
+                <img src="assets/icons/github.svg" class="github-icon" alt="" width="16" height="16" />
+                <span>Repositorio</span>
+              </a>
+              <a href="https://rappixtreame.netlify.app" target="_blank" rel="noopener" class="btn primary">
+                <span>Ver sitio</span>
+              </a>
+            </div>
+          </article>
+        </div>
+
+        <h3 class="section-subtitle">Portafolio Gráfico</h3>
+        <div class="grid cards portfolio gallery graphic-gallery">
+          <article class="card hoverable reveal gallery-item">
+            <img class="gallery-media"
+                 src="assets/portfolio/MediaWeb_Studio.png"
+                 alt="MediaWeb Studio"
+                 loading="lazy" />
+            <div class="gallery-overlay">
+              <a class="btn primary" href="assets/portfolio/MediaWeb_Studio.png" target="_blank" rel="noopener">Ver</a>
+            </div>
+          </article>
+
+          <article class="card hoverable reveal gallery-item">
+            <img class="gallery-media"
+                 src="assets/portfolio/mayester-sublimatie.jpg"
+                 alt="Mayester Sublimatie"
+                 loading="lazy" />
+            <div class="gallery-overlay">
+              <a class="btn primary" href="assets/portfolio/mayester-sublimatie.jpg" target="_blank" rel="noopener">Ver</a>
+            </div>
+          </article>
+
+          <article class="card hoverable reveal gallery-item">
+            <video class="gallery-media"
+                   src="assets/portfolio/la-muelona.mp4"
+                   muted
+                   loop
+                   autoplay
+                   playsinline
+                   preload="metadata"
+                   aria-label="Video La Muelona">
+            </video>
+            <div class="gallery-overlay">
+              <a class="btn primary" href="assets/portfolio/la-muelona.mp4" target="_blank" rel="noopener">Ver</a>
+            </div>
+          </article>
+
+          <article class="card hoverable reveal gallery-item">
+            <img class="gallery-media"
+                 src="assets/portfolio/saboresdemama.png"
+                 alt="Sabores de Mamá"
+                 loading="lazy" />
+            <div class="gallery-overlay">
+              <a class="btn primary" href="assets/portfolio/saboresdemama.png" target="_blank" rel="noopener">Ver</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACTO ============ -->
+    <section id="contact" class="section">
+      <div class="container">
+        <h2 class="section-title">Contacto</h2>
+
+        <div class="card reveal">
+          <ul class="contact-list">
+            <li>
+              <a href="mailto:juan.jose.osorio.reyes@hotmail.com" rel="noopener" aria-label="Correo electrónico">
+                <img src="assets/icons/mail.svg" class="icon" alt="" />
+                juan.jose.osorio.reyes@hotmail.com
+              </a>
+            </li>
+
+            <li>
+              <span aria-label="Ubicación">
+                <img src="assets/icons/map-pin.svg" class="icon" alt="" />
+                Cali, Colombia
+              </span>
+            </li>
+
+            <li>
+              <a href="https://www.linkedin.com/in/juan-jose-osorio-reyes-a7b7442ba/" target="_blank" rel="noopener" aria-label="LinkedIn">
+                <img src="assets/icons/linkedin.svg" class="icon linkedin-icon" alt="" />
+                LinkedIn
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="hero-actions" style="margin-top: 1.5rem;">
+          <a class="btn primary"
+             href="assets/documents/CV_Juan_Jose_Osorio_Reyes.pdf"
+             target="_blank" rel="noopener"
+             aria-label="Descargar CV en PDF">
+            Descargar CV
+          </a>
+          <a class="btn ghost"
+             href="https://github.com/Ryuukatsuro25"
+             target="_blank" rel="noopener"
+             aria-label="Ver GitHub">
+            <img src="assets/icons/github.svg" class="github-icon" alt="" width="16" height="16" />
+            <span>GitHub</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
   </main>
-
-
-        <h3 class="section-subtitle">Experiencia Como Freelance</h3>
-      <div class="timeline">
-        <article class="tl-item reveal">
-          <div class="tl-dot"></div>
-          <header class="tl-head">
-            <h3>Editor Multimedia</h3>
-            <span class="meta">Proyectos Independientes · Ene 2022 – Presente</span>
-          </header>
-          <ul class="tl-body">
-            <li>Desarrollo de contenido audiovisual para redes sociales y plataformas digitales.</li>
-            <li>Edición y postproducción de video con Adobe Premiere y After Effects.</li>
-            <li>Creación de motion graphics y animaciones para proyectos comerciales.</li>
-            <li>Registro fotográfico y edición de video para una guardería de mascotas caninas.</li>
-          </ul>
-        </article>
-
-        <article class="tl-item reveal">
-          <div class="tl-dot"></div>
-          <header class="tl-head">
-            <h3>Productor gráfico</h3>
-            <span class="meta">Varios Emprendimientos · Mar 2023 – Presente</span>
-          </header>
-          <ul class="tl-body">
-            <li>Diseño de identidad visual y creación de logos para diversos emprendimientos y marcas.</li>
-            <li>Desarrollo de material gráfico utilizando Adobe Illustrator y Photoshop.</li>
-            <li>Colaboración con clientes para conceptualizar y materializar su visión de marca.</li>
-          </ul>
-        </article>
-
-        <article class="tl-item reveal">
-          <div class="tl-dot"></div>
-          <header class="tl-head">
-            <h3>Editor de Video Semi-Profesional</h3>
-            <span class="meta">Clientes Independientes · Abr 2023 – Presente</span>
-          </header>
-          <ul class="tl-body">
-            <li>Realización de ediciones de video semi-profesionales para diversos clientes y proyectos.</li>
-            <li>Aplicación de técnicas de corrección de color, transiciones y efectos visuales.</li>
-            <li>Optimización de contenido para diferentes plataformas y formatos de visualización.</li>
-          </ul>
-        </article>
-
-        <article class="tl-item reveal">
-          <div class="tl-dot"></div>
-          <header class="tl-head">
-            <h3>Desarrollador Web Independiente</h3>
-            <span class="meta">MediaWebStudio · Mar 2023 – Presente</span>
-          </header>
-          <ul class="tl-body">
-            <li>Diseño y desarrollo de interfaces web responsive usando HTML5, CSS3 y JavaScript.</li>
-            <li>Optimización de performance y experiencia de usuario en proyectos web.</li>
-            <li>Gestión de proyectos desde la conceptualización hasta la implementación.</li>
-          </ul>
-        </article>
-      </div>
-
-
-  <section id="bio" class="section">
-    <div class="container">
-      <h2 class="section-title">Resumen Profesional</h2>
-
-      <div class="card lead reveal">
-        <p>
-          Soy <strong>Estudiante de Ingeniería Multimedia</strong> con enfoque en la concepción y desarrollo de productos digitales innovadores.
-          Mi formación abarca <strong>telecomunicaciones, desarrollo web y producción de contenidos digitales</strong>,
-          complementada con experiencia en proyectos freelance de edición de video, animación y diseño gráfico.
-        </p>
-
-        <p>
-          Combino <strong>criterio visual, narrativa audiovisual y habilidades técnicas</strong> para crear interfaces funcionales
-          y experiencias digitales de alto impacto. Me apasiona la tecnología y la creación de contenidos que conecten con los usuarios
-          de manera significativa.
-        </p>
-
-        <p>
-          Destaco por mi <strong>capacidad de adaptación en entornos dinámicos</strong>, trabajo en equipo colaborativo y cumplimiento
-          de objetivos bajo presión. Busco oportunidades para aplicar mis conocimientos en proyectos desafiantes que impulsen mi crecimiento profesional.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <section id="experience" class="section alt">
-    <div class="container">
-      <h2 class="section-title">Experiencia</h2>
-
-
-
-      <div class="timeline single-dot">
-        <article class="tl-item reveal">
-          <div class="tl-dot"></div>
-          <header class="tl-head">
-            <h3></h3>
-            <span class="meta"></span>
-          </header>
-          <ul class="tl-body">
-            <li></li>
-          </ul>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section id="education" class="section">
-    <div class="container">
-      <h2 class="section-title">Educación</h2>
-
-      <div class="grid cards">
-        <article class="card reveal">
-          <h3>Ingeniería Multimedia</h3>
-          <p class="muted">Universidad Autónoma de Occidente · <span class="tag">Feb 2021 – En curso</span></p>
-        </article>
-
-        <article class="card reveal">
-          <h3>Bachiller Académico</h3>
-          <p class="muted">Colegio Los Andes San Fernando · <span class="tag">Jul 2018 – Ene 2021</span></p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section id="languages" class="section">
-    <div class="container">
-      <h2 class="section-title">Idiomas</h2>
-
-      <div class="grid cards">
-        <article class="card reveal language-card">
-          <div class="language-header">
-            <img src="assets/img/Colombia.png" alt="Colombia" class="flag">
-            <div>
-              <h3>Español</h3>
-              <span class="level">Nativo</span>
-            </div>
-          </div>
-
-          <div class="bars">
-            <div class="bar"><span>Comprensión</span><i style="--val:100%"></i></div>
-            <div class="bar"><span>Lectura</span><i style="--val:100%"></i></div>
-            <div class="bar"><span>Comunicación</span><i style="--val:100%"></i></div>
-          </div>
-
-          <div class="badge-row">
-            <span class="badge">🇨🇴 Nativo</span>
-            <span class="badge">Comunicación profesional</span>
-            <span class="badge">Escritura avanzada</span>
-          </div>
-        </article>
-
-        <article class="card reveal language-card">
-          <div class="language-header">
-            <img src="assets/img/usa.png" alt="USA" class="flag">
-            <div>
-              <h3>Inglés</h3>
-              <span class="level">Nivel: B1</span>
-            </div>
-          </div>
-
-          <div class="bars">
-            <div class="bar"><span>Comprensión</span><i style="--val:70%"></i></div>
-            <div class="bar"><span>Lectura técnica</span><i style="--val:65%"></i></div>
-            <div class="bar"><span>Conversación</span><i style="--val:75%"></i></div>
-          </div>
-
-<div class="badge-row">
-            <span class="badge">🇺🇸 B1 Intermedio</span>
-            <span class="badge">Comprensión técnica</span>
-            <span class="badge">Buen nivel conversacional</span>
-          </div>
-          
-          <div style="margin-top: 20px;">
-            <a href="https://cert.efset.org/es/2oEXjs" 
-               target="_blank" 
-               rel="noopener" 
-               class="btn primary" 
-               style="display: inline-flex; align-items: center; gap: 8px; font-size: 0.9rem;">
-               <span>Ver Certificado Oficial</span>
-               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
-            </a>
-          </div>
-          
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section id="diplomas" class="section alt">
-    <div class="container">
-      <h2 class="section-title">Diplomas y Cursos</h2>
-      <div id="diploma-grid" class="grid tiles"></div>
-    </div>
-
-    <div id="lightbox" class="lightbox" aria-hidden="true" role="dialog" aria-label="Vista de diploma">
-      <div class="lightbox-body glass">
-        <button class="lightbox-close" aria-label="Cerrar ventana" type="button">×</button>
-        <img id="lightbox-img" alt="" />
-        <iframe id="lightbox-pdf" title="Diploma PDF" loading="lazy"></iframe>
-      </div>
-    </div>
-  </section>
-
-  <section id="skills" class="section">
-    <div class="container">
-      <h2 class="section-title">Habilidades</h2>
-
-      <div class="grid skill-grid">
-        <article class="card reveal">
-          <h3>Habilidades Profesionales</h3>
-          <div class="badge-row" role="list">
-            <span class="badge" role="listitem">Diseño UI/UX</span>
-            <span class="badge" role="listitem">Desarrollo Web</span>
-            <span class="badge" role="listitem">Edición de Video</span>
-            <span class="badge" role="listitem">Animación Digital</span>
-            <span class="badge" role="listitem">Producción Multimedia</span>
-          </div>
-        </article>
-
-        <article class="card reveal">
-          <h3>Habilidades Personales</h3>
-          <div class="badge-row">
-            <span class="badge">Trabajo en equipo</span>
-            <span class="badge">Adaptabilidad</span>
-            <span class="badge">Creatividad</span>
-            <span class="badge">Resolución de problemas</span>
-            <span class="badge">Gestión del tiempo</span>
-          </div>
-        </article>
-
-        <article class="card reveal">
-          <h3>Tecnologías</h3>
-
-          <div class="badge-row" aria-label="Áreas técnicas">
-            <span class="badge">Web: HTML/CSS/JS</span>
-            <span class="badge">Backend: Python</span>
-            <span class="badge">UI/UX: Figma</span>
-            <span class="badge">Multimedia: Adobe CC</span>
-          </div>
-
-          <div class="bars">
-            <div class="bar"><span>Figma/Prototipos</span><i style="--val:75%"></i></div>
-            <div class="bar"><span>JavaScript</span><i style="--val:80%"></i></div>
-            <div class="bar"><span>Adobe Creative Suite</span><i style="--val:85%"></i></div>
-            <div class="bar"><span>HTML/CSS</span><i style="--val:90%"></i></div>
-            <div class="bar"><span>Python (Desarrollo)</span><i style="--val:95%"></i></div>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- PORTAFOLIO (un solo section con 2 bloques) -->
-  <section id="projects" class="section alt">
-    <div class="container">
-      <h2 class="section-title">Portafolio</h2>
-
-      <!-- Programación -->
-      <h3 class="section-subtitle">Proyectos de Programación</h3>
-      <div class="grid cards portfolio">
-        <article class="card hoverable reveal">
-          <div class="cover" aria-hidden="true"></div>
-          <h3>MediaWebStudio</h3>
-          <p>Emprendimiento personal de desarrollo de software, edición de imagen y video.</p>
-
-          <div class="project-actions">
-            <a href="https://github.com/Ryuukatsuro25/MediaWebStudio" target="_blank" rel="noopener" class="btn ghost">
-              <img src="assets/icons/github.svg" class="github-icon" alt="GitHub" width="16" height="16" />
-              <span>Repositorio</span>
-            </a>
-
-            <a href="https://mediawebstudio.netlify.app" target="_blank" rel="noopener" class="btn primary">
-              <span>Ver sitio</span>
-            </a>
-          </div>
-        </article>
-
-        <article class="card hoverable reveal">
-          <div class="cover" aria-hidden="true"></div>
-          <h3>Servidor de Minecraft</h3>
-          <p>Panel de control para servidor de Minecraft: genera conexión, IP y habilita el servicio.</p>
-
-          <div class="project-actions">
-            <a href="https://github.com/Ryuukatsuro25/SERVER-MANAGER-MINERCRAFT" target="_blank" rel="noopener" class="btn ghost">
-              <img src="assets/icons/github.svg" class="github-icon" alt="GitHub" width="16" height="16" />
-              <span>Repositorio</span>
-            </a>
-          </div>
-        </article>
-
-        <article class="card hoverable reveal">
-          <div class="cover" aria-hidden="true"></div>
-          <h3>RappiXtreame</h3>
-          <p>Proyecto de documentación de videojuego creado en Unity.</p>
-
-          <div class="project-actions">
-            <a href="https://github.com/Ryuukatsuro25/Rappi-Xtreame" target="_blank" rel="noopener" class="btn ghost">
-              <img src="assets/icons/github.svg" class="github-icon" alt="GitHub" width="16" height="16" />
-              <span>Repositorio</span>
-            </a>
-
-            <a href="https://rappixtreame.netlify.app" target="_blank" rel="noopener" class="btn primary">
-              <span>Ver sitio</span>
-            </a>
-          </div>
-        </article>
-      </div>
-
-      <!-- Gráfico -->
-      <h3 class="section-subtitle">Portafolio Gráfico</h3>
-      <div class="grid cards portfolio gallery graphic-gallery">
-        <!-- IMAGEN 1 -->
-        <article class="card hoverable reveal gallery-item">
-          <img class="gallery-media"
-               src="assets/portfolio/MediaWeb_Studio.png"
-               alt="MediaWeb Studio"
-               loading="lazy" />
-          <div class="gallery-overlay">
-            <a class="btn primary" href="assets/portfolio/MediaWeb_Studio.png" target="_blank" rel="noopener">Ver</a>
-          </div>
-        </article>
-
-        <!-- IMAGEN 2 (evita espacios en el nombre del archivo) -->
-        <article class="card hoverable reveal gallery-item">
-          <img class="gallery-media"
-               src="assets/portfolio/mayester-sublimatie.jpg"
-               alt="Mayester Sublimatie"
-               loading="lazy" />
-          <div class="gallery-overlay">
-            <a class="btn primary" href="assets/portfolio/mayester-sublimatie.jpg" target="_blank" rel="noopener">Ver</a>
-          </div>
-        </article>
-
-        <!-- VIDEO 1 -->
-        <article class="card hoverable reveal gallery-item">
-          <video class="gallery-media"
-                 src="assets/portfolio/la-muelona.mp4"
-                 muted
-                 loop
-                 autoplay
-                 playsinline
-                 preload="metadata">
-          </video>
-          <div class="gallery-overlay">
-            <a class="btn primary" href="assets/portfolio/la-muelona.mp4" target="_blank" rel="noopener">Ver</a>
-          </div>
-        </article>
-
-        <!-- IMAGEN 3 (si es PNG, debe ser img, no video) -->
-        <article class="card hoverable reveal gallery-item">
-          <img class="gallery-media"
-               src="assets/portfolio/saboresdemama.png"
-               alt="Sabores de Mamá"
-               loading="lazy" />
-          <div class="gallery-overlay">
-            <a class="btn primary" href="assets/portfolio/saboresdemama.png" target="_blank" rel="noopener">Ver</a>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section id="contact" class="section">
-    <div class="container">
-      <h2 class="section-title">Contacto</h2>
-
-      <div class="card reveal">
-        <ul class="contact-list">
-          <li>
-            <a href="mailto:juan.jose.osorio.reyes@hotmail.com" rel="noopener" aria-label="Correo electrónico">
-              <img src="assets/icons/mail.svg" class="icon" alt="Correo" />
-              juan.jose.osorio.reyes@hotmail.com
-            </a>
-          </li>
-
-          <li>
-            <span aria-label="Ubicación">
-              <img src="assets/icons/map-pin.svg" class="icon" alt="Ubicación" />
-              Cali, Colombia
-            </span>
-          </li>
-
-          <li>
-            <a href="https://www.linkedin.com/in/juan-jose-osorio-reyes-a7b7442ba/" target="_blank" rel="noopener" aria-label="LinkedIn">
-              <img src="assets/icons/linkedin.svg" class="icon linkedin-icon" alt="LinkedIn" />
-              LinkedIn
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </section>
 
   <footer class="site-footer">
     <div class="container">
       <small>© <span id="year"></span> Juan José Osorio Reyes · Estudiante de Ingeniería Multimedia</small>
 
-      <nav class="footer-nav">
+      <nav class="footer-nav" aria-label="Navegación del pie de página">
         <a href="#hero">Inicio</a>
         <a href="#projects">Portafolio</a>
         <a href="#contact">Contacto</a>
@@ -488,4 +497,3 @@
   <script src="js/app.js" defer></script>
 </body>
 </html>
-
