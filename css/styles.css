@@ -381,3 +381,9 @@ body{
   transform: scale(1.03);
   transition: transform .25s ease;
 }
+:root { --fs-h1: 2.4rem; --fs-h2: 1.6rem; --fs-h3: 1.15rem; --fs-body: 1rem; --fs-meta: .85rem; }
+h1.display { font-size: var(--fs-h1); line-height: 1.1; }
+.section-title { font-size: var(--fs-h2); margin-bottom: .75rem; }
+.section-subtitle { font-size: var(--fs-h3); margin: 2rem 0 1rem; }
+.card p, .tl-body li { font-size: var(--fs-body); line-height: 1.55; }
+.meta { font-size: var(--fs-meta); opacity: .8; }
