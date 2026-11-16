@@ -90,9 +90,46 @@
             "Identifiqué 6 bloqueos críticos de experiencia y los vinculé a soluciones de diseño mediante una matriz de trazabilidad.",
             "Diseñé en Figma prototipos de fidelidad media de 5 pantallas (Inicio, Residencial, Empresarial, Soporte, Institucional); la validación con usuarios y escala SUS está en curso."
           ],
-          "links": []
+          "links": [],
+          "metrics": [
+            [
+              "25",
+              "participantes"
+            ],
+            [
+              "6",
+              "tareas evaluadas"
+            ],
+            [
+              "6",
+              "bloqueos de UX"
+            ],
+            [
+              "5",
+              "pantallas prototipadas"
+            ]
+          ],
+          "case": [
+            [
+              "Método",
+              "Diagnóstico con 25 participantes sobre 6 tareas clave: auditoría heurística, protocolo Think Aloud, entrevistas semiestructuradas y cuestionario Likert."
+            ],
+            [
+              "Hallazgos",
+              "6 bloqueos críticos de experiencia (UX-01 a UX-06), cada uno vinculado a una solución de diseño mediante una matriz de trazabilidad."
+            ],
+            [
+              "Solución",
+              "Prototipos de fidelidad media en Figma para 5 pantallas: Inicio, Residencial, Empresarial, Soporte e Institucional, con pago rápido y formulario de contacto."
+            ],
+            [
+              "Siguiente paso",
+              "Evaluación de usabilidad con usuarios y escala SUS, y validación de accesibilidad con WAVE y Lighthouse."
+            ]
+          ]
         }
-      ]
+      ],
+      "slug": "ux"
     },
     {
       "category": "Desarrollo web",
@@ -145,7 +182,8 @@
             ]
           ]
         }
-      ]
+      ],
+      "slug": "web"
     },
     {
       "category": "Software, IA y datos",
@@ -216,7 +254,8 @@
           ],
           "links": []
         }
-      ]
+      ],
+      "slug": "software"
     },
     {
       "category": "Videojuegos",
@@ -231,7 +270,8 @@
           ],
           "links": []
         }
-      ]
+      ],
+      "slug": "juegos"
     },
     {
       "category": "Redes e infraestructura",
@@ -247,7 +287,8 @@
           ],
           "links": []
         }
-      ]
+      ],
+      "slug": "redes"
     }
   ]
 }

@@ -7,29 +7,33 @@ Hoja de vida web y en PDF de Juan José Osorio Reyes, estudiante de Ingeniería 
 ## Estructura
 
 ```
-index.html                     Página (orden: Inicio → Proyectos → Experiencia → Habilidades → Formación → Portafolio gráfico → Contacto)
-css/styles.css                 Estilos (tema claro/oscuro)
-js/app.js                      Tema, animaciones, certificados del diplomado y video al pasar el cursor
-data/cv.json                   FUENTE ÚNICA del contenido del CV en PDF
-data/diplomas.json             Módulos del diplomado de MinCultura
-tools/build_cv.py              Genera los PDF a partir de data/cv.json
-tools/fonts/                   Fuentes incrustadas en el PDF (Carlito y Poppins, licencia OFL)
+index.html            Página generada (no editar a mano: usa tools/build_site.py)
+css/styles.css        Estilos: paleta, tipografía, diseño responsive, tema claro/oscuro y animaciones
+js/app.js             Tema, menú activo, aparición al hacer scroll, filtro de proyectos, visor de certificados
+data/cv.json          FUENTE ÚNICA del contenido (web y PDF)
+data/diplomas.json    Módulos del diplomado de MinCultura
+tools/build_site.py   Genera index.html a partir de data/cv.json
+tools/build_cv.py     Genera los PDF a partir de data/cv.json
+tools/fonts/          Fuentes del PDF (Carlito y Poppins, licencia OFL)
+assets/fonts/         Fuentes de la web (Sora y Source Sans 3, licencia OFL), alojadas en el sitio
 assets/documents/
-  Juan_Jose_Osorio_Reyes_CV.pdf       Versión ATS: una columna, sin foto (para portales de empleo)
-  Juan_Jose_Osorio_Reyes_CV_foto.pdf  Misma información con foto (para enviar directamente)
+  Juan_Jose_Osorio_Reyes_CV.pdf       Versión ATS: una columna, sin foto
+  Juan_Jose_Osorio_Reyes_CV_foto.pdf  Misma información con foto
 ```
 
-## Actualizar el CV
+Orden de la página: Presentación → Perfil → Experiencia → Habilidades → Formación → Proyectos → Contacto.
+
+## Actualizar el contenido
 
 1. Edita `data/cv.json`.
-2. Regenera los PDF:
+2. Regenera la web y los PDF:
    ```bash
    pip install reportlab
+   python tools/build_site.py
    python tools/build_cv.py
    ```
-3. Si cambiaste proyectos, habilidades o fechas, actualiza lo mismo en `index.html` (los proyectos están agrupados por área igual que en el PDF) para que la web y el PDF digan exactamente lo mismo.
 
 ## Publicar en GitHub Pages
 
 Settings → Pages → Source: *Deploy from a branch* → rama `main`, carpeta `/ (root)`.
-Si la URL final es distinta a la de arriba, cámbiala en `index.html` (`canonical`, `og:url`, `og:image` y JSON-LD) y en `data/cv.json` (`contact.site`), y vuelve a generar los PDF.
+Si la URL final es distinta a la de arriba, cámbiala en `data/cv.json` (`contact.site`) y vuelve a ejecutar los dos scripts.
