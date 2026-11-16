@@ -225,29 +225,6 @@ def project_links(links):
     return '<div class="p-links">' + "".join(out) + "</div>"
 
 
-def featured(pr):
-    metrics = "".join(
-        f'<div class="metric"><span class="metric-n" data-count="{e(n)}">{e(n)}</span><span class="metric-l">{e(l)}</span></div>'
-        for n, l in pr["metrics"])
-    case = "".join(f"<div><h4>{e(h)}</h4><p>{e(t)}</p></div>" for h, t in pr["case"])
-    return f'''
-        <article class="card featured spot reveal" data-area="ux">
-          <div class="featured-top">
-            <div>
-              <span class="area-tag area-ux">Caso de estudio · UX/UI</span>
-              <h3>{e(pr["name"])}</h3>
-              <p class="meta">{e(pr["context"])} · {e(pr["date"])}</p>
-              <p>Investigué los problemas de usabilidad del portal corporativo de un proveedor de internet por fibra y estoy rediseñando su experiencia a partir de la evidencia recogida con usuarios.</p>
-              {tags([s.strip() for s in pr["stack"].split("·")])}
-            </div>
-            <div class="metrics">{metrics}</div>
-          </div>
-          <details class="case">
-            <summary>Leer el caso de estudio{CHEV}</summary>
-            <div class="case-grid">{case}</div>
-          </details>
-        </article>'''
-
 
 def project_card(pr, slug, idx):
     extra = " is-extra" if idx >= VISIBLE_PROJECTS else ""
@@ -268,16 +245,13 @@ def project_card(pr, slug, idx):
 
 
 def projects():
-    feat, cards, idx = "", [], 0
+    cards, idx = [], 0
     for g in D["project_groups"]:
         for pr in g["projects"]:
-            if "metrics" in pr:
-                feat = featured(pr)
-            else:
-                cards.append(project_card(pr, g["slug"], idx)); idx += 1
+            cards.append(project_card(pr, g["slug"], idx)); idx += 1
     chips = [f'<button class="chip is-on" type="button" data-filter="all" aria-pressed="true">Todos <span>{idx}</span></button>']
     for g in D["project_groups"]:
-        n = sum(1 for p in g["projects"] if "metrics" not in p)
+        n = len(g["projects"])
         if n:
             chips.append(f'<button class="chip" type="button" data-filter="{g["slug"]}" aria-pressed="false">{e(AREA_LABEL[g["slug"]])} <span>{n}</span></button>')
     more = (f'<div class="more-wrap"><button class="btn ghost" id="show-all" type="button" aria-expanded="false">'
@@ -286,7 +260,6 @@ def projects():
     <section id="proyectos" class="section">
       <div class="container">
         {head("Proyectos", "Qué hice, con qué herramientas y dónde verlo.")}
-        {feat}
         <div class="chips reveal" role="group" aria-label="Filtrar proyectos por área">{"".join(chips)}</div>
         <p class="sr-only" aria-live="polite" id="filter-status"></p>
         <div class="grid projects-grid" id="projects-grid">{"".join(cards)}

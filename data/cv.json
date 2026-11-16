@@ -89,43 +89,7 @@
             "Identifiqué 6 bloqueos críticos de experiencia y los vinculé a soluciones de diseño mediante una matriz de trazabilidad.",
             "Diseñé en Figma prototipos de fidelidad media de 5 pantallas (Inicio, Residencial, Empresarial, Soporte, Institucional); la validación con usuarios y escala SUS está en curso."
           ],
-          "links": [],
-          "metrics": [
-            [
-              "25",
-              "participantes"
-            ],
-            [
-              "6",
-              "tareas evaluadas"
-            ],
-            [
-              "6",
-              "bloqueos de UX"
-            ],
-            [
-              "5",
-              "pantallas prototipadas"
-            ]
-          ],
-          "case": [
-            [
-              "Método",
-              "Diagnóstico con 25 participantes sobre 6 tareas clave: auditoría heurística, protocolo Think Aloud, entrevistas semiestructuradas y cuestionario Likert."
-            ],
-            [
-              "Hallazgos",
-              "6 bloqueos críticos de experiencia (UX-01 a UX-06), cada uno vinculado a una solución de diseño mediante una matriz de trazabilidad."
-            ],
-            [
-              "Solución",
-              "Prototipos de fidelidad media en Figma para 5 pantallas: Inicio, Residencial, Empresarial, Soporte e Institucional, con pago rápido y formulario de contacto."
-            ],
-            [
-              "Siguiente paso",
-              "Evaluación de usabilidad con usuarios y escala SUS, y validación de accesibilidad con WAVE y Lighthouse."
-            ]
-          ]
+          "links": []
         }
       ],
       "slug": "ux"
@@ -199,26 +163,6 @@
           "links": []
         },
         {
-          "name": "Notebook de análisis de datos con IA",
-          "context": "Proyecto personal",
-          "date": "2026",
-          "stack": "Python · Jupyter · APIs de Anthropic, OpenAI y Gemini",
-          "bullets": [
-            "Construí un cuaderno de análisis de datos asistido por IA con soporte para 3 proveedores y aislamiento estricto de los datos en memoria."
-          ],
-          "links": []
-        },
-        {
-          "name": "Comparador de países con datos del Banco Mundial",
-          "context": "Proyecto personal",
-          "date": "",
-          "stack": "Python · API del Banco Mundial · Tkinter · Exportación a Word",
-          "bullets": [
-            "Desarrollé una aplicación de escritorio que compara 50 indicadores por país, calcula ventajas y desventajas, muestra gráficas y exporta un reporte en Word."
-          ],
-          "links": []
-        },
-        {
           "name": "Transferencia de archivos cifrada",
           "context": "Proyecto personal",
           "date": "",
@@ -271,23 +215,6 @@
         }
       ],
       "slug": "juegos"
-    },
-    {
-      "category": "Redes e infraestructura",
-      "projects": [
-        {
-          "name": "Infraestructura de red para AgroRed S.A.S.",
-          "context": "Proyecto en equipo de 4, UAO · Rol: análisis",
-          "date": "2026",
-          "stack": "Packet Tracer · VLSM · NAT · Ubuntu · Vagrant · VirtualBox · BIND9 · Apache · UFW",
-          "bullets": [
-            "Participé en el diseño del direccionamiento IPv4 con VLSM, enrutamiento estático y NAT para 4 sedes.",
-            "Virtualizamos servidores Ubuntu con Vagrant/VirtualBox: DNS (BIND9), Apache con hosts virtuales, UFW y Squid."
-          ],
-          "links": []
-        }
-      ],
-      "slug": "redes"
     }
   ]
 }
