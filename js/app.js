@@ -9,6 +9,13 @@ const root = document.documentElement;
 
 $('#year').textContent = new Date().getFullYear();
 
+// Las animaciones de aparición solo se activan si este script carga.
+// Si falla, no hay IntersectionObserver o la página la visita una herramienta automática
+// (capturas, robots), todo el contenido queda visible desde el inicio.
+const canAnimate = 'IntersectionObserver' in window && !navigator.webdriver;
+root.classList.add('js-ready');           // filtros y "ver todos" activos
+if (canAnimate) root.classList.add('anim'); // apariciones al hacer scroll
+
 // ---------- Tema claro / oscuro ----------
 const themeBtn = $('#themeToggle');
 const syncTheme = () => themeBtn.setAttribute('aria-label', root.classList.contains('light') ? 'Cambiar a tema oscuro' : 'Cambiar a tema claro');
@@ -58,7 +65,7 @@ $('#nombre').setAttribute('tabindex', '-1');
 
 // ---------- Menú: resalta la sección visible ----------
 const navLinks = $$('.main-nav a');
-const spy = new IntersectionObserver(entries => {
+const spy = 'IntersectionObserver' in window && new IntersectionObserver(entries => {
   entries.forEach(en => {
     if (!en.isIntersecting) return;
     navLinks.forEach(a => {
@@ -68,7 +75,7 @@ const spy = new IntersectionObserver(entries => {
     });
   });
 }, { rootMargin: '-45% 0px -50% 0px' });
-navLinks.map(a => $(a.getAttribute('href'))).filter(Boolean).forEach(s => spy.observe(s));
+if (spy) navLinks.map(a => $(a.getAttribute('href'))).filter(Boolean).forEach(s => spy.observe(s));
 
 // ---------- Contadores ----------
 function countUp(el){
@@ -84,7 +91,7 @@ function countUp(el){
 }
 
 // ---------- Aparición al hacer scroll (una sola vez) ----------
-const reveal = new IntersectionObserver(entries => {
+const reveal = canAnimate && new IntersectionObserver(entries => {
   entries.forEach(en => {
     if (!en.isIntersecting) return;
     en.target.classList.add('show');
@@ -92,9 +99,15 @@ const reveal = new IntersectionObserver(entries => {
     reveal.unobserve(en.target);
   });
 }, { rootMargin: '0px 0px -10% 0px', threshold: 0.12 });
-$$('.reveal').forEach(el => reveal.observe(el));
-// Las tarjetas de proyectos aparecen en cascada
-$$('.project').forEach((p, i) => { p.classList.add('reveal'); p.style.setProperty('--d', i % 3); reveal.observe(p); });
+$$('.project').forEach((p, i) => { p.classList.add('reveal'); p.style.setProperty('--d', i % 3); });
+if (canAnimate){
+  $$('.reveal').forEach(el => reveal.observe(el));
+} else {
+  $$('.reveal').forEach(el => el.classList.add('show'));
+  $$('[data-count]').forEach(el => { el.textContent = el.dataset.count; });
+}
+// Al imprimir se muestra todo, incluso lo que no se ha desplazado
+addEventListener('beforeprint', () => $$('.reveal').forEach(el => el.classList.add('show')));
 
 // ---------- Texto del titular que se escribe y se borra ----------
 const typed = $('.typed');
@@ -140,7 +153,7 @@ function applyProjects(animate = true){
     card.classList.toggle('expanded', visible && card.classList.contains('is-extra'));
     if (visible){
       shown++;
-      card.classList.add('show');
+      if (animate) card.classList.add('show'); // al cargar, cada tarjeta espera a entrar en pantalla
       if (animate && !reduceMotion){
         card.classList.remove('pop'); void card.offsetWidth;
         card.style.setProperty('--k', k++); card.classList.add('pop');

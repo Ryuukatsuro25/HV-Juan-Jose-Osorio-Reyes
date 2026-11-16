@@ -194,7 +194,7 @@ body{overflow-x:clip}
   content:""; display:block; height:4px; width:48px; margin-top:10px; border-radius:4px; background:var(--grad);
   transform-origin:left; transition:transform .8s var(--ease) .2s;
 }
-.js .reveal:not(.show) .section-title::after, .js .section-head.reveal:not(.show) .section-title::after{transform:scaleX(0)}
+.anim .reveal:not(.show) .section-title::after, .anim .section-head.reveal:not(.show) .section-title::after{transform:scaleX(0)}
 .section-sub{margin:10px 0 0; color:var(--muted); max-width:60ch}
 
 /* Tarjetas de vidrio */
@@ -224,8 +224,8 @@ body{overflow-x:clip}
 :root.light .tags li{background:rgba(20,35,70,.03)}
 .tags-sm li{font-size:.78rem; padding:3px 9px}
 /* Las etiquetas aparecen una tras otra cuando su tarjeta entra en pantalla */
-.js .reveal .tags li{opacity:0; transform:scale(.9); transition:opacity .4s var(--ease), transform .4s var(--ease); transition-delay:calc(.25s + var(--i, 0) * .04s)}
-.js .reveal.show .tags li{opacity:1; transform:none}
+.anim .reveal .tags li{opacity:0; transform:scale(.9); transition:opacity .4s var(--ease), transform .4s var(--ease); transition-delay:calc(.25s + var(--i, 0) * .04s)}
+.anim .reveal.show .tags li{opacity:1; transform:none}
 
 /* ---------- Sobre mí ---------- */
 .about-grid{display:grid; grid-template-columns:1.6fr 1fr; gap:20px; align-items:stretch}
@@ -346,8 +346,8 @@ body{overflow-x:clip}
 :root.light .area-juegos{color:#0b7566} :root.light .area-redes{color:#0b6577}
 
 /* Animación del filtro y "ver todos" */
-.project.is-extra:not(.expanded){display:none}
-.project.is-hidden{display:none}
+.js-ready .project.is-extra:not(.expanded){display:none}
+.js-ready .project.is-hidden{display:none}
 .project.pop{animation:pop .45s var(--ease) both; animation-delay:calc(var(--k, 0) * .05s)}
 @keyframes pop{from{opacity:0; transform:translateY(14px) scale(.98)}}
 .more-wrap{display:flex; justify-content:center; margin-top:30px}
@@ -415,9 +415,9 @@ body{overflow-x:clip}
 }
 
 /* ---------- Aparición al hacer scroll ---------- */
-.js .reveal{opacity:0; transform:translateY(24px); transition:opacity .7s var(--ease), transform .7s var(--ease); transition-delay:calc(var(--d, 0) * .1s)}
-.js .reveal.show{opacity:1; transform:none}
-.js .reveal.show.spot:hover, .js .reveal.show.skill-card:hover{transform:translateY(-4px)}
+.anim .reveal{opacity:0; transform:translateY(24px); transition:opacity .7s var(--ease), transform .7s var(--ease); transition-delay:calc(var(--d, 0) * .1s)}
+.anim .reveal.show{opacity:1; transform:none}
+.anim .reveal.show.spot:hover, .anim .reveal.show.skill-card:hover{transform:translateY(-4px)}
 
 /* ---------- Responsive ---------- */
 @media (max-width: 1000px){
@@ -461,11 +461,14 @@ body{overflow-x:clip}
 @media (prefers-reduced-motion: reduce){
   html{scroll-behavior:auto}
   *,*::before,*::after{animation-duration:.01ms !important; animation-iteration-count:1 !important; transition-duration:.01ms !important; transition-delay:0s !important}
-  .js .reveal, .js .load, .js .reveal .tags li, .diploma{opacity:1 !important; transform:none !important}
+  .anim .reveal, .js .load, .anim .reveal .tags li, .diploma{opacity:1 !important; transform:none !important}
   .caret{display:none}
 }
 @media print{
   .site-header, .progress, .hero-bg, .scroll-hint, .to-top, .chips, .more-wrap, .gallery{display:none !important}
-  .js .reveal, .js .load, .js .reveal .tags li{opacity:1; transform:none}
+  .anim .reveal, .js .load, .anim .reveal .tags li{opacity:1; transform:none}
   .project.is-extra{display:flex !important}
 }
+
+/* Sin JavaScript se ven todos los proyectos; los controles que dependen del script se ocultan */
+html:not(.js-ready) .chips, html:not(.js-ready) .more-wrap, html:not(.js-ready) .to-top, html:not(.js-ready) #copy-mail{display:none}

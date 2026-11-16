@@ -31,6 +31,7 @@ DL = svg('<path d="M12 3v12m0 0-5-5m5 5 5-5M4 20h16"/>')
 EXT = svg('<path d="M14 4h6v6M20 4l-9 9M18 14v6H4V6h6"/>')
 COPY = svg('<rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a1 1 0 0 1 1-1h10"/>')
 PIN = svg('<path d="M12 21s-7-6.1-7-11a7 7 0 0 1 14 0c0 4.9-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/>')
+WA = svg('<path d="M3.5 20.5 5 16a8.5 8.5 0 1 1 3.2 3.1z"/><path d="M9 9.5c.3 1.8 2.2 4 4.4 4.6l1.1-1.1 1.8.8-.4 1.6c-3 .6-7.1-3.4-7-6.4l1.6-.4.8 1.8z"/>')
 PHONE = svg('<path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A17 17 0 0 1 3 5a2 2 0 0 1 2-2"/>')
 UP = svg('<path d="m6 14 6-6 6 6"/>')
 SUN = svg('<circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/>')
@@ -194,7 +195,7 @@ def education():
           <article class="card spot reveal" style="--d:1">
             <span class="pill">ene. 2026</span>
             <h3>Inglés B1 intermedio</h3>
-            <p class="meta">EF SET English Certificate · 50/100</p>
+            <p class="meta">EF SET English Certificate</p>
             <p>Español nativo.</p>
             <a class="link" href="https://cert.efset.org/es/2oEXjs" target="_blank" rel="noopener">Verificar certificado{EXT}</a>
           </article>
@@ -334,6 +335,7 @@ def contact():
           </div>
           <ul class="contact-list">
             <li><a href="tel:{e(C["phone"].replace(" ", ""))}">{PHONE}<span>{e(C["phone"])}</span></a></li>
+            <li><a href="https://wa.me/{e(C["phone"].replace(" ", "").replace("+", ""))}" target="_blank" rel="noopener">{WA}<span>WhatsApp</span></a></li>
             <li><a href="https://www.{e(C["linkedin"])}/" target="_blank" rel="noopener">{LI}<span>LinkedIn</span></a></li>
             <li><a href="https://{e(C["github"])}" target="_blank" rel="noopener">{GH}<span>GitHub</span></a></li>
             <li><span>{PIN}<span>{e(C["city"])}</span></span></li>

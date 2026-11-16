@@ -2,7 +2,7 @@
 
 Hoja de vida web y en PDF de Juan José Osorio Reyes, estudiante de Ingeniería Multimedia (Universidad Autónoma de Occidente, Cali). Enfoque: desarrollo web, UX/UI e integración de APIs de IA.
 
-**Sitio:** https://ryuukatsuro25.github.io/HV-Juan-Jose-Osorio-Reyes/
+**Sitio:** https://hv-juanjoseosorioreyes.netlify.app/
 
 ## Estructura
 
@@ -34,7 +34,7 @@ Orden de la página: Inicio → Sobre mí → Experiencia → Habilidades → Fo
    python tools/build_cv.py
    ```
 
-## Publicar en GitHub Pages
+## Publicar
 
-Settings → Pages → Source: *Deploy from a branch* → rama `main`, carpeta `/ (root)`.
-Si la URL final es distinta a la de arriba, cámbiala en `data/cv.json` (`contact.site`) y vuelve a ejecutar los dos scripts.
+El sitio se publica en Netlify desde este repositorio (no necesita paso de compilación: `index.html` ya viene generado).
+Si la URL cambia, actualízala en `data/cv.json` (`contact.site`) y vuelve a ejecutar los dos scripts: así se corrigen a la vez la URL canónica, la vista previa de LinkedIn/WhatsApp y el enlace del PDF.
