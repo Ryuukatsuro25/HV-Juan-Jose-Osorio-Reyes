@@ -8,20 +8,21 @@ Hoja de vida web y en PDF de Juan José Osorio Reyes, estudiante de Ingeniería 
 
 ```
 index.html            Página generada (no editar a mano: usa tools/build_site.py)
-css/styles.css        Estilos: paleta, tipografía, diseño responsive, tema claro/oscuro y animaciones
-js/app.js             Tema, menú activo, aparición al hacer scroll, filtro de proyectos, visor de certificados
+css/styles.css        Estilos (basados en la plantilla original): tema oscuro/claro, vidrio, animaciones y diseño responsive
+js/app.js             Tema, menú móvil, progreso de lectura, aparición al hacer scroll, texto animado, contadores,
+                      filtro de proyectos, certificados, copiar correo y volver arriba
 data/cv.json          FUENTE ÚNICA del contenido (web y PDF)
 data/diplomas.json    Módulos del diplomado de MinCultura
 tools/build_site.py   Genera index.html a partir de data/cv.json
 tools/build_cv.py     Genera los PDF a partir de data/cv.json
 tools/fonts/          Fuentes del PDF (Carlito y Poppins, licencia OFL)
-assets/fonts/         Fuentes de la web (Sora y Source Sans 3, licencia OFL), alojadas en el sitio
+assets/fonts/         Fuente de la web (Inter, licencia OFL), alojada en el sitio
 assets/documents/
   Juan_Jose_Osorio_Reyes_CV.pdf       Versión ATS: una columna, sin foto
   Juan_Jose_Osorio_Reyes_CV_foto.pdf  Misma información con foto
 ```
 
-Orden de la página: Presentación → Perfil → Experiencia → Habilidades → Formación → Proyectos → Contacto.
+Orden de la página: Inicio → Sobre mí → Experiencia → Habilidades → Formación → Proyectos → Portafolio → Contacto.
 
 ## Actualizar el contenido
 
