@@ -1,0 +1,253 @@
+{
+  "_nota": "Fuente única de datos del CV. Edita aquí y ejecuta: python tools/build_cv.py — así el PDF y la web nunca se contradicen.",
+  "name": "Juan José Osorio Reyes",
+  "headline": "Estudiante de Ingeniería Multimedia | Desarrollo Web y UX/UI",
+  "contact": {
+    "city": "Cali, Colombia",
+    "phone": "+57 301 251 6228",
+    "email": "juan.jose.osorio.reyes@hotmail.com",
+    "linkedin": "linkedin.com/in/juan-jose-osorio-reyes-a7b7442ba",
+    "github": "github.com/Ryuukatsuro25",
+    "site": "ryuukatsuro25.github.io/HV-Juan-Jose-Osorio-Reyes"
+  },
+  "summary": "Estudiante de Ingeniería Multimedia de la Universidad Autónoma de Occidente, en etapa de trabajo de grado, con experiencia en desarrollo web, diseño UX/UI e integración de APIs de inteligencia artificial. Desarrollo aplicaciones con Python, JavaScript y Node.js, y actualmente rediseño la experiencia de usuario del portal corporativo de un proveedor de internet a partir de investigación con usuarios. Complemento el perfil técnico con experiencia freelance en diseño gráfico y producción audiovisual.",
+  "skills": [
+    [
+      "Lenguajes",
+      "Python, JavaScript, HTML5, CSS3, SQL, C#"
+    ],
+    [
+      "Web y backend",
+      "Node.js, REST APIs, Netlify Functions, Netlify Blobs, SQLite, MySQL, diseño responsive"
+    ],
+    [
+      "IA y datos",
+      "APIs de LLM (OpenAI, Anthropic, Gemini, Groq, OpenRouter), Gradio, Pydantic, Jupyter, Colab"
+    ],
+    [
+      "Herramientas",
+      "Git, GitHub, Jira, Scrum, Unity, Tkinter"
+    ],
+    [
+      "UX/UI",
+      "Figma, wireframes, prototipado, investigación de usuarios, evaluación heurística, Think Aloud, SUS"
+    ],
+    [
+      "Redes",
+      "IPv4/VLSM, NAT, Packet Tracer, Ubuntu, Vagrant, VirtualBox, BIND9, Apache, UFW, Squid"
+    ],
+    [
+      "Multimedia",
+      "Adobe Premiere Pro, After Effects, Illustrator, Photoshop, motion graphics, corrección de color"
+    ]
+  ],
+  "experience": [
+    {
+      "role": "Desarrollador web y diseñador multimedia",
+      "org": "Freelance (MediaWebStudio)",
+      "place": "Cali",
+      "date": "ene. 2022 – actualidad",
+      "bullets": [
+        "Diseño y desarrollo sitios web responsive (HTML5, CSS3, JavaScript) para emprendimientos, desde la conceptualización y el trabajo con el cliente hasta el despliegue en Netlify.",
+        "Creo identidades visuales, logotipos y piezas gráficas en Illustrator y Photoshop para marcas locales como Mayester Sublimatie y Sabores de Mamá.",
+        "Edito y postproduzco video en Premiere Pro y After Effects (corrección de color, transiciones, motion graphics) optimizado para cada red social y formato.",
+        "Realicé el registro fotográfico y audiovisual de una guardería canina para sus redes sociales."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "title": "Ingeniería Multimedia",
+      "org": "Universidad Autónoma de Occidente, Cali",
+      "date": "feb. 2021 – actualidad",
+      "detail": "Trabajo de grado en curso. Cursos: Redes y Servicios Multimedia, Procesamiento Digital de Imágenes, Gestión de Tecnologías."
+    }
+  ],
+  "certifications": [
+    [
+      "Diplomado internacional en producción de contenidos para infancia y juventud (8 módulos)",
+      "MinCultura",
+      "2022"
+    ],
+    [
+      "EF SET English Certificate: B1 Intermedio (50/100)",
+      "EF Education First",
+      "ene. 2026"
+    ]
+  ],
+  "languages": "Español: nativo · Inglés: B1 intermedio",
+  "project_groups": [
+    {
+      "category": "UX/UI e investigación de usuarios",
+      "projects": [
+        {
+          "name": "Rediseño UX/UI del portal corporativo de Fidelity Networks",
+          "context": "Trabajo de grado · Individual",
+          "date": "2026 – actualidad",
+          "stack": "Figma · Evaluación heurística · Think Aloud · Entrevistas · Likert · SUS",
+          "bullets": [
+            "Realicé un diagnóstico de usabilidad con 25 participantes y 6 tareas clave (auditoría heurística, Think Aloud, entrevistas semiestructuradas y cuestionario Likert).",
+            "Identifiqué 6 bloqueos críticos de experiencia y los vinculé a soluciones de diseño mediante una matriz de trazabilidad.",
+            "Diseñé en Figma prototipos de fidelidad media de 5 pantallas (Inicio, Residencial, Empresarial, Soporte, Institucional); la validación con usuarios y escala SUS está en curso."
+          ],
+          "links": []
+        }
+      ]
+    },
+    {
+      "category": "Desarrollo web",
+      "projects": [
+        {
+          "name": "VektorGadget: tienda en línea serverless",
+          "context": "Proyecto personal",
+          "date": "2026",
+          "stack": "JavaScript · Netlify Functions · Netlify Blobs · HTML/CSS",
+          "bullets": [
+            "Desarrollé y desplegué una tienda de gadgets con funciones serverless y persistencia en Netlify Blobs, con panel de administración y sincronización de datos por polling."
+          ],
+          "links": []
+        },
+        {
+          "name": "MediaWebStudio",
+          "context": "Emprendimiento propio",
+          "date": "2023 – actualidad",
+          "stack": "HTML5 · CSS3 · JavaScript · Netlify",
+          "bullets": [
+            "Diseñé y desarrollé el sitio web de mi emprendimiento de desarrollo de software, edición de imagen y video."
+          ],
+          "links": [
+            [
+              "Sitio",
+              "mediawebstudio.netlify.app"
+            ],
+            [
+              "Código",
+              "github.com/Ryuukatsuro25/MediaWebStudio"
+            ]
+          ]
+        },
+        {
+          "name": "RappiXtreame",
+          "context": "Proyecto académico",
+          "date": "",
+          "stack": "HTML · CSS · JavaScript · Netlify · Unity",
+          "bullets": [
+            "Construí el sitio web de documentación de un videojuego desarrollado en Unity."
+          ],
+          "links": [
+            [
+              "Sitio",
+              "rappixtreame.netlify.app"
+            ],
+            [
+              "Código",
+              "github.com/Ryuukatsuro25/Rappi-Xtreame"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Software, IA y datos",
+      "projects": [
+        {
+          "name": "Sistema de Hemogramas con IA",
+          "context": "Proyecto personal",
+          "date": "2026",
+          "stack": "Python · Gradio · SQLite · Pydantic · APIs de LLM",
+          "bullets": [
+            "Desarrollé una aplicación de 4 capas (ingesta, normalización con IA, persistencia en SQLite e interfaz en Gradio) con validación de datos en Pydantic.",
+            "Integré 4 proveedores de LLM (Anthropic, OpenAI, Groq, OpenRouter) con alternancia para superar límites de cuota, y consultas en lenguaje natural sobre los datos."
+          ],
+          "links": []
+        },
+        {
+          "name": "Notebook de análisis de datos con IA",
+          "context": "Proyecto personal",
+          "date": "2026",
+          "stack": "Python · Jupyter · APIs de Anthropic, OpenAI y Gemini",
+          "bullets": [
+            "Construí un cuaderno de análisis de datos asistido por IA con soporte para 3 proveedores y aislamiento estricto de los datos en memoria."
+          ],
+          "links": []
+        },
+        {
+          "name": "Comparador de países con datos del Banco Mundial",
+          "context": "Proyecto personal",
+          "date": "",
+          "stack": "Python · API del Banco Mundial · Tkinter · Exportación a Word",
+          "bullets": [
+            "Desarrollé una aplicación de escritorio que compara 50 indicadores por país, calcula ventajas y desventajas, muestra gráficas y exporta un reporte en Word."
+          ],
+          "links": []
+        },
+        {
+          "name": "Transferencia de archivos cifrada",
+          "context": "Proyecto personal",
+          "date": "",
+          "stack": "Python · Sockets · TLS/SSL · Tkinter",
+          "bullets": [
+            "Implementé un sistema cliente-servidor de transferencia de archivos con cifrado TLS/SSL e interfaz gráfica."
+          ],
+          "links": []
+        },
+        {
+          "name": "Panel de gestión de servidor de Minecraft",
+          "context": "Proyecto personal",
+          "date": "",
+          "stack": "Gestión de servidores · Redes",
+          "bullets": [
+            "Creé un panel que genera la conexión y la IP del servidor y habilita el servicio para los jugadores."
+          ],
+          "links": [
+            [
+              "Código",
+              "github.com/Ryuukatsuro25/SERVER-MANAGER-MINERCRAFT"
+            ]
+          ]
+        },
+        {
+          "name": "Reconocimiento de emociones en museos",
+          "context": "Macroproyecto de visión por computador, UAO",
+          "date": "2026",
+          "stack": "Visión por computador · Procesamiento digital de imágenes · Investigación",
+          "bullets": [
+            "Investigué referentes académicos (ArtEmis, VimoNet, MuseMate) y elaboré el documento técnico del proyecto en formato APA 7."
+          ],
+          "links": []
+        }
+      ]
+    },
+    {
+      "category": "Videojuegos",
+      "projects": [
+        {
+          "name": "El Pe$o de Elegir: juego serio móvil",
+          "context": "Proyecto en equipo, UAO",
+          "date": "2026",
+          "stack": "Unity · C# · Jira · Scrum",
+          "bullets": [
+            "Desarrollo en equipo un juego móvil de educación financiera para estudiantes de primer semestre, implementando en C# las historias de usuario asignadas y gestionadas en Jira."
+          ],
+          "links": []
+        }
+      ]
+    },
+    {
+      "category": "Redes e infraestructura",
+      "projects": [
+        {
+          "name": "Infraestructura de red para AgroRed S.A.S.",
+          "context": "Proyecto en equipo de 4, UAO · Rol: análisis",
+          "date": "2026",
+          "stack": "Packet Tracer · VLSM · NAT · Ubuntu · Vagrant · VirtualBox · BIND9 · Apache · UFW",
+          "bullets": [
+            "Participé en el diseño del direccionamiento IPv4 con VLSM, enrutamiento estático y NAT para 4 sedes.",
+            "Virtualizamos servidores Ubuntu con Vagrant/VirtualBox: DNS (BIND9), Apache con hosts virtuales, UFW y Squid."
+          ],
+          "links": []
+        }
+      ]
+    }
+  ]
+}

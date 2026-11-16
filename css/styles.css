@@ -387,3 +387,75 @@ h1.display { font-size: var(--fs-h1); line-height: 1.1; }
 .section-subtitle { font-size: var(--fs-h3); margin: 2rem 0 1rem; }
 .card p, .tl-body li { font-size: var(--fs-body); line-height: 1.55; }
 .meta { font-size: var(--fs-meta); opacity: .8; }
+
+/* =========================================================
+   REDISEÑO 2026 — componentes para proyectos, habilidades y contacto
+   ========================================================= */
+:root.light body{background:var(--bg)}
+.skip-link{position:absolute; left:-999px; top:8px; z-index:50; background:var(--accent); color:#fff; padding:8px 12px; border-radius:8px}
+.skip-link:focus{left:8px}
+.muted{color:var(--muted)}
+.section-lead{color:var(--muted); margin:-.25rem 0 1.25rem}
+.kicker{margin:0 0 4px; font-size:.8rem; font-weight:700; letter-spacing:.4px; text-transform:uppercase; color:var(--accent)}
+:root:not(.light) .kicker{color:#7cc0ff}
+.hero{padding:56px 0 28px}
+ul.hero-highlights{list-style:none; padding:0; margin:0 0 16px}
+.hero-highlights .badge{font-size:.85rem; padding:6px 12px}
+.mono-icon, .icon-inv{width:16px; height:16px}
+:root:not(.light) img.mono-icon{filter:invert(1) brightness(1.05)}
+img.icon-inv{filter:invert(1) brightness(2)}
+
+/* Proyectos */
+.project-list{display:grid; gap:18px; grid-template-columns:repeat(auto-fill, minmax(320px, 1fr))}
+.project{display:flex; flex-direction:column; gap:12px}
+.project.featured{grid-column:1 / -1; border-color:var(--accent)}
+.project h3{margin:0; font-size:1.15rem; line-height:1.3}
+.project-problem{margin:6px 0 0; color:var(--muted)}
+.stack{list-style:none; padding:0; margin:0; display:flex; flex-wrap:wrap; gap:6px}
+.stack li{font-size:.8rem; font-weight:600; padding:4px 10px; border-radius:999px; border:1px solid var(--line); background:rgba(58,160,255,.10)}
+.project-results{margin:0; padding-left:1.1rem}
+.project-results li{margin:2px 0}
+.metrics{display:grid; grid-template-columns:repeat(auto-fit, minmax(120px, 1fr)); gap:10px}
+.metrics div{border:1px solid var(--line); border-radius:12px; padding:10px 12px; display:flex; flex-direction:column}
+.metrics strong{font-size:1.6rem; line-height:1.1; color:var(--accent)}
+:root:not(.light) .metrics strong{color:#7cc0ff}
+.metrics span{font-size:.85rem; color:var(--muted)}
+details > summary{cursor:pointer; font-weight:700; color:var(--accent); padding:6px 0}
+:root:not(.light) details > summary{color:#7cc0ff}
+.case-grid{display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:14px; margin-top:8px}
+.case-grid h4{margin:0 0 4px}
+.case-grid p{margin:0}
+.other-projects{margin:0; padding-left:1.1rem; display:grid; gap:6px}
+.other-projects a, .contact-card a{color:var(--accent)}
+:root:not(.light) .other-projects a{color:#7cc0ff}
+.project-actions{margin-top:auto}
+
+/* Habilidades */
+.skill-grid{grid-template-columns:repeat(auto-fill, minmax(260px, 1fr))}
+.skill-grid h3{margin:0 0 10px; font-size:1rem}
+
+/* Formación */
+#education .card h3{margin:0 0 4px; font-size:1.05rem}
+#education .card p{margin:4px 0}
+.diplomas .tiles{grid-template-columns:repeat(auto-fill, minmax(150px, 1fr)); margin-top:10px}
+.diplomas .diploma-tile{padding:8px; cursor:pointer}
+.diplomas .diploma-tile .thumb{height:90px}
+.diplomas .diploma-tile .title{font-size:.8rem; line-height:1.3}
+
+/* Portafolio gráfico */
+.graphic-gallery figure{margin:0; padding:0}
+.graphic-gallery figcaption{padding:10px 12px; font-size:.88rem; font-weight:600}
+
+/* Contacto y footer */
+.contact-card{display:grid; gap:14px}
+.contact-card p{margin:0}
+.footer-wrap{display:flex; justify-content:space-between; flex-wrap:wrap; gap:8px}
+
+@media (max-width:760px){
+  .project-list{grid-template-columns:1fr}
+  .hero{padding:32px 0 20px}
+}
+button.diploma-tile{font:inherit; color:inherit; text-align:left; width:100%}
+button.diploma-tile:focus-visible{outline:2px solid var(--accent); outline-offset:2px}
+#education .cards{grid-template-columns:repeat(auto-fill, minmax(300px, 1fr)); align-items:start}
+#education .card.diplomado{grid-column:1 / -1}

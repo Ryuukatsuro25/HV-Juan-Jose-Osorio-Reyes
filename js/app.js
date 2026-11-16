@@ -26,39 +26,43 @@ const io = new IntersectionObserver(entries => {
 }, { threshold: .15 });
 $$('.reveal').forEach(el => io.observe(el));
 
-// Diplomas
+// Diplomas (se cargan dentro del desplegable de Formación)
 async function loadDiplomas(){
+  const wrap = $("#diploma-grid");
+  if(!wrap) return;
   try{
     const res = await fetch('data/diplomas.json', {cache:'no-store'});
     const list = await res.json();
-    const wrap = $("#diploma-grid");
     wrap.innerHTML = '';
     list.forEach(item => {
-      const tile = document.createElement('article');
-      tile.className = 'tile diploma-tile hoverable reveal';
+      const tile = document.createElement('button');
+      tile.type = 'button';
+      tile.className = 'tile diploma-tile hoverable';
+      tile.setAttribute('aria-label', `Ver certificado: ${item.title}`);
       tile.innerHTML = `
         <div class="thumb" aria-hidden="true">
-          <img src="${item.thumb}" alt="Vista previa de ${item.title}" loading="lazy">
+          <img src="${item.thumb}" alt="" loading="lazy">
         </div>
-        <div class="content">
-          <div class="title">${item.title}</div>
-          <div class="meta">${item.institution || ''} ${item.date ? '· '+item.date : ''}</div>
-          <div style="margin-top:8px">
-            <a class="card-link" href="${item.file}" target="_blank" rel="noopener">Abrir</a>
-          </div>
-        </div>
+        <div class="content"><div class="title">${item.title}</div></div>
       `;
-      tile.addEventListener('click', (e)=>{
-        if(e.target.tagName.toLowerCase() === 'a') return;
-        openLightbox(item);
-      });
+      tile.addEventListener('click', ()=> openLightbox(item));
       wrap.appendChild(tile);
-      io.observe(tile);
     });
   }catch(e){
     console.error('Error cargando diplomas', e);
   }
 }
+
+// Videos del portafolio: se reproducen solo al pasar el cursor o al enfocar (ahorra datos en móvil)
+$$('video.hover-play').forEach(v => {
+  const card = v.closest('.gallery-item') || v;
+  const play = () => { v.play().catch(()=>{}); };
+  const stop = () => { v.pause(); };
+  card.addEventListener('mouseenter', play);
+  card.addEventListener('mouseleave', stop);
+  card.addEventListener('focusin', play);
+  card.addEventListener('focusout', stop);
+});
 
 function openLightbox(item){
   const box = $("#lightbox");

@@ -3,45 +3,70 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Juan José Osorio Reyes — Ingeniero Multimedia · Desarrollador Web Full-Stack</title>
-  <meta name="description" content="CV web de Juan José Osorio Reyes, estudiante de Ingeniería Multimedia y desarrollador web full-stack. Experiencia freelance, educación, idiomas, diplomas, habilidades y portafolio." />
+  <title>Juan José Osorio Reyes · Ingeniería Multimedia · Desarrollo Web y UX/UI</title>
+  <meta name="description" content="Juan José Osorio Reyes, estudiante de Ingeniería Multimedia (UAO, Cali) enfocado en desarrollo web, diseño UX/UI e integración de APIs de IA. Proyectos, experiencia y CV en PDF." />
   <meta name="theme-color" content="#0b3d62" />
+  <!-- URL pública del sitio: si cambia, actualízala aquí, en og:url/og:image y en data/cv.json -->
+  <link rel="canonical" href="https://ryuukatsuro25.github.io/HV-Juan-Jose-Osorio-Reyes/" />
 
-  <!-- Open Graph (mejor presentación al compartir en LinkedIn) -->
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Juan José Osorio Reyes — Ingeniero Multimedia · Desarrollador Web Full-Stack" />
-  <meta property="og:description" content="Portafolio y CV de Juan José Osorio Reyes: desarrollo web full-stack, UI/UX, edición de video y producción gráfica." />
-  <meta property="og:image" content="assets/img/profile.png" />
+  <!-- Open Graph (vista previa al compartir en LinkedIn/WhatsApp) -->
+  <meta property="og:type" content="profile" />
+  <meta property="og:title" content="Juan José Osorio Reyes · Desarrollo Web y UX/UI" />
+  <meta property="og:description" content="Ingeniería Multimedia (UAO). Proyectos de desarrollo web, UX/UI e IA aplicada." />
+  <meta property="og:url" content="https://ryuukatsuro25.github.io/HV-Juan-Jose-Osorio-Reyes/" />
+  <meta property="og:image" content="https://ryuukatsuro25.github.io/HV-Juan-Jose-Osorio-Reyes/assets/img/profile.png" />
+  <meta property="og:locale" content="es_CO" />
 
+  <!-- Datos estructurados: ayudan a buscadores a identificarte -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Juan José Osorio Reyes",
+    "jobTitle": "Estudiante de Ingeniería Multimedia · Desarrollo Web y UX/UI",
+    "url": "https://ryuukatsuro25.github.io/HV-Juan-Jose-Osorio-Reyes/",
+    "image": "https://ryuukatsuro25.github.io/HV-Juan-Jose-Osorio-Reyes/assets/img/profile.png",
+    "email": "mailto:juan.jose.osorio.reyes@hotmail.com",
+    "address": { "@type": "PostalAddress", "addressLocality": "Cali", "addressCountry": "CO" },
+    "alumniOf": { "@type": "CollegeOrUniversity", "name": "Universidad Autónoma de Occidente" },
+    "knowsAbout": ["Desarrollo web", "UX/UI", "Python", "JavaScript", "Node.js", "Figma", "APIs de IA", "Producción multimedia"],
+    "knowsLanguage": ["es", "en"],
+    "sameAs": [
+      "https://github.com/Ryuukatsuro25",
+      "https://www.linkedin.com/in/juan-jose-osorio-reyes-a7b7442ba/"
+    ]
+  }
+  </script>
+
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 
 <body>
-  <header class="site-header" role="banner" aria-label="Cabecera">
-    <div class="container nav-wrap">
-      <a href="#hero" class="brand" aria-label="Ir a portada">Juan José</a>
+  <a class="skip-link" href="#main">Saltar al contenido</a>
 
-      <nav class="main-nav" role="navigation" aria-label="Navegación principal">
-        <a href="#bio">Resumen</a>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="#hero" class="brand" aria-label="Ir al inicio">Juan José Osorio</a>
+
+      <nav class="main-nav" aria-label="Navegación principal">
+        <a href="#projects">Proyectos</a>
         <a href="#experience">Experiencia</a>
-        <a href="#education">Educación</a>
-        <a href="#languages">Idiomas</a>
-        <a href="#diplomas">Diplomas</a>
         <a href="#skills">Habilidades</a>
-        <a href="#projects">Portafolio</a>
+        <a href="#education">Formación</a>
         <a href="#contact">Contacto</a>
       </nav>
 
-      <button id="themeToggle" class="icon-btn" aria-label="Cambiar tema">🌗</button>
+      <button id="themeToggle" class="icon-btn" type="button" aria-label="Cambiar entre tema claro y oscuro">🌗</button>
     </div>
   </header>
 
   <main id="main">
 
-    <!-- ============ HERO ============ -->
+    <!-- ============ HERO: quién eres, qué haces, cómo contactarte ============ -->
     <section id="hero" class="hero" tabindex="-1">
       <div class="hero-bg" aria-hidden="true">
         <span class="blob b1"></span>
@@ -51,37 +76,37 @@
 
       <div class="container hero-grid">
         <div class="hero-card reveal">
-          <img src="assets/img/profile.png" alt="Foto profesional de Juan José Osorio Reyes" class="avatar" />
+          <img src="assets/img/profile.png" alt="Foto de Juan José Osorio Reyes" class="avatar" width="140" height="140" />
 
           <div>
             <h1 class="display">Juan José Osorio Reyes</h1>
-            <p class="subtitle">Estudiante de Ingeniería Multimedia · Desarrollador Web Full‑Stack</p>
+            <p class="subtitle">Ingeniería Multimedia · Desarrollo Web y UX/UI</p>
             <p class="tagline">
-              Construyo productos digitales completos combinando <strong>desarrollo web frontend y backend</strong>
-              con una base sólida en <strong>multimedia</strong>.
+              Diseño y construyo productos web: desde la <strong>investigación con usuarios</strong> y el prototipo en Figma
+              hasta el <strong>código desplegado</strong> con Python, JavaScript y APIs de IA.
             </p>
 
-            <div class="hero-highlights badge-row" aria-label="Puntos clave">
-              <span class="badge">Desarrollo web full‑stack</span>
-              <span class="badge">UI/UX · Figma</span>
-              <span class="badge">Multimedia · Adobe (Premiere/AE)</span>
-              <span class="badge">Inglés B1 (EFSET)</span>
-            </div>
+            <ul class="hero-highlights badge-row" aria-label="Datos rápidos">
+              <li class="badge">Trabajo de grado en curso · UAO</li>
+              <li class="badge">Cali, Colombia · Abierto a remoto</li>
+              <li class="badge">Prácticas y roles junior</li>
+              <li class="badge">Inglés B1 (EF SET)</li>
+            </ul>
 
             <div class="hero-actions">
-              <a class="btn primary"
-                 href="assets/documents/CV_Juan_Jose_Osorio_Reyes.pdf"
-                 target="_blank" rel="noopener"
-                 aria-label="Abrir CV en PDF">
-                Descargar CV
+              <a class="btn primary" href="assets/documents/Juan_Jose_Osorio_Reyes_CV.pdf" target="_blank" rel="noopener">
+                <img src="assets/icons/pdf.svg" class="icon icon-inv" alt="" width="16" height="16" />
+                Descargar CV (PDF)
               </a>
-
-              <a class="btn ghost" href="https://github.com/Ryuukatsuro25" target="_blank" rel="noopener" aria-label="GitHub">
-                <img src="assets/icons/github.svg" class="github-icon" alt="" width="16" height="16" />
+              <a class="btn ghost" href="mailto:juan.jose.osorio.reyes@hotmail.com">
+                <img src="assets/icons/mail.svg" class="icon mono-icon" alt="" width="16" height="16" />
+                <span>Escríbeme</span>
+              </a>
+              <a class="btn ghost" href="https://github.com/Ryuukatsuro25" target="_blank" rel="noopener">
+                <img src="assets/icons/github.svg" class="icon github-icon" alt="" width="16" height="16" />
                 <span>GitHub</span>
               </a>
-
-              <a class="btn ghost" href="https://www.linkedin.com/in/juan-jose-osorio-reyes-a7b7442ba/" target="_blank" rel="noopener" aria-label="LinkedIn">
+              <a class="btn ghost" href="https://www.linkedin.com/in/juan-jose-osorio-reyes-a7b7442ba/" target="_blank" rel="noopener">
                 <img src="assets/icons/linkedin.svg" class="icon linkedin-icon" alt="" width="16" height="16" />
                 <span>LinkedIn</span>
               </a>
@@ -91,23 +116,188 @@
       </div>
     </section>
 
-    <!-- ============ RESUMEN ============ -->
-    <section id="bio" class="section">
+    <!-- ============ PROYECTOS DESTACADOS: la prueba de lo que sabes hacer ============ -->
+    <section id="projects" class="section">
       <div class="container">
-        <h2 class="section-title">Resumen Profesional</h2>
+        <h2 class="section-title">Proyectos destacados</h2>
+        <p class="section-lead">12 proyectos organizados por área. Cada uno indica el contexto, la tecnología usada y el resultado.</p>
 
-        <div class="card lead reveal">
-          <p>
-            Soy <strong>estudiante de Ingeniería Multimedia</strong> con experiencia freelance en
-            <strong>desarrollo web full‑stack, diseño UI/UX, edición de video y producción gráfica</strong>.
-            Combino criterio visual y habilidades técnicas para crear productos digitales completos.
-          </p>
+        <h3 class="section-subtitle">UX/UI e investigación de usuarios</h3>
+        <div class="project-list">
 
-          <p>
-            Destaco por mi <strong>adaptabilidad en entornos dinámicos</strong>, el trabajo en equipo
-            y el cumplimiento de objetivos bajo presión. Busco proyectos desafiantes donde aportar
-            y seguir creciendo profesionalmente.
-          </p>
+          <!-- Tesis: caso de estudio -->
+          <article class="card project featured reveal">
+            <div class="project-head">
+              <p class="kicker">Trabajo de grado · 2026 – actualidad · Individual</p>
+              <h3>Rediseño UX/UI del portal corporativo de Fidelity Networks</h3>
+              <p class="project-problem">Investigué los problemas de usabilidad del portal corporativo de un proveedor de internet por fibra y estoy rediseñando su experiencia a partir de la evidencia recogida con usuarios.</p>
+            </div>
+            <ul class="stack" aria-label="Tecnologías y métodos">
+              <li>Figma</li><li>Evaluación heurística</li><li>Think Aloud</li><li>Entrevistas</li><li>Likert</li><li>SUS</li>
+            </ul>
+            <div class="metrics" aria-label="Datos clave">
+              <div><strong>25</strong><span>participantes</span></div>
+              <div><strong>6</strong><span>tareas evaluadas</span></div>
+              <div><strong>6</strong><span>bloqueos UX</span></div>
+              <div><strong>5</strong><span>pantallas prototipadas</span></div>
+            </div>
+            <details class="case-study">
+              <summary>Ver caso de estudio</summary>
+              <div class="case-grid">
+                <div>
+                  <h4>Método</h4>
+                  <p>Diagnóstico con 25 participantes sobre 6 tareas clave: auditoría heurística, protocolo Think Aloud, entrevistas semiestructuradas y cuestionario Likert.</p>
+                </div>
+                <div>
+                  <h4>Hallazgos</h4>
+                  <p>6 bloqueos críticos de experiencia (UX-01 a UX-06), cada uno vinculado a una solución de diseño mediante una matriz de trazabilidad.</p>
+                </div>
+                <div>
+                  <h4>Solución</h4>
+                  <p>Prototipos de fidelidad media en Figma para 5 pantallas: Inicio, Residencial, Empresarial, Soporte e Institucional, con pago rápido y formulario de contacto.</p>
+                </div>
+                <div>
+                  <h4>Siguiente paso</h4>
+                  <p>Evaluación de usabilidad con usuarios y escala SUS, y validación de accesibilidad con WAVE y Lighthouse.</p>
+                </div>
+              </div>
+            </details>
+          </article>
+        </div>
+        <h3 class="section-subtitle">Desarrollo web</h3>
+        <div class="project-list">
+          <article class="card project reveal">
+            <div class="project-head">
+              <p class="kicker">Proyecto personal · 2026</p>
+              <h3>VektorGadget: tienda en línea serverless</h3>
+            </div>
+            <ul class="stack" aria-label="Tecnologías"><li>JavaScript</li><li>Netlify Functions</li><li>Netlify Blobs</li><li>HTML/CSS</li></ul>
+            <ul class="project-results">
+              <li>Desarrollé y desplegué una tienda de gadgets con funciones serverless y persistencia en Netlify Blobs, con panel de administración y sincronización de datos por polling.</li>
+            </ul>
+          </article>
+          <article class="card project reveal">
+            <div class="project-head">
+              <p class="kicker">Emprendimiento propio · 2023 – actualidad</p>
+              <h3>MediaWebStudio</h3>
+            </div>
+            <ul class="stack" aria-label="Tecnologías"><li>HTML5</li><li>CSS3</li><li>JavaScript</li><li>Netlify</li></ul>
+            <ul class="project-results">
+              <li>Diseñé y desarrollé el sitio web de mi emprendimiento de desarrollo de software, edición de imagen y video.</li>
+            </ul>
+            <div class="project-actions">
+              <a href="https://mediawebstudio.netlify.app" target="_blank" rel="noopener" class="btn primary">Ver sitio</a>
+              <a href="https://github.com/Ryuukatsuro25/MediaWebStudio" target="_blank" rel="noopener" class="btn ghost"><img src="assets/icons/github.svg" class="icon github-icon" alt="" width="16" height="16" /><span>Código</span></a>
+            </div>
+          </article>
+          <article class="card project reveal">
+            <div class="project-head">
+              <p class="kicker">Proyecto académico</p>
+              <h3>RappiXtreame</h3>
+            </div>
+            <ul class="stack" aria-label="Tecnologías"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>Netlify</li><li>Unity</li></ul>
+            <ul class="project-results">
+              <li>Construí el sitio web de documentación de un videojuego desarrollado en Unity.</li>
+            </ul>
+            <div class="project-actions">
+              <a href="https://rappixtreame.netlify.app" target="_blank" rel="noopener" class="btn primary">Ver sitio</a>
+              <a href="https://github.com/Ryuukatsuro25/Rappi-Xtreame" target="_blank" rel="noopener" class="btn ghost"><img src="assets/icons/github.svg" class="icon github-icon" alt="" width="16" height="16" /><span>Código</span></a>
+            </div>
+          </article>
+        </div>
+        <h3 class="section-subtitle">Software, IA y datos</h3>
+        <div class="project-list">
+          <article class="card project reveal">
+            <div class="project-head">
+              <p class="kicker">Proyecto personal · 2026</p>
+              <h3>Sistema de Hemogramas con IA</h3>
+            </div>
+            <ul class="stack" aria-label="Tecnologías"><li>Python</li><li>Gradio</li><li>SQLite</li><li>Pydantic</li><li>APIs de LLM</li></ul>
+            <ul class="project-results">
+              <li>Desarrollé una aplicación de 4 capas (ingesta, normalización con IA, persistencia en SQLite e interfaz en Gradio) con validación de datos en Pydantic.</li>
+              <li>Integré 4 proveedores de LLM (Anthropic, OpenAI, Groq, OpenRouter) con alternancia para superar límites de cuota, y consultas en lenguaje natural sobre los datos.</li>
+            </ul>
+          </article>
+          <article class="card project reveal">
+            <div class="project-head">
+              <p class="kicker">Proyecto personal · 2026</p>
+              <h3>Notebook de análisis de datos con IA</h3>
+            </div>
+            <ul class="stack" aria-label="Tecnologías"><li>Python</li><li>Jupyter</li><li>APIs de Anthropic, OpenAI y Gemini</li></ul>
+            <ul class="project-results">
+              <li>Construí un cuaderno de análisis de datos asistido por IA con soporte para 3 proveedores y aislamiento estricto de los datos en memoria.</li>
+            </ul>
+          </article>
+          <article class="card project reveal">
+            <div class="project-head">
+              <p class="kicker">Proyecto personal</p>
+              <h3>Comparador de países con datos del Banco Mundial</h3>
+            </div>
+            <ul class="stack" aria-label="Tecnologías"><li>Python</li><li>API del Banco Mundial</li><li>Tkinter</li><li>Exportación a Word</li></ul>
+            <ul class="project-results">
+              <li>Desarrollé una aplicación de escritorio que compara 50 indicadores por país, calcula ventajas y desventajas, muestra gráficas y exporta un reporte en Word.</li>
+            </ul>
+          </article>
+          <article class="card project reveal">
+            <div class="project-head">
+              <p class="kicker">Proyecto personal</p>
+              <h3>Transferencia de archivos cifrada</h3>
+            </div>
+            <ul class="stack" aria-label="Tecnologías"><li>Python</li><li>Sockets</li><li>TLS/SSL</li><li>Tkinter</li></ul>
+            <ul class="project-results">
+              <li>Implementé un sistema cliente-servidor de transferencia de archivos con cifrado TLS/SSL e interfaz gráfica.</li>
+            </ul>
+          </article>
+          <article class="card project reveal">
+            <div class="project-head">
+              <p class="kicker">Proyecto personal</p>
+              <h3>Panel de gestión de servidor de Minecraft</h3>
+            </div>
+            <ul class="stack" aria-label="Tecnologías"><li>Gestión de servidores</li><li>Redes</li></ul>
+            <ul class="project-results">
+              <li>Creé un panel que genera la conexión y la IP del servidor y habilita el servicio para los jugadores.</li>
+            </ul>
+            <div class="project-actions">
+              <a href="https://github.com/Ryuukatsuro25/SERVER-MANAGER-MINERCRAFT" target="_blank" rel="noopener" class="btn ghost"><img src="assets/icons/github.svg" class="icon github-icon" alt="" width="16" height="16" /><span>Código</span></a>
+            </div>
+          </article>
+          <article class="card project reveal">
+            <div class="project-head">
+              <p class="kicker">Macroproyecto de visión por computador, UAO · 2026</p>
+              <h3>Reconocimiento de emociones en museos</h3>
+            </div>
+            <ul class="stack" aria-label="Tecnologías"><li>Visión por computador</li><li>Procesamiento digital de imágenes</li><li>Investigación</li></ul>
+            <ul class="project-results">
+              <li>Investigué referentes académicos (ArtEmis, VimoNet, MuseMate) y elaboré el documento técnico del proyecto en formato APA 7.</li>
+            </ul>
+          </article>
+        </div>
+        <h3 class="section-subtitle">Videojuegos</h3>
+        <div class="project-list">
+          <article class="card project reveal">
+            <div class="project-head">
+              <p class="kicker">Proyecto en equipo, UAO · 2026</p>
+              <h3>El Pe$o de Elegir: juego serio móvil</h3>
+            </div>
+            <ul class="stack" aria-label="Tecnologías"><li>Unity</li><li>C#</li><li>Jira</li><li>Scrum</li></ul>
+            <ul class="project-results">
+              <li>Desarrollo en equipo un juego móvil de educación financiera para estudiantes de primer semestre, implementando en C# las historias de usuario asignadas y gestionadas en Jira.</li>
+            </ul>
+          </article>
+        </div>
+        <h3 class="section-subtitle">Redes e infraestructura</h3>
+        <div class="project-list">
+          <article class="card project reveal">
+            <div class="project-head">
+              <p class="kicker">Proyecto en equipo de 4, UAO · Rol: análisis · 2026</p>
+              <h3>Infraestructura de red para AgroRed S.A.S.</h3>
+            </div>
+            <ul class="stack" aria-label="Tecnologías"><li>Packet Tracer</li><li>VLSM</li><li>NAT</li><li>Ubuntu</li><li>Vagrant</li><li>VirtualBox</li><li>BIND9</li><li>Apache</li><li>UFW</li></ul>
+            <ul class="project-results">
+              <li>Participé en el diseño del direccionamiento IPv4 con VLSM, enrutamiento estático y NAT para 4 sedes.</li>
+              <li>Virtualizamos servidores Ubuntu con Vagrant/VirtualBox: DNS (BIND9), Apache con hosts virtuales, UFW y Squid.</li>
+            </ul>
+          </article>
         </div>
       </div>
     </section>
@@ -121,361 +311,175 @@
           <article class="tl-item reveal">
             <div class="tl-dot"></div>
             <header class="tl-head">
-              <h3>Desarrollador Web Independiente</h3>
-              <span class="meta">MediaWebStudio · Mar 2023 – Presente</span>
+              <h3>Desarrollador web y diseñador multimedia</h3>
+              <span class="meta">Freelance (MediaWebStudio) · Cali · ene. 2022 – actualidad</span>
             </header>
             <ul class="tl-body">
-              <li>Diseño y desarrollo de interfaces web responsive usando HTML5, CSS3 y JavaScript.</li>
-              <li>Optimización de performance y experiencia de usuario en proyectos web.</li>
-              <li>Gestión de proyectos desde la conceptualización hasta la implementación.</li>
-            </ul>
-          </article>
-
-          <article class="tl-item reveal">
-            <div class="tl-dot"></div>
-            <header class="tl-head">
-              <h3>Editor de Video</h3>
-              <span class="meta">Clientes Independientes · Abr 2023 – Presente</span>
-            </header>
-            <ul class="tl-body">
-              <li>Ediciones de video para clientes y proyectos diversos.</li>
-              <li>Aplicación de corrección de color, transiciones y efectos visuales.</li>
-              <li>Optimización de contenido para diferentes plataformas y formatos.</li>
-            </ul>
-          </article>
-
-          <article class="tl-item reveal">
-            <div class="tl-dot"></div>
-            <header class="tl-head">
-              <h3>Productor Gráfico</h3>
-              <span class="meta">Varios Emprendimientos · Mar 2023 – Presente</span>
-            </header>
-            <ul class="tl-body">
-              <li>Diseño de identidad visual y creación de logos para emprendimientos y marcas.</li>
-              <li>Desarrollo de material gráfico con Adobe Illustrator y Photoshop.</li>
-              <li>Colaboración con clientes para conceptualizar y materializar su visión de marca.</li>
-            </ul>
-          </article>
-
-          <article class="tl-item reveal">
-            <div class="tl-dot"></div>
-            <header class="tl-head">
-              <h3>Editor Multimedia</h3>
-              <span class="meta">Proyectos Independientes · Ene 2022 – Presente</span>
-            </header>
-            <ul class="tl-body">
-              <li>Desarrollo de contenido audiovisual para redes sociales y plataformas digitales.</li>
-              <li>Edición y postproducción con Adobe Premiere y After Effects.</li>
-              <li>Creación de motion graphics y animaciones para proyectos comerciales.</li>
-              <li>Registro fotográfico y edición de video para una guardería de mascotas caninas.</li>
+              <li>Diseño y desarrollo sitios web responsive (HTML5, CSS3, JavaScript) para emprendimientos, desde la conceptualización y el trabajo con el cliente hasta el despliegue en Netlify.</li>
+              <li>Creo identidades visuales, logotipos y piezas gráficas en Illustrator y Photoshop para marcas locales como Mayester Sublimatie y Sabores de Mamá.</li>
+              <li>Edito y postproduzco video en Premiere Pro y After Effects (corrección de color, transiciones, motion graphics) optimizado para cada red social y formato.</li>
+              <li>Realicé el registro fotográfico y audiovisual de una guardería canina para sus redes sociales.</li>
             </ul>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- ============ EDUCACIÓN ============ -->
-    <section id="education" class="section">
-      <div class="container">
-        <h2 class="section-title">Educación</h2>
-
-        <div class="grid cards">
-          <article class="card reveal">
-            <h3>Ingeniería Multimedia</h3>
-            <p class="muted">Universidad Autónoma de Occidente · <span class="tag">Feb 2021 – En curso</span></p>
-          </article>
-
-          <article class="card reveal">
-            <h3>Bachiller Académico</h3>
-            <p class="muted">Colegio Los Andes San Fernando · <span class="tag">Jul 2018 – Ene 2021</span></p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ IDIOMAS ============ -->
-    <section id="languages" class="section">
-      <div class="container">
-        <h2 class="section-title">Idiomas</h2>
-
-        <div class="grid cards">
-          <article class="card reveal language-card">
-            <div class="language-header">
-              <img src="assets/img/Colombia.png" alt="Bandera de Colombia" class="flag" />
-              <div>
-                <h3>Español</h3>
-                <span class="level">Nativo</span>
-              </div>
-            </div>
-
-            <div class="bars">
-              <div class="bar"><span>Comprensión</span><i style="--val:100%"></i></div>
-              <div class="bar"><span>Lectura</span><i style="--val:100%"></i></div>
-              <div class="bar"><span>Comunicación</span><i style="--val:100%"></i></div>
-            </div>
-
-            <div class="badge-row">
-              <span class="badge">Nativo</span>
-              <span class="badge">Comunicación profesional</span>
-              <span class="badge">Escritura avanzada</span>
-            </div>
-          </article>
-
-          <article class="card reveal language-card">
-            <div class="language-header">
-              <img src="assets/img/usa.png" alt="Bandera de Estados Unidos" class="flag" />
-              <div>
-                <h3>Inglés</h3>
-                <span class="level">Nivel B1</span>
-              </div>
-            </div>
-
-            <div class="bars">
-              <div class="bar"><span>Comprensión</span><i style="--val:70%"></i></div>
-              <div class="bar"><span>Lectura técnica</span><i style="--val:65%"></i></div>
-              <div class="bar"><span>Conversación</span><i style="--val:75%"></i></div>
-            </div>
-
-            <div class="badge-row">
-              <span class="badge">B1 Intermedio</span>
-              <span class="badge">Comprensión técnica</span>
-              <span class="badge">Nivel conversacional</span>
-            </div>
-
-            <div style="margin-top: 20px;">
-              <a href="https://cert.efset.org/es/2oEXjs"
-                 target="_blank" rel="noopener"
-                 class="btn primary"
-                 style="display: inline-flex; align-items: center; gap: 8px; font-size: 0.9rem;">
-                <span>Ver Certificado Oficial</span>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                     stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                  <polyline points="15 3 21 3 21 9"></polyline>
-                  <line x1="10" y1="14" x2="21" y2="3"></line>
-                </svg>
-              </a>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ DIPLOMAS ============ -->
-    <section id="diplomas" class="section alt">
-      <div class="container">
-        <h2 class="section-title">Diplomas y Cursos</h2>
-        <div id="diploma-grid" class="grid tiles"></div>
-      </div>
-
-      <div id="lightbox" class="lightbox" aria-hidden="true" role="dialog" aria-label="Vista de diploma">
-        <div class="lightbox-body glass">
-          <button class="lightbox-close" aria-label="Cerrar ventana" type="button">×</button>
-          <img id="lightbox-img" alt="" />
-          <iframe id="lightbox-pdf" title="Diploma PDF" loading="lazy"></iframe>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ HABILIDADES ============ -->
+    <!-- ============ HABILIDADES: mismas palabras que el PDF ============ -->
     <section id="skills" class="section">
       <div class="container">
-        <h2 class="section-title">Habilidades</h2>
+        <h2 class="section-title">Habilidades técnicas</h2>
 
         <div class="grid skill-grid">
           <article class="card reveal">
-            <h3>Habilidades Profesionales</h3>
-            <div class="badge-row" role="list">
-              <span class="badge" role="listitem">Diseño UI/UX</span>
-              <span class="badge" role="listitem">Desarrollo Web</span>
-              <span class="badge" role="listitem">Edición de Video</span>
-              <span class="badge" role="listitem">Animación Digital</span>
-              <span class="badge" role="listitem">Producción Multimedia</span>
-            </div>
+            <h3>Lenguajes</h3>
+            <ul class="stack"><li>Python</li><li>JavaScript</li><li>HTML5</li><li>CSS3</li><li>SQL</li><li>C#</li></ul>
           </article>
-
           <article class="card reveal">
-            <h3>Habilidades Personales</h3>
-            <div class="badge-row">
-              <span class="badge">Trabajo en equipo</span>
-              <span class="badge">Adaptabilidad</span>
-              <span class="badge">Creatividad</span>
-              <span class="badge">Resolución de problemas</span>
-              <span class="badge">Gestión del tiempo</span>
-            </div>
+            <h3>Web y backend</h3>
+            <ul class="stack"><li>Node.js</li><li>REST APIs</li><li>Netlify Functions</li><li>Netlify Blobs</li><li>SQLite</li><li>MySQL</li><li>Diseño responsive</li></ul>
           </article>
-
           <article class="card reveal">
-            <h3>Tecnologías</h3>
-
-            <div class="badge-row" aria-label="Áreas técnicas">
-              <span class="badge">Web: HTML/CSS/JS</span>
-              <span class="badge">Backend: Python</span>
-              <span class="badge">UI/UX: Figma</span>
-              <span class="badge">Multimedia: Adobe CC</span>
-              <span class="badge">Git/GitHub</span>
-              <span class="badge">Netlify</span>
-            </div>
-
-            <div class="bars">
-              <div class="bar"><span>Figma / Prototipos</span><i style="--val:75%"></i></div>
-              <div class="bar"><span>JavaScript</span><i style="--val:80%"></i></div>
-              <div class="bar"><span>Adobe Creative Suite</span><i style="--val:85%"></i></div>
-              <div class="bar"><span>HTML / CSS</span><i style="--val:90%"></i></div>
-              <div class="bar"><span>Python (Desarrollo)</span><i style="--val:95%"></i></div>
-            </div>
+            <h3>IA y datos</h3>
+            <ul class="stack"><li>APIs de LLM (OpenAI, Anthropic, Gemini, Groq, OpenRouter)</li><li>Gradio</li><li>Pydantic</li><li>Jupyter</li><li>Google Colab</li></ul>
+          </article>
+          <article class="card reveal">
+            <h3>UX/UI</h3>
+            <ul class="stack"><li>Figma</li><li>Wireframes</li><li>Prototipado</li><li>Investigación de usuarios</li><li>Evaluación heurística</li><li>Think Aloud</li><li>Pruebas de usabilidad</li><li>SUS</li></ul>
+          </article>
+          <article class="card reveal">
+            <h3>Redes e infraestructura</h3>
+            <ul class="stack"><li>Subnetting IPv4/VLSM</li><li>Enrutamiento</li><li>NAT</li><li>Packet Tracer</li><li>Linux (Ubuntu)</li><li>Vagrant</li><li>VirtualBox</li><li>BIND9</li><li>Apache</li><li>UFW</li><li>Squid</li></ul>
+          </article>
+          <article class="card reveal">
+            <h3>Herramientas y métodos</h3>
+            <ul class="stack"><li>Git</li><li>GitHub</li><li>Jira</li><li>Scrum</li><li>Unity</li></ul>
+          </article>
+          <article class="card reveal">
+            <h3>Multimedia</h3>
+            <ul class="stack"><li>Premiere Pro</li><li>After Effects</li><li>Illustrator</li><li>Photoshop</li><li>Motion graphics</li></ul>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- ============ PORTAFOLIO ============ -->
-    <section id="projects" class="section alt">
+    <!-- ============ FORMACIÓN, CERTIFICACIONES E IDIOMAS ============ -->
+    <section id="education" class="section alt">
       <div class="container">
-        <h2 class="section-title">Portafolio</h2>
+        <h2 class="section-title">Formación</h2>
 
-        <h3 class="section-subtitle">Proyectos de Programación</h3>
-        <div class="grid cards portfolio">
-          <article class="card hoverable reveal">
-            <div class="cover" aria-hidden="true"></div>
-            <h3>MediaWebStudio</h3>
-            <p>Emprendimiento personal de desarrollo de software, edición de imagen y video.</p>
+        <div class="grid cards">
+          <article class="card reveal">
+            <p class="kicker">feb. 2021 – actualidad</p>
+            <h3>Ingeniería Multimedia</h3>
+            <p class="muted">Universidad Autónoma de Occidente, Cali</p>
+            <p>Trabajo de grado en curso: rediseño UX/UI del portal de Fidelity Networks.</p>
+            <p class="muted">Cursos relacionados: Redes y Servicios Multimedia, Procesamiento Digital de Imágenes.</p>
+          </article>
 
+          <article class="card reveal">
+            <p class="kicker">ene. 2026 · Verificable</p>
+            <h3>Inglés B1 intermedio</h3>
+            <p class="muted">EF SET English Certificate · 50/100</p>
+            <p>Español: nativo.</p>
             <div class="project-actions">
-              <a href="https://github.com/Ryuukatsuro25/MediaWebStudio" target="_blank" rel="noopener" class="btn ghost">
-                <img src="assets/icons/github.svg" class="github-icon" alt="" width="16" height="16" />
-                <span>Repositorio</span>
-              </a>
-              <a href="https://mediawebstudio.netlify.app" target="_blank" rel="noopener" class="btn primary">
-                <span>Ver sitio</span>
-              </a>
+              <a href="https://cert.efset.org/es/2oEXjs" target="_blank" rel="noopener" class="btn ghost">Ver certificado</a>
             </div>
           </article>
 
-          <article class="card hoverable reveal">
-            <div class="cover" aria-hidden="true"></div>
-            <h3>Servidor de Minecraft</h3>
-            <p>Panel de control para servidor de Minecraft: genera conexión, IP y habilita el servicio.</p>
-
-            <div class="project-actions">
-              <a href="https://github.com/Ryuukatsuro25/SERVER-MANAGER-MINERCRAFT" target="_blank" rel="noopener" class="btn ghost">
-                <img src="assets/icons/github.svg" class="github-icon" alt="" width="16" height="16" />
-                <span>Repositorio</span>
-              </a>
-            </div>
-          </article>
-
-          <article class="card hoverable reveal">
-            <div class="cover" aria-hidden="true"></div>
-            <h3>RappiXtreame</h3>
-            <p>Proyecto de documentación de videojuego creado en Unity.</p>
-
-            <div class="project-actions">
-              <a href="https://github.com/Ryuukatsuro25/Rappi-Xtreame" target="_blank" rel="noopener" class="btn ghost">
-                <img src="assets/icons/github.svg" class="github-icon" alt="" width="16" height="16" />
-                <span>Repositorio</span>
-              </a>
-              <a href="https://rappixtreame.netlify.app" target="_blank" rel="noopener" class="btn primary">
-                <span>Ver sitio</span>
-              </a>
-            </div>
+          <article class="card reveal diplomado">
+            <p class="kicker">2022</p>
+            <h3>Diplomado internacional en producción de contenidos para infancia y juventud</h3>
+            <p class="muted">Ministerio de Cultura de Colombia · 8 módulos</p>
+            <details class="diplomas">
+              <summary>Ver los 8 certificados</summary>
+              <div id="diploma-grid" class="grid tiles"></div>
+            </details>
           </article>
         </div>
+      </div>
 
-        <h3 class="section-subtitle">Portafolio Gráfico</h3>
+      <div id="lightbox" class="lightbox" aria-hidden="true" role="dialog" aria-label="Vista de certificado">
+        <div class="lightbox-body">
+          <button class="lightbox-close" aria-label="Cerrar ventana" type="button">×</button>
+          <img id="lightbox-img" alt="" />
+          <iframe id="lightbox-pdf" title="Certificado en PDF"></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PORTAFOLIO GRÁFICO Y AUDIOVISUAL (complemento) ============ -->
+    <section id="graphic" class="section">
+      <div class="container">
+        <h2 class="section-title">Portafolio gráfico y audiovisual</h2>
+        <p class="section-lead">Trabajos freelance de identidad visual y video para marcas locales.</p>
+
         <div class="grid cards portfolio gallery graphic-gallery">
-          <article class="card hoverable reveal gallery-item">
-            <img class="gallery-media"
-                 src="assets/portfolio/MediaWeb_Studio.png"
-                 alt="MediaWeb Studio"
-                 loading="lazy" />
-            <div class="gallery-overlay">
-              <a class="btn primary" href="assets/portfolio/MediaWeb_Studio.png" target="_blank" rel="noopener">Ver</a>
-            </div>
-          </article>
+          <figure class="card hoverable reveal gallery-item">
+            <img class="gallery-media" src="assets/portfolio/MediaWeb_Studio.png" alt="Identidad visual de MediaWebStudio" loading="lazy" />
+            <figcaption>MediaWebStudio · Identidad visual</figcaption>
+            <div class="gallery-overlay"><a class="btn primary" href="assets/portfolio/MediaWeb_Studio.png" target="_blank" rel="noopener">Ver</a></div>
+          </figure>
 
-          <article class="card hoverable reveal gallery-item">
-            <img class="gallery-media"
-                 src="assets/portfolio/mayester-sublimatie.jpg"
-                 alt="Mayester Sublimatie"
-                 loading="lazy" />
-            <div class="gallery-overlay">
-              <a class="btn primary" href="assets/portfolio/mayester-sublimatie.jpg" target="_blank" rel="noopener">Ver</a>
-            </div>
-          </article>
+          <figure class="card hoverable reveal gallery-item">
+            <img class="gallery-media" src="assets/portfolio/mayester-sublimatie.jpg" alt="Pieza gráfica para Mayester Sublimatie" loading="lazy" />
+            <figcaption>Mayester Sublimatie · Pieza gráfica</figcaption>
+            <div class="gallery-overlay"><a class="btn primary" href="assets/portfolio/mayester-sublimatie.jpg" target="_blank" rel="noopener">Ver</a></div>
+          </figure>
 
-          <article class="card hoverable reveal gallery-item">
-            <video class="gallery-media"
-                   src="assets/portfolio/la-muelona.mp4"
-                   muted
-                   loop
-                   autoplay
-                   playsinline
-                   preload="metadata"
-                   aria-label="Video La Muelona">
-            </video>
-            <div class="gallery-overlay">
-              <a class="btn primary" href="assets/portfolio/la-muelona.mp4" target="_blank" rel="noopener">Ver</a>
-            </div>
-          </article>
+          <figure class="card hoverable reveal gallery-item">
+            <video class="gallery-media hover-play" src="assets/portfolio/la-muelona.mp4" poster="assets/portfolio/la-muelona-poster.jpg"
+                   muted loop playsinline preload="none" aria-label="Video promocional La Muelona"></video>
+            <figcaption>La Muelona · Video promocional</figcaption>
+            <div class="gallery-overlay"><a class="btn primary" href="assets/portfolio/la-muelona.mp4" target="_blank" rel="noopener">Ver</a></div>
+          </figure>
 
-          <article class="card hoverable reveal gallery-item">
-            <img class="gallery-media"
-                 src="assets/portfolio/saboresdemama.png"
-                 alt="Sabores de Mamá"
-                 loading="lazy" />
-            <div class="gallery-overlay">
-              <a class="btn primary" href="assets/portfolio/saboresdemama.png" target="_blank" rel="noopener">Ver</a>
-            </div>
-          </article>
+          <figure class="card hoverable reveal gallery-item">
+            <img class="gallery-media" src="assets/portfolio/saboresdemama.png" alt="Logotipo de Sabores de Mamá" loading="lazy" />
+            <figcaption>Sabores de Mamá · Logotipo</figcaption>
+            <div class="gallery-overlay"><a class="btn primary" href="assets/portfolio/saboresdemama.png" target="_blank" rel="noopener">Ver</a></div>
+          </figure>
         </div>
       </div>
     </section>
 
     <!-- ============ CONTACTO ============ -->
-    <section id="contact" class="section">
+    <section id="contact" class="section alt">
       <div class="container">
         <h2 class="section-title">Contacto</h2>
 
-        <div class="card reveal">
+        <div class="card contact-card reveal">
+          <p>¿Tienes una vacante de práctica o un rol junior en desarrollo web o UX/UI? Escríbeme.</p>
           <ul class="contact-list">
             <li>
-              <a href="mailto:juan.jose.osorio.reyes@hotmail.com" rel="noopener" aria-label="Correo electrónico">
-                <img src="assets/icons/mail.svg" class="icon" alt="" />
+              <a href="mailto:juan.jose.osorio.reyes@hotmail.com">
+                <img src="assets/icons/mail.svg" class="icon mono-icon" alt="" />
                 juan.jose.osorio.reyes@hotmail.com
               </a>
             </li>
-
             <li>
-              <span aria-label="Ubicación">
-                <img src="assets/icons/map-pin.svg" class="icon" alt="" />
-                Cali, Colombia
-              </span>
-            </li>
-
-            <li>
-              <a href="https://www.linkedin.com/in/juan-jose-osorio-reyes-a7b7442ba/" target="_blank" rel="noopener" aria-label="LinkedIn">
+              <a href="https://www.linkedin.com/in/juan-jose-osorio-reyes-a7b7442ba/" target="_blank" rel="noopener">
                 <img src="assets/icons/linkedin.svg" class="icon linkedin-icon" alt="" />
-                LinkedIn
+                linkedin.com/in/juan-jose-osorio-reyes-a7b7442ba
               </a>
             </li>
+            <li>
+              <a href="https://github.com/Ryuukatsuro25" target="_blank" rel="noopener">
+                <img src="assets/icons/github.svg" class="icon github-icon" alt="" />
+                github.com/Ryuukatsuro25
+              </a>
+            </li>
+            <li>
+              <span>
+                <img src="assets/icons/map-pin.svg" class="icon mono-icon" alt="" />
+                Cali, Colombia · Abierto a trabajo remoto
+              </span>
+            </li>
           </ul>
-        </div>
 
-        <div class="hero-actions" style="margin-top: 1.5rem;">
-          <a class="btn primary"
-             href="assets/documents/CV_Juan_Jose_Osorio_Reyes.pdf"
-             target="_blank" rel="noopener"
-             aria-label="Descargar CV en PDF">
-            Descargar CV
-          </a>
-          <a class="btn ghost"
-             href="https://github.com/Ryuukatsuro25"
-             target="_blank" rel="noopener"
-             aria-label="Ver GitHub">
-            <img src="assets/icons/github.svg" class="github-icon" alt="" width="16" height="16" />
-            <span>GitHub</span>
-          </a>
+          <div class="hero-actions">
+            <a class="btn primary" href="assets/documents/Juan_Jose_Osorio_Reyes_CV.pdf" target="_blank" rel="noopener">Descargar CV (PDF)</a>
+          </div>
         </div>
       </div>
     </section>
@@ -483,12 +487,11 @@
   </main>
 
   <footer class="site-footer">
-    <div class="container">
-      <small>© <span id="year"></span> Juan José Osorio Reyes · Estudiante de Ingeniería Multimedia</small>
-
+    <div class="container footer-wrap">
+      <small>© <span id="year"></span> Juan José Osorio Reyes · Ingeniería Multimedia</small>
       <nav class="footer-nav" aria-label="Navegación del pie de página">
         <a href="#hero">Inicio</a>
-        <a href="#projects">Portafolio</a>
+        <a href="#projects">Proyectos</a>
         <a href="#contact">Contacto</a>
       </nav>
     </div>
