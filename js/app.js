@@ -14,30 +14,42 @@ $('#year').textContent = new Date().getFullYear();
 // (capturas, robots), todo el contenido queda visible desde el inicio.
 const canAnimate = 'IntersectionObserver' in window && !navigator.webdriver;
 root.classList.add('js-ready');           // filtros y "ver todos" activos
-if (canAnimate) root.classList.add('anim'); // apariciones al hacer scroll
+// La clase 'anim' (que oculta el contenido hasta que aparece) se añade más abajo,
+// solo cuando el observador ya está listo.
+
+// Red de seguridad: si algún error de JS ocurre, se muestra todo el contenido
+// en lugar de dejar las secciones invisibles.
+addEventListener('error', () => {
+  root.classList.remove('anim');
+  $$('.reveal').forEach(el => el.classList.add('show'));
+});
 
 // ---------- Tema claro / oscuro ----------
 const themeBtn = $('#themeToggle');
-const syncTheme = () => themeBtn.setAttribute('aria-label', root.classList.contains('light') ? 'Cambiar a tema oscuro' : 'Cambiar a tema claro');
-themeBtn.addEventListener('click', () => {
-  root.classList.toggle('light');
-  try { localStorage.setItem('theme', root.classList.contains('light') ? 'light' : 'dark'); } catch (err) {}
+if (themeBtn){
+  const syncTheme = () => themeBtn.setAttribute('aria-label', root.classList.contains('light') ? 'Cambiar a tema oscuro' : 'Cambiar a tema claro');
+  themeBtn.addEventListener('click', () => {
+    root.classList.toggle('light');
+    try { localStorage.setItem('theme', root.classList.contains('light') ? 'light' : 'dark'); } catch (err) {}
+    syncTheme();
+  });
   syncTheme();
-});
-syncTheme();
+}
 
 // ---------- Menú móvil ----------
 const menuBtn = $('#menuToggle');
 const nav = $('#main-nav');
-const closeMenu = () => { nav.classList.remove('open'); menuBtn.setAttribute('aria-expanded', 'false'); menuBtn.setAttribute('aria-label', 'Abrir menú'); };
-menuBtn.addEventListener('click', () => {
-  const open = !nav.classList.contains('open');
-  nav.classList.toggle('open', open);
-  menuBtn.setAttribute('aria-expanded', String(open));
-  menuBtn.setAttribute('aria-label', open ? 'Cerrar menú' : 'Abrir menú');
-});
-$$('a', nav).forEach(a => a.addEventListener('click', closeMenu));
-addEventListener('keydown', e => { if (e.key === 'Escape' && nav.classList.contains('open')) { closeMenu(); menuBtn.focus(); } });
+if (menuBtn && nav){
+  const closeMenu = () => { nav.classList.remove('open'); menuBtn.setAttribute('aria-expanded', 'false'); menuBtn.setAttribute('aria-label', 'Abrir menú'); };
+  menuBtn.addEventListener('click', () => {
+    const open = !nav.classList.contains('open');
+    nav.classList.toggle('open', open);
+    menuBtn.setAttribute('aria-expanded', String(open));
+    menuBtn.setAttribute('aria-label', open ? 'Cerrar menú' : 'Abrir menú');
+  });
+  $$('a', nav).forEach(a => a.addEventListener('click', closeMenu));
+  addEventListener('keydown', e => { if (e.key === 'Escape' && nav.classList.contains('open')) { closeMenu(); menuBtn.focus(); } });
+}
 
 // ---------- Scroll: progreso, cabecera, volver arriba, línea de tiempo ----------
 const header = $('.site-header');
@@ -101,6 +113,7 @@ const reveal = canAnimate && new IntersectionObserver(entries => {
 }, { rootMargin: '0px 0px -10% 0px', threshold: 0.12 });
 $$('.project').forEach((p, i) => { p.classList.add('reveal'); p.style.setProperty('--d', i % 3); });
 if (canAnimate){
+  root.classList.add('anim'); // apariciones al hacer scroll
   $$('.reveal').forEach(el => reveal.observe(el));
 } else {
   $$('.reveal').forEach(el => el.classList.add('show'));
